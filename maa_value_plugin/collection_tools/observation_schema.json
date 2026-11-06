@@ -1,0 +1,18 @@
+{
+  "schema_version": 3,
+  "run_identity": "exploration_id/run_id 为同一次本地UI探索的UUID；session_id仅标识Python进程；不是服务器对局ID。",
+  "run_header": "exploration_start保存完整原始预设、36槽原始目标（含0）、角色身份、模型与软件版本。每条记录携带preset_id和完整36槽目标向量。",
+  "completeness": "complete只表示观察到开局和结算。owned为从已观察到的开局、逐次拿走确认重建的持有历史；owned_complete仅表示该历史完整且未出现等级冲突，不表示独立背包或服务器校验。owned_revision、owned_issues、inventory_conflicts保留逐页依据；maa_owned_cache单独保留Maa提前写入的缓存，maa_owned_complete始终false。",
+  "offer_observed": "每个新奖励建立reward_chain_id，每次成功刷新建立新offer_id，即使候选内容完全相同。refresh_parent_offer_id、refresh_operation_id关联上页与成功刷新。只有同页重读复用offer_id，记录offer_reobserved；重读内容不一致时recognition_consistent=false，不伪装成新抽取。offer_index全局递增，refresh_index在奖励链内递增，maa_refresh_count另存原值。",
+  "candidates": "与RealGameData对应：slot为0起始显示顺序；potential_id、character_id、role、trekker_index、target_level、canonical_rarity保留身份和目录依据。rarity/raw_rarity保留本页Maa识别，不使用目录覆盖；刷新后重新调用Maa原识别器。level_before/offered_level_after/level_after/level_delta保留展示等级及Maa上限约定，原old_level/new_level不改写；核心0→1明确标注约定。raw_ocr保留all_results，name_roi/level_roi及recognition_record_ids关联原始识别。未知ID和目标为null，不是0。",
+  "selection": "selection_result只确认卡片预选；selection_cache不提交持有历史。selection_ui_transition_observed监听Maa已确认拿走节点的Node.Action.Succeeded，仅此时推进持有历史并关闭奖励链；重复通知不重复提交。owned_before和owned为确认前后历史，observed_state_after为Maa缓存；仍非服务端确认。",
+  "shops": "stock_scan_id在读取前分配，原始识别与快照共享关联。stock_generation_id/shelf_generation_id按同次访问和可见剩余刷新次数关联货架生成，repeated_scan区分重读。payload.slots保存全部8槽的ROI、名称和价格原OCR、有效价格及商品实例；payload.maa_items保留Maa解析结果；购买与刷新前后原记录均保留。",
+  "events": "event_menu_observed保存全部选项和后果；event_choice为拟执行选择，event_choice_click_observed为Maa点击成功。之后的wallet_observed和潜能页保留preceding_event_id；不把显示的后果当作已发放奖励。",
+  "context_run_recognition": "read_id关联一次读取，record_id关联原始识别；保留ROI、all_results/filtered_results/best_result/raw_detail。候选页引用预载和本页全部recognition_record_ids，不重复识别或导出后补配。",
+  "state": "每页保存抽取前持有历史、各角色稀有/普通/未满级数量、Maa推断计数counters、coin、refresh_price。未实际读取的floor为null；神经网络推断楼层留在tracker_estimate。preceding_event_id仅表示最近观察的事件，不自动认定为发奖来源。",
+  "model_decision": "保存offer_id、reward_chain_id、event_id、stock_scan_id、决策前公开状态、全部合法动作及Q值、选中动作与模型推断状态；tracker_estimate明确是推断而非游戏观测。operation_id关联点击、购买、强化和产生的候选页。",
+  "interrupted_runs": "任务停止产生completion_observed=false；重开时将已退出进程的未闭合记录恢复为中断局。没有观察到的结算不会猜补。",
+  "privacy": "只记录星塔OCR和流程。不写图片、完整Maa日志、账号配置或本机用户路径。上传沿用MFA设置HelpImproveSoftware（帮助改进软件），关闭则不发送；接收地址为空也不发送。",
+  "export": "采集时写入关联和语义字段，导出仅复制原始记录；不改写旧数据，不补配历史编号、识别结果、持有状态或概率。",
+  "transport": "每局ZIP内为observations.jsonl和manifest.json；POST application/zip；X-Upload-ID幂等键；X-Content-SHA256；可选Bearer凭证；HTTP 2xx确认。"
+}

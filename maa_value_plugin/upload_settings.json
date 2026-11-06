@@ -1,0 +1,17 @@
+{
+  "endpoint": "https://35.213.73.34/v1/runs",
+  "access_token": "",
+  "policy_version": "tower-probability-collection-v1",
+  "recipient": "Dango（群内临时分发）",
+  "purpose": "修正星塔黑箱状态空间与潜能抽取概率",
+  "retention": "本次概率研究期间；可联系分发者申请删除",
+  "contact": "在分发群联系 Dango",
+  "transport": {
+    "method": "POST",
+    "content_type": "application/zip",
+    "authorization": "Bearer access_token（如已配置）",
+    "deduplication_header": "X-Upload-ID",
+    "sha256_header": "X-Content-SHA256",
+    "acknowledgement": "HTTP 2xx 表示接收成功"
+  }
+}

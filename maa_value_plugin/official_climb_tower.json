@@ -1,0 +1,356 @@
+{
+    "task": [
+        {
+            "name": "新版爬塔",
+            "resource": [
+                "官服",
+                "台服",
+                "国际服",
+                "日服"
+            ],
+            "label": "$interface.task.新版爬塔.label",
+            "entry": "星塔_入口_agent",
+            "description": "$interface.task.新版爬塔.description",
+            "option": [
+                "新版爬塔_开始位置",
+                "新版爬塔_爬塔次数",
+                "新版爬塔_属性塔",
+                "新版爬塔_潜能选择模式",
+                "新版爬塔_潜能最大刷新次数",
+                "新版爬塔_商店_自定义选项开关",
+                "新版爬塔_商店_强化_自定义选项开关",
+                "新版爬塔_事件选项策略文件",
+                "新版爬塔_设置爬塔目标",
+            ]
+        }
+    ],
+    "option": {
+        "新版爬塔_开始位置": {
+            "type": "select",
+            "label": "$interface.task.option.新版爬塔_开始位置.label",
+            "description": "$interface.task.option.新版爬塔_开始位置.description",
+            "default_case": "主页",
+            "cases": [
+                {
+                    "name": "主页",
+                    "label": "$interface.task.option.新版爬塔_开始位置.cases.主页.label",
+                    "description": "$interface.task.option.新版爬塔_开始位置.cases.主页.description"
+                },
+                {
+                    "name": "进入星塔后",
+                    "label": "$interface.task.option.新版爬塔_开始位置.cases.进入星塔后.label",
+                    "description": "$interface.task.option.新版爬塔_开始位置.cases.进入星塔后.description",
+                    "pipeline_override": {
+                        "星塔_跳过进入星塔流程_agent": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "新版爬塔_爬塔次数": {
+            "type": "input",
+            "inputs": [
+                {
+                    "name": "爬塔次数",
+                    "label": "$interface.task.option.新版爬塔_爬塔次数.inputs.爬塔次数.label",
+                    "pipeline_type": "int",
+                    "default": "1",
+                    "verify": "^[1-9]\\d*$",
+                    "pattern_msg": "$interface.task.option.新版爬塔_爬塔次数.inputs.爬塔次数.pattern_msg"
+                }
+            ],
+            "pipeline_override": {
+                "星塔_循环用节点_agent": {
+                    "attach": {
+                        "loop_count": "{爬塔次数}"
+                    }
+                }
+            }
+        },
+        "新版爬塔_属性塔": {
+            "type": "select",
+            "label": "$interface.task.option.新版爬塔_属性塔.label",
+            "default_case": "属性_光土",
+            "cases": [
+                {
+                    "name": "属性_光土",
+                    "label": "$interface.task.option.新版爬塔_属性塔.cases.属性_光土.label",
+                    "pipeline_override": {
+                        "星塔_属性塔选择_agent": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "ClimbTower_agent/爬塔_光土__387_137_124_45__337_87_224_145.png"
+                                    ]
+                                }
+                            },
+                            "attach": {
+                                "active_melodies": ["melody_of_lux", "melody_of_terra"]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "属性_水风",
+                    "label": "$interface.task.option.新版爬塔_属性塔.cases.属性_水风.label",
+                    "pipeline_override": {
+                        "星塔_属性塔选择_agent": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "ClimbTower_agent/爬塔_水风__384_271_129_39__334_221_229_139.png"
+                                    ]
+                                }
+                            },
+                            "attach": {
+                                "active_melodies": ["melody_of_aqua", "melody_of_ventus"]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "属性_火暗",
+                    "label": "$interface.task.option.新版爬塔_属性塔.cases.属性_火暗.label",
+                    "pipeline_override": {
+                        "星塔_属性塔选择_agent": {
+                            "recognition": {
+                                "param": {
+                                    "template": [
+                                        "ClimbTower_agent/爬塔_火暗__381_404_129_39__331_354_229_139.png"
+                                    ]
+                                }
+                            },
+                            "attach": {
+                                "active_melodies": ["melody_of_ignis", "melody_of_umbra"]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "新版爬塔_潜能选择模式": {
+            "type": "select",
+            "label": "$interface.task.option.新版爬塔_潜能选择模式.label",
+            "default_case": "内置选择策略",
+            "cases": [
+                {
+                    "name": "内置选择策略",
+                    "label": "$interface.task.option.新版爬塔_潜能选择模式.cases.内置选择策略.label",
+                    "description": "$interface.task.option.新版爬塔_潜能选择模式.cases.内置选择策略.description",
+                    "pipeline_override": {
+                        "星塔_节点_选择潜能_agent": {
+                            "attach": {
+                                "handler": "preset"
+                            }
+                        }
+                    },
+                    "option": [
+                        "新版爬塔_策略"
+                    ]
+                },
+                {
+                    "name": "直接选择推荐潜能(备用)",
+                    "label": "$interface.task.option.新版爬塔_潜能选择模式.cases.直接选择推荐潜能(备用).label",
+                    "description": "$interface.task.option.新版爬塔_潜能选择模式.cases.直接选择推荐潜能(备用).description",
+                    "pipeline_override": {
+                        "星塔_节点_选择潜能_agent": {
+                            "attach": {
+                                "handler": "default"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "自定义json优先级",
+                    "label": "$interface.task.option.新版爬塔_潜能选择模式.cases.自定义json优先级.label",
+                    "description": "$interface.task.option.新版爬塔_潜能选择模式.cases.自定义json优先级.description",
+                    "pipeline_override": {
+                        "星塔_节点_选择潜能_agent": {
+                            "attach": {
+                                "handler": "json"
+                            }
+                        }
+                    },
+                    "option": [
+                        "预设作业_手动输入作业名",
+                        "新版爬塔_开始任务前清空内存"
+                    ]
+                }
+            ]
+        },
+        "新版爬塔_策略": {
+            "type": "select",
+            "label": "$interface.task.option.新版爬塔_策略.label",
+            "default_case": "通用",
+            "cases": [
+                {
+                    "name": "通用",
+                    "label": "$interface.task.option.新版爬塔_策略.cases.通用.label",
+                    "description": "$interface.task.option.新版爬塔_策略.cases.通用.description",
+                    "pipeline_override": {
+                        "星塔_节点_选择潜能_agent": {
+                            "attach": {
+                                "environment": "default"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "打分策略",
+                    "label": "$interface.task.option.新版爬塔_策略.cases.打分策略.label",
+                    "description": "$interface.task.option.新版爬塔_策略.cases.打分策略.description",
+                    "pipeline_override": {
+                        "星塔_节点_选择潜能_agent": {
+                            "attach": {
+                                "environment": "tower_8"
+                            }
+                        }
+                    },
+                    "option": [
+                        "新版爬塔_潜能抓取刷新阈值系数",
+                        "新版爬塔_开始任务前清空内存"
+                    ]
+                }
+            ]
+        },
+        "新版爬塔_潜能抓取刷新阈值系数": {
+            "type": "input",
+            "label": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.label",
+            "inputs": [
+                {
+                    "name": "刷新阈值系数",
+                    "label": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.inputs.刷新阈值系数.label",
+                    "description": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.inputs.刷新阈值系数.description",
+                    "pipeline_type": "string",
+                    "default": "0.8",
+                    "verify": "^(0|[1-9])(\\.\\d{1,2})?$",
+                    "pattern_msg": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.inputs.刷新阈值系数.pattern_msg"
+                },
+                {
+                    "name": "刷新阈值衰减系数",
+                    "label": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.inputs.刷新阈值衰减系数.label",
+                    "description": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.inputs.刷新阈值衰减系数.description",
+                    "pipeline_type": "string",
+                    "default": "0.05",
+                    "verify": "^(0(\\.\\d{1,2})?|1(\\.0{1,2})?)$",
+                    "pattern_msg": "$interface.task.option.新版爬塔_潜能抓取刷新阈值系数.inputs.刷新阈值衰减系数.pattern_msg"
+                }
+            ],
+            "pipeline_override": {
+                "星塔_节点_选择潜能_agent": {
+                    "attach": {
+                        "threshold_coef_str": "{刷新阈值系数}",
+                        "threshold_decay_str": "{刷新阈值衰减系数}"
+                    }
+                }
+            }
+        },
+        "新版爬塔_开始任务前清空内存": {
+            "type": "switch",
+            "label": "$interface.task.option.新版爬塔_开始任务前清空内存.label",
+            "description": "$interface.task.option.新版爬塔_开始任务前清空内存.description",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "label": "Yes",
+                    "pipeline_override": {
+                        "星塔_入口_agent": {
+                            "attach": {
+                                "reset_state": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "label": "No",
+                    "pipeline_override": {
+                        "星塔_入口_agent": {
+                            "attach": {
+                                "reset_state": false
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "新版爬塔_潜能最大刷新次数": {
+            "type": "input",
+            "inputs": [
+                {
+                    "name": "潜能最大刷新次数",
+                    "label": "$interface.task.option.新版爬塔_潜能最大刷新次数.inputs.潜能最大刷新次数.label",
+                    "description": "$interface.task.option.新版爬塔_潜能最大刷新次数.inputs.潜能最大刷新次数.description",
+                    "pipeline_type": "int",
+                    "default": "5",
+                    "verify": "^\\d+$",
+                    "pattern_msg": "$interface.task.option.新版爬塔_潜能最大刷新次数.inputs.潜能最大刷新次数.pattern_msg"
+                }
+            ],
+            "pipeline_override": {
+                "星塔_节点_选择潜能_agent": {
+                    "attach": {
+                        "max_refresh_count": "{潜能最大刷新次数}"
+                    }
+                }
+            }
+        },
+        "新版爬塔_事件选项策略文件": {
+            "type": "select",
+            "label": "$interface.task.option.新版爬塔_事件选项策略文件.label",
+            "description": "$interface.task.option.新版爬塔_事件选项策略文件.description",
+            "default_case": "默认",
+            "cases": [
+                {
+                    "name": "默认", "label": "$interface.task.option.新版爬塔_事件选项策略文件.cases.默认.label"
+                },
+                {
+                    "name": "自定义文件",
+                    "label": "$interface.task.option.新版爬塔_事件选项策略文件.cases.自定义文件.label",
+                    "option": [
+                        "新版爬塔_事件选项策略文件_自定义"
+                    ]
+                }
+            ]
+        },
+        "新版爬塔_事件选项策略文件_自定义": {
+            "type": "input",
+            "inputs": [
+                {
+                    "name": "选项策略文件名",
+                    "label": "$interface.task.option.新版爬塔_事件选项策略文件_自定义.inputs.选项策略文件名.label",
+                    "pipeline_type": "string",
+                    "default": "ascension_event_custom.json",
+                    "description": "$interface.task.option.新版爬塔_事件选项策略文件_自定义.inputs.选项策略文件名.description"
+                }
+            ],
+            "pipeline_override": {
+                "星塔_入口_agent": {
+                    "attach": {
+                        "event_rules": "{选项策略文件名}"
+                    }
+                }
+            }
+        },
+        "预设作业_手动输入作业名": {
+            "type": "input",
+            "inputs": [
+                {
+                    "name": "预设作业_作业文件名",
+                    "label": "$interface.task.option.预设作业_手动输入作业名.inputs.预设作业_作业文件名.label",
+                    "pipeline_type": "string",
+                    "description": "$interface.task.option.预设作业_手动输入作业名.inputs.预设作业_作业文件名.description"
+                }
+            ],
+            "pipeline_override": {
+                "星塔_入口_agent": {
+                    "attach": {
+                        "preset_name": "{预设作业_作业文件名}"
+                    }
+                }
+            }
+        }
+    }
+}

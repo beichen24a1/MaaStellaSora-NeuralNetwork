@@ -1,0 +1,10 @@
+{
+  "source": "StellaSora_Learning_Handoff/project/training/value_model/vendor/StellaSora_R19/python/stella_sim.py",
+  "sha256": "fdb12bfbab3a5d340ffdc604418acdf2045ab353d2785d1f5e54310a6e5021c2",
+  "also_identical_in": [
+    "StellaSora_R24",
+    "StellaSora_R35"
+  ],
+  "changes": "2026-10-28: state_space_s75_l5of11_v2; initial shops 2/3 discount trials 3/4, all other shelves 7/10; capped new level-one trial 5/11. Original source hash above retained for provenance.",
+  "scope": "Generative simulation kernel with user-adopted rule hypotheses, no game client access. Unknown rules raise ModelGap."
+}

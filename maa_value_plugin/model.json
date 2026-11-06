@@ -1,0 +1,10 @@
+{
+  "checkpoint": "models/beta.npz",
+  "model_id": "beta",
+  "feature_version": "public_state_action_compact_v1",
+  "rules_version": "state_space_s75_l5of11_v2",
+  "policy": "direct_argmax",
+  "switched_at_JST": "2026-11-07T00:45:09+09:00",
+  "file_sha256": "e540787be6726f217530c75a6a66af4dc8c95ebd6cd8d503340bddda01bab925",
+  "source": "accepted best single model, frozen beta distribution"
+}
