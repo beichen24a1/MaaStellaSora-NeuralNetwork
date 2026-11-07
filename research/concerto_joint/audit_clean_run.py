@@ -11,7 +11,7 @@ from maa_value_plugin.critic.features import FEATURE_DIM
 from price_data import PRICE_SCHEMA, validate_note_goods, validate_note_price
 
 
-def audit(run="joint_v3_prices_clean"):
+def audit(run="joint_v4_env_fixed"):
     directory = HERE / "runs" / run
     raw = (HERE / "data/inputs.json").read_bytes().replace(b"\r\n", b"\n")
     data = json.loads(raw)
@@ -69,6 +69,6 @@ def audit(run="joint_v3_prices_clean"):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", default="joint_v3_prices_clean")
+    parser.add_argument("--run", default="joint_v4_env_fixed")
     args = parser.parse_args()
     audit(args.run)

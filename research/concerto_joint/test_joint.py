@@ -6,7 +6,8 @@ import unittest
 
 from bootstrap import HERE
 import numpy as np
-from joint_env import JointEpisode, JointAction, catalog, random_scenarios
+from joint_env import JointEpisode, JointAction, catalog, random_scenarios, remaining_discount_tiers
+from maa_value_plugin.critic.environment import Episode, sim
 from joint_model import Baseline, JointCritic, encode_joint, play, delta_notes
 from joint_env import note_progress
 
@@ -77,11 +78,110 @@ class JointTests(unittest.TestCase):
         self.assertFalse(any(action.kind == "SWAP" for action in a.actions))
 
     def test_event_cannot_spend_missing_notes(self):
-        env = JointEpisode(self.config, 34)
-        env.notes = (0,) * 13
-        env.ep.state = replace(env.ep.state, phase="EVENT", eventId=103,
-                               eventOptions=(0, 10301, 10302), seen=(103,))
+        env = self.event(103, (0, 10301, 10302), notes=0)
         self.assertFalse(any(a.base and a.base.index == 10301 for a in env.actions))
+        self.assertEqual({a.base.index for a in env.actions}, {0, 10302})
+        env.step(next(a for a in env.actions if a.base.index == 10302))
+        self.assertEqual(sum(env.notes), 0)
+
+    def event(self, eid, options, notes=50, coins=1000):
+        env = JointEpisode(self.config, 34)
+        env.notes = (notes,) + (0,)*12
+        env.ep.state = replace(env.ep.state, phase="EVENT", eventId=eid,
+                               eventOptions=tuple(options), seen=(eid,), coins=coins,
+                               node=len(sim.ROUTE)+1, floor=20, source=None, offer=())
+        env.crossed = len(sim.ROUTE)
+        return env
+
+    def test_every_exposed_note_event_executes_and_charges_exactly(self):
+        for eid, ids, quantity in ((107, range(10701, 10709), 5),
+                                  (108, range(10801, 10809), 10),
+                                  (114, range(11401, 11406), 10)):
+            for oid in ids:
+                with self.subTest(option=oid):
+                    env = self.event(eid, (0, oid))
+                    snapshot = json.loads(json.dumps(env.snapshot()))
+                    branch = JointEpisode.from_public(snapshot, 98)
+                    action = next(a for a in branch.actions if a.base.index == oid)
+                    branch.step(action)
+                    self.assertEqual(sum(branch.notes), 50+quantity)
+                    self.assertEqual(branch.ep.state.coins, 1000-sim.EVENT_DATA[eid][2][oid][0])
+                    self.assertEqual(branch.phase, "ADJUST")
+                    self.assertEqual(sum(env.notes), 50)
+                    if eid in (107, 108) and oid % 100 <= 7:
+                        self.assertEqual(branch.notes[oid % 100-1], env.notes[oid % 100-1]+quantity)
+
+    def test_event_visibility_wallet_and_note_cost_boundaries(self):
+        for notes in (0, 4, 5, 9, 10, 50):
+            env = self.event(103, (0, 10301, 10302), notes)
+            self.assertEqual({a.base.index for a in env.actions},
+                             {0, 10302} | ({10301} if notes >= 5 else set()))
+            if notes >= 5:
+                env.step(next(a for a in env.actions if a.base.index == 10301))
+                self.assertEqual(sum(env.notes), notes-5)
+                self.assertEqual(env.ep.state.coins, 1150)
+            env = self.event(104, (0, 10401, 10402, 10403), notes, 200)
+            self.assertIn(10402, {a.base.index for a in env.actions})
+            self.assertEqual(10401 in {a.base.index for a in env.actions}, notes >= 10)
+            if notes >= 10:
+                env.step(next(a for a in env.actions if a.base.index == 10401))
+                self.assertEqual(sum(env.notes), notes-10)
+            paid = self.event(104, (0, 10401, 10402, 10403), notes, 200)
+            paid.step(next(a for a in paid.actions if a.base.index == 10402))
+            self.assertEqual(sum(paid.notes), notes)
+            self.assertEqual(paid.ep.state.coins, 0)
+        for coins in (89, 90, 139, 140):
+            env = self.event(108, (0, 10801, 10808), coins=coins)
+            ids = {a.base.index for a in env.actions}
+            self.assertEqual(ids, {0} | ({10808} if coins >= 90 else set()) |
+                             ({10801} if coins >= 140 else set()))
+            self.assertNotIn(10802, ids)  # Not visible: no fabricated action.
+        env = self.event(105, (0, 10501, 10502, 10503), coins=99)
+        self.assertEqual({a.base.index for a in env.actions}, {0, 10503})
+        with self.assertRaises(ValueError):
+            env.step(JointAction("BASE", base=sim.Action("EVENT_OPTION", 10501, 0, 105)))
+
+    def test_joint_shelf_constraints_initial_and_restock(self):
+        env = JointEpisode(self.config, 32)
+        policy = Baseline()
+        generations = 0
+        while not env.done:
+            if env.phase == "SHOP":
+                stock = env.ep.state.stock
+                if sum(map(sum, stock)) + sum(i.stock for i in env.shelf) == 8:
+                    half = sum(row[0] for row in stock)
+                    discounted = sum(row[0]+row[1] for row in stock)
+                    for item in env.shelf:
+                        quantity = sum(q for _, q in item.contents)
+                        discounted += item.price < {5: 90, 15: 400}[quantity]
+                        half += item.price == {5: 45, 15: 200}[quantity]
+                    self.assertEqual(discounted, 4)
+                    self.assertLessEqual(half, 2)
+                    generations += 1
+                restock = next((a for a in env.actions if a.base and a.base.kind == "RESTOCK"), None)
+                if restock:
+                    env.step(restock)
+                    continue
+            env.step(policy(env))
+        self.assertGreaterEqual(generations, 6)  # All initial shops plus refreshes.
+
+    def test_discount_conditioning_and_frozen_kernel_unchanged(self):
+        # Three 20%-off drinks reveal that at most one of the four discounted
+        # positions can be half-price. Bayes gives P(H=1)=.189/(.189+4*.027).
+        rng = Random(451)
+        samples = [remaining_discount_tiers(((0, 3, 0), (0, 0, 0)), rng) for _ in range(3000)]
+        self.assertTrue(all(len(t) == 5 and sum(x < 2 for x in t) == 1 for t in samples))
+        observed = sum(0 in t for t in samples)/len(samples)
+        self.assertAlmostEqual(observed, .189/(.189+4*.027), delta=.03)
+        middle = [remaining_discount_tiers(((0, 3, 0), (0, 0, 0)), rng,
+                                         middle_initial=True) for _ in range(3000)]
+        self.assertAlmostEqual(sum(0 in t for t in middle)/len(middle),
+                               .140625/(.140625+4*.015625), delta=.03)
+        # The ordinary Episode still applies its original pruning.
+        joint = self.event(103, (0, 10301, 10302))
+        ordinary = Episode.from_public(joint.ep.state, 4, joint.preset)
+        self.assertEqual({a.index for a in ordinary.actions}, {10301})
+        self.assertEqual({a.base.index for a in joint.actions}, {0, 10301, 10302})
 
     def test_zero_residual_reproduces_greedy_preferences(self):
         env = JointEpisode(self.config, 32)

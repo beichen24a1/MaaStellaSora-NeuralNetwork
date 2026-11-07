@@ -24,9 +24,9 @@ python3 build_installer.py
 
 [`research/concerto_joint/`](research/concerto_joint/README.md) 提供音符／协奏与普通潜能联合决策的独立实验模块，包含训练、冻结权重、公共 JSON 推理接口和完整留出评测。它不更改插件当前默认模型；成绩只适用于文档列明的模拟规则与实验目标。
 
-原 `joint_v2` 因音符价格 OCR 污染已作废；已重新生成标签、重训和评测，新模型尚未显著优于规则。详见 [价格审计](research/concerto_joint/PRICE_AUDIT.md)。
+原 `joint_v2` 因音符价格 OCR 污染、`joint_v3_prices_clean` 因环境缺陷作废。当前活动运行是 `joint_v4_env_fixed`，使用新规则重新生成标签、训练和评测；推荐状态以当前报告为准。
 
-进一步环境审计发现待修复的事件动作与整架折扣问题，PR 暂缓合并；见 [环境审计](research/concerto_joint/ENVIRONMENT_AUDIT.md)。
+已修复音符事件动作过滤、普通目标剪枝和整架折扣约束，见 [环境修复](research/concerto_joint/ENVIRONMENT_FIX.md)；实际掉落和调整规则仍待实测验证。
 
 ## 许可
 

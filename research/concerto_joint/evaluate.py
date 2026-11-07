@@ -129,7 +129,7 @@ def evaluate(checkpoint, rounds=32, seed=20401107, stress_rounds=8):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", default="joint_v3_prices_clean")
+    parser.add_argument("--run", default="joint_v4_env_fixed")
     parser.add_argument("--rounds", type=int, default=32)
     parser.add_argument("--stress-rounds", type=int, default=8)
     parser.add_argument("--seed", type=int, default=20401107)

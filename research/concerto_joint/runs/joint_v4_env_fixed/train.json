@@ -1,0 +1,5354 @@
+{
+  "feature_version": "joint_public_action_v2_greedy_residual",
+  "rules": {
+    "version": "joint_offline_v3_environment_fixed",
+    "note_prices": "Quantity-specific legal prices; confirmed 9045->45 and 9072->72 OCR concatenations repaired before aggregation; unknown values fail validation",
+    "ordinary_kernel": "state_space_s75_l5of11_v2",
+    "ordinary_route": "unchanged frozen 45-node route",
+    "shelves": "Keep kernel drinks; sample remaining discount tiers from the exact conditional four-of-eight shelf law (at most two half-price slots), then empirical marginal note sizes; middle initial shops retain the kernel half-price prior",
+    "note_product_identity": "Uniform among tower drop-group notes, independent of selected skills",
+    "battle_notes": "Eight individual uniform draws per battle by default; uncalibrated, evaluate sensitivity",
+    "initial_supply": "Actual local wiki per-sigil supportSupply, not a blanket eight per type",
+    "note_events": "Client-table effects with uniform random-note draws; generic fixed-note IDs 10701..10707; any-note costs use a deterministic least-loss donor",
+    "visibility": "All modeled note options exposed for 107/108/114; actual server option sampling is unknown",
+    "event_legality": "All visible table options, without ordinary-objective dominance pruning; coin costs, every positive-mass wallet outcome and note costs checked before selection",
+    "adjustments": "At terminal, at most 15 one-for-one transfers between any owned donor and a required target; legality/timing need game evidence",
+    "objective": "Separate ordinary/concerto returns; lambda is an experimental preference, not measured damage",
+    "scope": "Offline research only, no Maa or live-game integration"
+  },
+  "seed": 20261107,
+  "episodes_requested": 64,
+  "rollouts_per_action": 2,
+  "roots": [
+    {
+      "game": 0,
+      "seed": "14866485014540438012",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "13292639874187679434"
+    },
+    {
+      "game": 0,
+      "seed": "14866485014540438012",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "9413408743888679832"
+    },
+    {
+      "game": 0,
+      "seed": "14866485014540438012",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "15255559854699986913"
+    },
+    {
+      "game": 0,
+      "seed": "14866485014540438012",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "3402701398964736723"
+    },
+    {
+      "game": 1,
+      "seed": "3464932963885124462",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1259446812397505343"
+    },
+    {
+      "game": 1,
+      "seed": "3464932963885124462",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "12784131770887661942"
+    },
+    {
+      "game": 1,
+      "seed": "3464932963885124462",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "12784315367442450141"
+    },
+    {
+      "game": 1,
+      "seed": "3464932963885124462",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "316940216016115148"
+    },
+    {
+      "game": 2,
+      "seed": "3299759754678363855",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "8354029205323812074"
+    },
+    {
+      "game": 2,
+      "seed": "3299759754678363855",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "6690365552979105871"
+    },
+    {
+      "game": 2,
+      "seed": "3299759754678363855",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "11824661369785746069"
+    },
+    {
+      "game": 2,
+      "seed": "3299759754678363855",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "10595098193381938168"
+    },
+    {
+      "game": 3,
+      "seed": "9616829735405617287",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "8628026521093112351"
+    },
+    {
+      "game": 3,
+      "seed": "9616829735405617287",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "16132819255041942506"
+    },
+    {
+      "game": 3,
+      "seed": "9616829735405617287",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "2382397238137756723"
+    },
+    {
+      "game": 3,
+      "seed": "9616829735405617287",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_114_011401",
+        "07_EVENT_114_011402",
+        "07_EVENT_114_011403",
+        "07_EVENT_114_011404",
+        "07_EVENT_114_011405"
+      ],
+      "samples": 6,
+      "root_seed": "1321090041288492498"
+    },
+    {
+      "game": 4,
+      "seed": "10997204948620394326",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "1748422465449071787"
+    },
+    {
+      "game": 4,
+      "seed": "10997204948620394326",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "3128688033469768085"
+    },
+    {
+      "game": 4,
+      "seed": "10997204948620394326",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "18381789949303664113"
+    },
+    {
+      "game": 4,
+      "seed": "10997204948620394326",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_114_011401",
+        "07_EVENT_114_011402",
+        "07_EVENT_114_011403",
+        "07_EVENT_114_011404",
+        "07_EVENT_114_011405"
+      ],
+      "samples": 6,
+      "root_seed": "14899912709306597988"
+    },
+    {
+      "game": 5,
+      "seed": "8852764957972422054",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "8663439213378619456"
+    },
+    {
+      "game": 5,
+      "seed": "8852764957972422054",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "10478591455155358931"
+    },
+    {
+      "game": 5,
+      "seed": "8852764957972422054",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "16372113862652049753"
+    },
+    {
+      "game": 5,
+      "seed": "8852764957972422054",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010702",
+        "07_EVENT_107_010703",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010705",
+        "07_EVENT_107_010706",
+        "07_EVENT_107_010707",
+        "07_EVENT_107_010708"
+      ],
+      "samples": 9,
+      "root_seed": "8287663959389959889"
+    },
+    {
+      "game": 6,
+      "seed": "2875880391544453592",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "13256786247702217508"
+    },
+    {
+      "game": 6,
+      "seed": "2875880391544453592",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "13921712519982573998"
+    },
+    {
+      "game": 6,
+      "seed": "2875880391544453592",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "2042396554610063145"
+    },
+    {
+      "game": 6,
+      "seed": "2875880391544453592",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_127_012701",
+        "07_EVENT_127_012702"
+      ],
+      "samples": 3,
+      "root_seed": "16365203031569652966"
+    },
+    {
+      "game": 7,
+      "seed": "17104990341378620439",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "17162744050117940884"
+    },
+    {
+      "game": 7,
+      "seed": "17104990341378620439",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "717037664389575307"
+    },
+    {
+      "game": 7,
+      "seed": "17104990341378620439",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "2219050368830217635"
+    },
+    {
+      "game": 7,
+      "seed": "17104990341378620439",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "946045433941868510"
+    },
+    {
+      "game": 8,
+      "seed": "9434626984265747080",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "8682990398243813097"
+    },
+    {
+      "game": 8,
+      "seed": "9434626984265747080",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "448774126207074170"
+    },
+    {
+      "game": 8,
+      "seed": "9434626984265747080",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "15701485390303743145"
+    },
+    {
+      "game": 8,
+      "seed": "9434626984265747080",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "14762996453040578838"
+    },
+    {
+      "game": 9,
+      "seed": "15138315586485144215",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "14954958510867851605"
+    },
+    {
+      "game": 9,
+      "seed": "15138315586485144215",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "14868087319496044362"
+    },
+    {
+      "game": 9,
+      "seed": "15138315586485144215",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "5817141996119719896"
+    },
+    {
+      "game": 9,
+      "seed": "15138315586485144215",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_127_012701",
+        "07_EVENT_127_012702"
+      ],
+      "samples": 3,
+      "root_seed": "17182349717270363689"
+    },
+    {
+      "game": 10,
+      "seed": "1326581733411452296",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "15935273074598115014"
+    },
+    {
+      "game": 10,
+      "seed": "1326581733411452296",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 4,
+      "root_seed": "8051965561460087455"
+    },
+    {
+      "game": 10,
+      "seed": "1326581733411452296",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "10053625493810257903"
+    },
+    {
+      "game": 10,
+      "seed": "1326581733411452296",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "7602039229269467102"
+    },
+    {
+      "game": 11,
+      "seed": "12255206899446524328",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0540",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "12465241302532501390"
+    },
+    {
+      "game": 11,
+      "seed": "12255206899446524328",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0540",
+        "05_BUY_01_0160",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "7400870851867014245"
+    },
+    {
+      "game": 11,
+      "seed": "12255206899446524328",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "6694893579578860853"
+    },
+    {
+      "game": 11,
+      "seed": "12255206899446524328",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_127_012701",
+        "07_EVENT_127_012702"
+      ],
+      "samples": 3,
+      "root_seed": "8900795553037320368"
+    },
+    {
+      "game": 12,
+      "seed": "11141407120685411731",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "10093219370283840306"
+    },
+    {
+      "game": 12,
+      "seed": "11141407120685411731",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "12603412818524946558"
+    },
+    {
+      "game": 12,
+      "seed": "11141407120685411731",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "5918819753173787079"
+    },
+    {
+      "game": 12,
+      "seed": "11141407120685411731",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_102_010201",
+        "07_EVENT_102_010202",
+        "07_EVENT_102_010203",
+        "07_EVENT_102_010204"
+      ],
+      "samples": 5,
+      "root_seed": "16454594507911960881"
+    },
+    {
+      "game": 13,
+      "seed": "5445104218239918761",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "9955449981442934142"
+    },
+    {
+      "game": 13,
+      "seed": "5445104218239918761",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:3:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "15398198821324835009"
+    },
+    {
+      "game": 13,
+      "seed": "5445104218239918761",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "16227380266448384895"
+    },
+    {
+      "game": 13,
+      "seed": "5445104218239918761",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_125_012501",
+        "07_EVENT_125_012502",
+        "07_EVENT_125_012503"
+      ],
+      "samples": 4,
+      "root_seed": "438626949688822083"
+    },
+    {
+      "game": 14,
+      "seed": "11299267089128768944",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "8183304721999832034"
+    },
+    {
+      "game": 14,
+      "seed": "11299267089128768944",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "16949806089594544678"
+    },
+    {
+      "game": 14,
+      "seed": "11299267089128768944",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "2137110591704112079"
+    },
+    {
+      "game": 14,
+      "seed": "11299267089128768944",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "11637484009088032065"
+    },
+    {
+      "game": 15,
+      "seed": "5346348433798743446",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE"
+      ],
+      "samples": 4,
+      "root_seed": "15621261527403034006"
+    },
+    {
+      "game": 15,
+      "seed": "5346348433798743446",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE"
+      ],
+      "samples": 4,
+      "root_seed": "15701345421706531336"
+    },
+    {
+      "game": 15,
+      "seed": "5346348433798743446",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "6364517904183887372"
+    },
+    {
+      "game": 15,
+      "seed": "5346348433798743446",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "5942010608475531042"
+    },
+    {
+      "game": 16,
+      "seed": "3021350183044767789",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0340",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1933474756920425386"
+    },
+    {
+      "game": 16,
+      "seed": "3021350183044767789",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "17216632575936719571"
+    },
+    {
+      "game": 16,
+      "seed": "3021350183044767789",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0340",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1606698477430299040"
+    },
+    {
+      "game": 16,
+      "seed": "3021350183044767789",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "2702527072747067683"
+    },
+    {
+      "game": 17,
+      "seed": "9850839646664160709",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "11641104053136888948"
+    },
+    {
+      "game": 17,
+      "seed": "9850839646664160709",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "8637298554175195669"
+    },
+    {
+      "game": 17,
+      "seed": "9850839646664160709",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "8310355335017638001"
+    },
+    {
+      "game": 17,
+      "seed": "9850839646664160709",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "12211700436739788960"
+    },
+    {
+      "game": 18,
+      "seed": "13320251285546058514",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE"
+      ],
+      "samples": 5,
+      "root_seed": "12205042769334018759"
+    },
+    {
+      "game": 18,
+      "seed": "13320251285546058514",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "5199623953553546223"
+    },
+    {
+      "game": 18,
+      "seed": "13320251285546058514",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "2243982179198064596"
+    },
+    {
+      "game": 18,
+      "seed": "13320251285546058514",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "9637870091183378572"
+    },
+    {
+      "game": 19,
+      "seed": "3671494506972513750",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "11823612267797711162"
+    },
+    {
+      "game": 19,
+      "seed": "3671494506972513750",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "8979233599378774815"
+    },
+    {
+      "game": 19,
+      "seed": "3671494506972513750",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "10556066909860626560"
+    },
+    {
+      "game": 19,
+      "seed": "3671494506972513750",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "3170038283437020580"
+    },
+    {
+      "game": 20,
+      "seed": "3599725081839216606",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "08_02_LEAVE",
+        "NOTE:2:0:0"
+      ],
+      "samples": 3,
+      "root_seed": "8898852376590065591"
+    },
+    {
+      "game": 20,
+      "seed": "3599725081839216606",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "08_02_LEAVE"
+      ],
+      "samples": 2,
+      "root_seed": "11831924975926118481"
+    },
+    {
+      "game": 20,
+      "seed": "3599725081839216606",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "8520412526706360304"
+    },
+    {
+      "game": 20,
+      "seed": "3599725081839216606",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_114_011401",
+        "07_EVENT_114_011402",
+        "07_EVENT_114_011403",
+        "07_EVENT_114_011404",
+        "07_EVENT_114_011405"
+      ],
+      "samples": 6,
+      "root_seed": "3795443121944058252"
+    },
+    {
+      "game": 21,
+      "seed": "18378928662162266483",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:1:0:0"
+      ],
+      "samples": 3,
+      "root_seed": "13762069111057218480"
+    },
+    {
+      "game": 21,
+      "seed": "18378928662162266483",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "3419926725318785986"
+    },
+    {
+      "game": 21,
+      "seed": "18378928662162266483",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "5837563041489674304"
+    },
+    {
+      "game": 21,
+      "seed": "18378928662162266483",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_126_012601",
+        "07_EVENT_126_012602"
+      ],
+      "samples": 3,
+      "root_seed": "2753878396763547866"
+    },
+    {
+      "game": 22,
+      "seed": "16098193966171249109",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "14057558513668355098"
+    },
+    {
+      "game": 22,
+      "seed": "16098193966171249109",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "17010289698633793955"
+    },
+    {
+      "game": 22,
+      "seed": "16098193966171249109",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "17524903408409534413"
+    },
+    {
+      "game": 22,
+      "seed": "16098193966171249109",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_114_011401",
+        "07_EVENT_114_011402",
+        "07_EVENT_114_011403",
+        "07_EVENT_114_011404",
+        "07_EVENT_114_011405"
+      ],
+      "samples": 6,
+      "root_seed": "12307075600897861006"
+    },
+    {
+      "game": 23,
+      "seed": "15410222417859311897",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "17336791065316012565"
+    },
+    {
+      "game": 23,
+      "seed": "15410222417859311897",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 4,
+      "root_seed": "13685672164472291746"
+    },
+    {
+      "game": 23,
+      "seed": "15410222417859311897",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "16597722753096787722"
+    },
+    {
+      "game": 23,
+      "seed": "15410222417859311897",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_120_012001",
+        "07_EVENT_120_012002"
+      ],
+      "samples": 3,
+      "root_seed": "14975997257683801906"
+    },
+    {
+      "game": 24,
+      "seed": "8399403093395696463",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "2834690939741345276"
+    },
+    {
+      "game": 24,
+      "seed": "8399403093395696463",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "3117288036202546333"
+    },
+    {
+      "game": 24,
+      "seed": "8399403093395696463",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "6769983733960235726"
+    },
+    {
+      "game": 24,
+      "seed": "8399403093395696463",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_128_012801",
+        "07_EVENT_128_012802"
+      ],
+      "samples": 3,
+      "root_seed": "7116769223030958208"
+    },
+    {
+      "game": 25,
+      "seed": "14688018305463965752",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "4072794604551335669"
+    },
+    {
+      "game": 25,
+      "seed": "14688018305463965752",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "8204778232630085240"
+    },
+    {
+      "game": 25,
+      "seed": "14688018305463965752",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "15017440254614035295"
+    },
+    {
+      "game": 25,
+      "seed": "14688018305463965752",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "7811517262497468395"
+    },
+    {
+      "game": 26,
+      "seed": "11899084081837250943",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:3:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "8842828965517546174"
+    },
+    {
+      "game": 26,
+      "seed": "11899084081837250943",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "4894851169896525097"
+    },
+    {
+      "game": 26,
+      "seed": "11899084081837250943",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "977155514736122914"
+    },
+    {
+      "game": 26,
+      "seed": "11899084081837250943",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "1655381102431088960"
+    },
+    {
+      "game": 27,
+      "seed": "10054996582551533526",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "5944842262246687245"
+    },
+    {
+      "game": 27,
+      "seed": "10054996582551533526",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "16461025635525338695"
+    },
+    {
+      "game": 27,
+      "seed": "10054996582551533526",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "14654812132761168572"
+    },
+    {
+      "game": 27,
+      "seed": "10054996582551533526",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "15532978824055698987"
+    },
+    {
+      "game": 28,
+      "seed": "9702520180031112126",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "3003860046513918067"
+    },
+    {
+      "game": 28,
+      "seed": "9702520180031112126",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "6347105775082988951"
+    },
+    {
+      "game": 28,
+      "seed": "9702520180031112126",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "12416783826988158271"
+    },
+    {
+      "game": 28,
+      "seed": "9702520180031112126",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "3307532545099837490"
+    },
+    {
+      "game": 29,
+      "seed": "17931774315175063264",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "5392189184432137381"
+    },
+    {
+      "game": 29,
+      "seed": "17931774315175063264",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "13199098687715236116"
+    },
+    {
+      "game": 29,
+      "seed": "17931774315175063264",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "4211276874510667788"
+    },
+    {
+      "game": 29,
+      "seed": "17931774315175063264",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_112_011201",
+        "07_EVENT_112_011202"
+      ],
+      "samples": 3,
+      "root_seed": "13978805584694086791"
+    },
+    {
+      "game": 30,
+      "seed": "7039511299805598047",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0"
+      ],
+      "samples": 4,
+      "root_seed": "1782643420281943460"
+    },
+    {
+      "game": 30,
+      "seed": "7039511299805598047",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "5542142988185625229"
+    },
+    {
+      "game": 30,
+      "seed": "7039511299805598047",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "6574441347352775763"
+    },
+    {
+      "game": 30,
+      "seed": "7039511299805598047",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "11961572822450270147"
+    },
+    {
+      "game": 31,
+      "seed": "5624432356468392304",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0540",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:1:0:0"
+      ],
+      "samples": 4,
+      "root_seed": "12313274182638150840"
+    },
+    {
+      "game": 31,
+      "seed": "5624432356468392304",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0540",
+        "05_BUY_01_0200",
+        "08_02_LEAVE"
+      ],
+      "samples": 3,
+      "root_seed": "3376558244561366262"
+    },
+    {
+      "game": 31,
+      "seed": "5624432356468392304",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "13154449598334008467"
+    },
+    {
+      "game": 31,
+      "seed": "5624432356468392304",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010702",
+        "07_EVENT_107_010703",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010705",
+        "07_EVENT_107_010706",
+        "07_EVENT_107_010707",
+        "07_EVENT_107_010708"
+      ],
+      "samples": 9,
+      "root_seed": "4246701220447660277"
+    },
+    {
+      "game": 32,
+      "seed": "5422833746788846214",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "6576238559218385325"
+    },
+    {
+      "game": 32,
+      "seed": "5422833746788846214",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "6561809132208234100"
+    },
+    {
+      "game": 32,
+      "seed": "5422833746788846214",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "18056992642471962756"
+    },
+    {
+      "game": 32,
+      "seed": "5422833746788846214",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010702",
+        "07_EVENT_107_010703",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010705",
+        "07_EVENT_107_010706",
+        "07_EVENT_107_010707",
+        "07_EVENT_107_010708"
+      ],
+      "samples": 9,
+      "root_seed": "2328849246140226926"
+    },
+    {
+      "game": 33,
+      "seed": "3137599563202122078",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "12343569597009671032"
+    },
+    {
+      "game": 33,
+      "seed": "3137599563202122078",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "17244640791930290094"
+    },
+    {
+      "game": 33,
+      "seed": "3137599563202122078",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "972746214866848433"
+    },
+    {
+      "game": 33,
+      "seed": "3137599563202122078",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_101_010101",
+        "07_EVENT_101_010102",
+        "07_EVENT_101_010103"
+      ],
+      "samples": 4,
+      "root_seed": "410125334328931592"
+    },
+    {
+      "game": 34,
+      "seed": "13560633997982070458",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "14348083815960402784"
+    },
+    {
+      "game": 34,
+      "seed": "13560633997982070458",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "3907834622279424884"
+    },
+    {
+      "game": 34,
+      "seed": "13560633997982070458",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "17470076750845334464"
+    },
+    {
+      "game": 34,
+      "seed": "13560633997982070458",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "1637601881029781995"
+    },
+    {
+      "game": 35,
+      "seed": "14950432451608232069",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "3234379655634646665"
+    },
+    {
+      "game": 35,
+      "seed": "14950432451608232069",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "11605006246641104550"
+    },
+    {
+      "game": 35,
+      "seed": "14950432451608232069",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 3,
+      "root_seed": "2871762132279801587"
+    },
+    {
+      "game": 35,
+      "seed": "14950432451608232069",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "3333366314056779012"
+    },
+    {
+      "game": 36,
+      "seed": "15676243433671169994",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "891473933888410990"
+    },
+    {
+      "game": 36,
+      "seed": "15676243433671169994",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "8554669091937089453"
+    },
+    {
+      "game": 36,
+      "seed": "15676243433671169994",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 4,
+      "root_seed": "12640280128124792699"
+    },
+    {
+      "game": 36,
+      "seed": "15676243433671169994",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "15146531703702759618"
+    },
+    {
+      "game": 37,
+      "seed": "10114628843667978729",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "8934796364921469110"
+    },
+    {
+      "game": 37,
+      "seed": "10114628843667978729",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "1534363801858448400"
+    },
+    {
+      "game": 37,
+      "seed": "10114628843667978729",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "6328005429251598551"
+    },
+    {
+      "game": 37,
+      "seed": "10114628843667978729",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "17557316250429800052"
+    },
+    {
+      "game": 38,
+      "seed": "16944527089530996616",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "15875173994190391302"
+    },
+    {
+      "game": 38,
+      "seed": "16944527089530996616",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "18047487118501320832"
+    },
+    {
+      "game": 38,
+      "seed": "16944527089530996616",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0100",
+        "05_BUY_02_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "5088786787942864982"
+    },
+    {
+      "game": 38,
+      "seed": "16944527089530996616",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_101_010101",
+        "07_EVENT_101_010102",
+        "07_EVENT_101_010103"
+      ],
+      "samples": 4,
+      "root_seed": "5185311921662513257"
+    },
+    {
+      "game": 39,
+      "seed": "11952323673955963498",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "2133794841659214470"
+    },
+    {
+      "game": 39,
+      "seed": "11952323673955963498",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "15643004906377607882"
+    },
+    {
+      "game": 39,
+      "seed": "11952323673955963498",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "1270577885343175287"
+    },
+    {
+      "game": 39,
+      "seed": "11952323673955963498",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "9893478241470587868"
+    },
+    {
+      "game": 40,
+      "seed": "14184246934760545841",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "282206306660832711"
+    },
+    {
+      "game": 40,
+      "seed": "14184246934760545841",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "14589566934202047788"
+    },
+    {
+      "game": 40,
+      "seed": "14184246934760545841",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "15195378711799874032"
+    },
+    {
+      "game": 40,
+      "seed": "14184246934760545841",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_127_012701",
+        "07_EVENT_127_012702"
+      ],
+      "samples": 3,
+      "root_seed": "11503140945629335948"
+    },
+    {
+      "game": 41,
+      "seed": "15803729387574023075",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "2402460505559108038"
+    },
+    {
+      "game": 41,
+      "seed": "15803729387574023075",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "4106300634036242402"
+    },
+    {
+      "game": 41,
+      "seed": "15803729387574023075",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "10858471072748989550"
+    },
+    {
+      "game": 41,
+      "seed": "15803729387574023075",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "8042295390364722110"
+    },
+    {
+      "game": 42,
+      "seed": "14700793607807910233",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "13318501195155796884"
+    },
+    {
+      "game": 42,
+      "seed": "14700793607807910233",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "3227218933641546430"
+    },
+    {
+      "game": 42,
+      "seed": "14700793607807910233",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "844219840815513451"
+    },
+    {
+      "game": 42,
+      "seed": "14700793607807910233",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_114_011401",
+        "07_EVENT_114_011402",
+        "07_EVENT_114_011403",
+        "07_EVENT_114_011404",
+        "07_EVENT_114_011405"
+      ],
+      "samples": 6,
+      "root_seed": "14736593479471126307"
+    },
+    {
+      "game": 43,
+      "seed": "14992933615230980049",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "15479637236407366959"
+    },
+    {
+      "game": 43,
+      "seed": "14992933615230980049",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "12507653145892864463"
+    },
+    {
+      "game": 43,
+      "seed": "14992933615230980049",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "2454735266335558"
+    },
+    {
+      "game": 43,
+      "seed": "14992933615230980049",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_118_011801",
+        "07_EVENT_118_011802"
+      ],
+      "samples": 3,
+      "root_seed": "14930503230908865793"
+    },
+    {
+      "game": 44,
+      "seed": "8519556125860603508",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0100",
+        "08_02_LEAVE"
+      ],
+      "samples": 3,
+      "root_seed": "11630683080981234678"
+    },
+    {
+      "game": 44,
+      "seed": "8519556125860603508",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "9790752940121986518"
+    },
+    {
+      "game": 44,
+      "seed": "8519556125860603508",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "08_02_LEAVE",
+        "NOTE:1:0:0"
+      ],
+      "samples": 4,
+      "root_seed": "13361061002379323526"
+    },
+    {
+      "game": 44,
+      "seed": "8519556125860603508",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_106_010601",
+        "07_EVENT_106_010602",
+        "07_EVENT_106_010603"
+      ],
+      "samples": 4,
+      "root_seed": "567311458303270764"
+    },
+    {
+      "game": 45,
+      "seed": "5212897780195054034",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1215159066512563502"
+    },
+    {
+      "game": 45,
+      "seed": "5212897780195054034",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "8358228552462747510"
+    },
+    {
+      "game": 45,
+      "seed": "5212897780195054034",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "1386991694897851639"
+    },
+    {
+      "game": 45,
+      "seed": "5212897780195054034",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010702",
+        "07_EVENT_107_010703",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010705",
+        "07_EVENT_107_010706",
+        "07_EVENT_107_010707",
+        "07_EVENT_107_010708"
+      ],
+      "samples": 9,
+      "root_seed": "11912858331844157723"
+    },
+    {
+      "game": 46,
+      "seed": "1358089140508286367",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "13481530865433101659"
+    },
+    {
+      "game": 46,
+      "seed": "1358089140508286367",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "7429761022655964602"
+    },
+    {
+      "game": 46,
+      "seed": "1358089140508286367",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "10048906267168394140"
+    },
+    {
+      "game": 46,
+      "seed": "1358089140508286367",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010702",
+        "07_EVENT_107_010703",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010705",
+        "07_EVENT_107_010706",
+        "07_EVENT_107_010707",
+        "07_EVENT_107_010708"
+      ],
+      "samples": 9,
+      "root_seed": "5245787986554947693"
+    },
+    {
+      "game": 47,
+      "seed": "3362652001625767558",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "112180571076228671"
+    },
+    {
+      "game": 47,
+      "seed": "3362652001625767558",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "15096626277127283765"
+    },
+    {
+      "game": 47,
+      "seed": "3362652001625767558",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "10747155325129278940"
+    },
+    {
+      "game": 47,
+      "seed": "3362652001625767558",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_121_012101",
+        "07_EVENT_121_012102"
+      ],
+      "samples": 3,
+      "root_seed": "14244727014795579001"
+    },
+    {
+      "game": 48,
+      "seed": "15961181207916174787",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "5183810328310889727"
+    },
+    {
+      "game": 48,
+      "seed": "15961181207916174787",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "3579389425721987976"
+    },
+    {
+      "game": 48,
+      "seed": "15961181207916174787",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "956094150035644990"
+    },
+    {
+      "game": 48,
+      "seed": "15961181207916174787",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_120_012001",
+        "07_EVENT_120_012002"
+      ],
+      "samples": 3,
+      "root_seed": "10689371532990813235"
+    },
+    {
+      "game": 49,
+      "seed": "1263502100109348766",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "12453485992667473741"
+    },
+    {
+      "game": 49,
+      "seed": "1263502100109348766",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "9378773435852393065"
+    },
+    {
+      "game": 49,
+      "seed": "1263502100109348766",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "5935902092293374025"
+    },
+    {
+      "game": 49,
+      "seed": "1263502100109348766",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "5796230737949535859"
+    },
+    {
+      "game": 50,
+      "seed": "15166209998169368307",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "892836220421419448"
+    },
+    {
+      "game": 50,
+      "seed": "15166209998169368307",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "5044545543753338951"
+    },
+    {
+      "game": 50,
+      "seed": "15166209998169368307",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "18321843027398761998"
+    },
+    {
+      "game": 50,
+      "seed": "15166209998169368307",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "3847951126312212646"
+    },
+    {
+      "game": 51,
+      "seed": "1237970174158563794",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1553311905339754810"
+    },
+    {
+      "game": 51,
+      "seed": "1237970174158563794",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "16399621201789576032"
+    },
+    {
+      "game": 51,
+      "seed": "1237970174158563794",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "14001818263532730282"
+    },
+    {
+      "game": 51,
+      "seed": "1237970174158563794",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_124_012401",
+        "07_EVENT_124_012402"
+      ],
+      "samples": 3,
+      "root_seed": "14899786889060371047"
+    },
+    {
+      "game": 52,
+      "seed": "7991602158699071162",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "5188914021735797216"
+    },
+    {
+      "game": 52,
+      "seed": "7991602158699071162",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "15410640797938158376"
+    },
+    {
+      "game": 52,
+      "seed": "7991602158699071162",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:2:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "3687876341110214467"
+    },
+    {
+      "game": 52,
+      "seed": "7991602158699071162",
+      "config_fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_110_011001",
+        "07_EVENT_110_011002"
+      ],
+      "samples": 3,
+      "root_seed": "737365498474728280"
+    },
+    {
+      "game": 53,
+      "seed": "16695355586321705608",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "5585675660962343188"
+    },
+    {
+      "game": 53,
+      "seed": "16695355586321705608",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "5453190302902043697"
+    },
+    {
+      "game": 53,
+      "seed": "16695355586321705608",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "6529942041330415215"
+    },
+    {
+      "game": 53,
+      "seed": "16695355586321705608",
+      "config_fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "16291334790200832877"
+    },
+    {
+      "game": 54,
+      "seed": "12798906594079469876",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "14379922801317610533"
+    },
+    {
+      "game": 54,
+      "seed": "12798906594079469876",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "3369233659786868858"
+    },
+    {
+      "game": 54,
+      "seed": "12798906594079469876",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "7919638079567223212"
+    },
+    {
+      "game": 54,
+      "seed": "12798906594079469876",
+      "config_fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "5199543245923425088"
+    },
+    {
+      "game": 55,
+      "seed": "13877867233755152109",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 5,
+      "root_seed": "14086647064522819367"
+    },
+    {
+      "game": 55,
+      "seed": "13877867233755152109",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "7577618329880517664"
+    },
+    {
+      "game": 55,
+      "seed": "13877867233755152109",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "12656470484699480298"
+    },
+    {
+      "game": 55,
+      "seed": "13877867233755152109",
+      "config_fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_124_012401",
+        "07_EVENT_124_012402"
+      ],
+      "samples": 3,
+      "root_seed": "4854097735506335224"
+    },
+    {
+      "game": 56,
+      "seed": "18371189441574335651",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "08_02_LEAVE"
+      ],
+      "samples": 3,
+      "root_seed": "8788235983814072243"
+    },
+    {
+      "game": 56,
+      "seed": "18371189441574335651",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0200",
+        "08_02_LEAVE"
+      ],
+      "samples": 3,
+      "root_seed": "12790246208805554356"
+    },
+    {
+      "game": 56,
+      "seed": "18371189441574335651",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0",
+        "NOTE:4:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "17378545794064584088"
+    },
+    {
+      "game": 56,
+      "seed": "18371189441574335651",
+      "config_fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_101_010101",
+        "07_EVENT_101_010102",
+        "07_EVENT_101_010103"
+      ],
+      "samples": 4,
+      "root_seed": "13301170065697827204"
+    },
+    {
+      "game": 57,
+      "seed": "17093026462797264146",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1710089539394492584"
+    },
+    {
+      "game": 57,
+      "seed": "17093026462797264146",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "4795562421538853396"
+    },
+    {
+      "game": 57,
+      "seed": "17093026462797264146",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "3169260274502127770"
+    },
+    {
+      "game": 57,
+      "seed": "17093026462797264146",
+      "config_fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_121_012101",
+        "07_EVENT_121_012102"
+      ],
+      "samples": 3,
+      "root_seed": "15750652514204256057"
+    },
+    {
+      "game": 58,
+      "seed": "3659966984674393587",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "8119042253076380404"
+    },
+    {
+      "game": 58,
+      "seed": "3659966984674393587",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "1684140768170496312"
+    },
+    {
+      "game": 58,
+      "seed": "3659966984674393587",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0100",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "10465052442076089500"
+    },
+    {
+      "game": 58,
+      "seed": "3659966984674393587",
+      "config_fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_117_011701",
+        "07_EVENT_117_011702"
+      ],
+      "samples": 3,
+      "root_seed": "10316904183179481665"
+    },
+    {
+      "game": 59,
+      "seed": "17181464661074228387",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "12794590345635874276"
+    },
+    {
+      "game": 59,
+      "seed": "17181464661074228387",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "2376109924365929473"
+    },
+    {
+      "game": 59,
+      "seed": "17181464661074228387",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "2407897725077670341"
+    },
+    {
+      "game": 59,
+      "seed": "17181464661074228387",
+      "config_fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "15068805560305332550"
+    },
+    {
+      "game": 60,
+      "seed": "15613217988824828976",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0100",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 9,
+      "root_seed": "12817142580323517289"
+    },
+    {
+      "game": 60,
+      "seed": "15613217988824828976",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "14363224587959457080"
+    },
+    {
+      "game": 60,
+      "seed": "15613217988824828976",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0180",
+        "05_BUY_01_0100",
+        "05_BUY_02_0200",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "3133196076542004006"
+    },
+    {
+      "game": 60,
+      "seed": "15613217988824828976",
+      "config_fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "15254058948806640260"
+    },
+    {
+      "game": 61,
+      "seed": "4874643272908904579",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0160",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "11373403317378457164"
+    },
+    {
+      "game": 61,
+      "seed": "4874643272908904579",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0340",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "17785682307394033642"
+    },
+    {
+      "game": 61,
+      "seed": "4874643272908904579",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "12328463915298871469"
+    },
+    {
+      "game": 61,
+      "seed": "4874643272908904579",
+      "config_fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ],
+      "samples": 3,
+      "root_seed": "434889742151391165"
+    },
+    {
+      "game": 62,
+      "seed": "4028245897737231797",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0260",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "16735287463319488205"
+    },
+    {
+      "game": 62,
+      "seed": "4028245897737231797",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "05_BUY_02_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "17663219069455892784"
+    },
+    {
+      "game": 62,
+      "seed": "4028245897737231797",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 6,
+      "root_seed": "16986291475082706685"
+    },
+    {
+      "game": 62,
+      "seed": "4028245897737231797",
+      "config_fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "3038082168699305375"
+    },
+    {
+      "game": 63,
+      "seed": "8107491264991902310",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0060",
+        "05_BUY_01_0160",
+        "05_BUY_02_0100",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "1177397793976465427"
+    },
+    {
+      "game": 63,
+      "seed": "8107491264991902310",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "03_FREE_ENHANCE",
+        "05_BUY_01_0200",
+        "05_BUY_02_0160",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:2:0:0"
+      ],
+      "samples": 7,
+      "root_seed": "13546091704082293912"
+    },
+    {
+      "game": 63,
+      "seed": "8107491264991902310",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "SHOP",
+      "actions": [
+        "04_PAID_ENHANCE_0120",
+        "05_BUY_01_0200",
+        "06_RESTOCK",
+        "08_02_LEAVE",
+        "NOTE:0:0:0",
+        "NOTE:1:0:0",
+        "NOTE:2:0:0",
+        "NOTE:3:0:0"
+      ],
+      "samples": 8,
+      "root_seed": "6052338121271617561"
+    },
+    {
+      "game": 63,
+      "seed": "8107491264991902310",
+      "config_fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d",
+      "phase": "EVENT",
+      "actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_105_010501",
+        "07_EVENT_105_010502",
+        "07_EVENT_105_010503"
+      ],
+      "samples": 4,
+      "root_seed": "9028566790422970781"
+    }
+  ],
+  "failures": {},
+  "configs": [
+    {
+      "name": "random_20261107_0",
+      "main_sigils": [
+        "真相☆梦工厂",
+        "花火",
+        "仙踪良梦"
+      ],
+      "sub_sigils": [
+        "冰柠与红茶",
+        "罗帷春染岁朝新",
+        "猫之珍藏"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "96–119_mixed_bb39473d42",
+        "pools": [
+          [
+            1,
+            4,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            1,
+            1,
+            3,
+            0,
+            0,
+            6
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            4,
+            1,
+            2,
+            5,
+            6,
+            1,
+            3,
+            6,
+            4
+          ],
+          [
+            5,
+            6,
+            6
+          ],
+          [
+            4,
+            6,
+            0,
+            0,
+            6,
+            4,
+            4,
+            5,
+            4
+          ]
+        ],
+        "group": "mixed",
+        "total": 108,
+        "role_totals": [
+          22,
+          36,
+          50
+        ],
+        "fingerprint": "932df6ad7d3313c04545e993ffc3055700697f89f5e891e01ccda9dbe62c7213"
+      },
+      "groups": [
+        40321,
+        40322,
+        40171,
+        40172,
+        40041,
+        40042
+      ],
+      "supply": [
+        8,
+        24,
+        0,
+        8,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "9e5fd1484c09508e5b348b153971e1f87cef02c2893139cdcc14a13f8fd2ad77"
+    },
+    {
+      "name": "random_20261107_1",
+      "main_sigils": [
+        "美好，尽在昨日",
+        "一二三，跳！",
+        "睡前童话"
+      ],
+      "sub_sigils": [
+        "波光漫游",
+        "冰柠与红茶",
+        "猫神降歌"
+      ],
+      "tower": 2,
+      "preset": {
+        "name": "120–144_mixed_6507dd0306",
+        "pools": [
+          [
+            6,
+            1,
+            3
+          ],
+          [
+            6,
+            3,
+            6,
+            5,
+            4,
+            1,
+            6,
+            4,
+            5
+          ],
+          [
+            3,
+            2,
+            2
+          ],
+          [
+            2,
+            6,
+            4,
+            3,
+            0,
+            0,
+            3,
+            3,
+            5
+          ],
+          [
+            5,
+            3,
+            6
+          ],
+          [
+            5,
+            5,
+            6,
+            2,
+            3,
+            3,
+            2,
+            1,
+            2
+          ]
+        ],
+        "group": "mixed",
+        "total": 126,
+        "role_totals": [
+          50,
+          33,
+          43
+        ],
+        "fingerprint": "287eb14999a152eca946fb39a5b21f44f0ac798aa45c1fe2d84451dc43a81b64"
+      },
+      "groups": [
+        40621,
+        40622,
+        40241,
+        40242,
+        40611,
+        40612
+      ],
+      "supply": [
+        0,
+        24,
+        0,
+        8,
+        0,
+        0,
+        8,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "ffb71d91b10f5f71b7f81e3f4c43e87563e87ad449f68f84819cfdb6959e7153"
+    },
+    {
+      "name": "random_20261107_2",
+      "main_sigils": [
+        "魔女的秋千",
+        "勇气之拳",
+        "狼贪虎视"
+      ],
+      "sub_sigils": [
+        "波光漫游",
+        "鹿鸣",
+        "潋滟故池水"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "72–95_mixed_fb49653c46",
+        "pools": [
+          [
+            5,
+            5,
+            3
+          ],
+          [
+            4,
+            0,
+            2,
+            4,
+            1,
+            1,
+            5,
+            5,
+            2
+          ],
+          [
+            5,
+            3,
+            6
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            4,
+            0,
+            3,
+            5
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            4,
+            3,
+            1,
+            5,
+            1,
+            1,
+            0,
+            2,
+            3
+          ]
+        ],
+        "group": "mixed",
+        "total": 90,
+        "role_totals": [
+          37,
+          30,
+          23
+        ],
+        "fingerprint": "65732401a9aea44cb851c95d8342a1a7bbc64a44d734cd1667c3894253258891"
+      },
+      "groups": [
+        40061,
+        40062,
+        40401,
+        40402,
+        40121,
+        40122
+      ],
+      "supply": [
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "ce3b46239a632333ad4a7394b1c8ff2603d83968a70f4b2bf34ee07990c14a83"
+    },
+    {
+      "name": "random_20261107_3",
+      "main_sigils": [
+        "一发破的",
+        "真相☆梦工厂",
+        "启程的礼物"
+      ],
+      "sub_sigils": [
+        "夏日进行曲",
+        "飞越青空",
+        "启程的礼物"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "120–144_concentrated_dcfaf62cfc",
+        "pools": [
+          [
+            6,
+            6,
+            0
+          ],
+          [
+            6,
+            6,
+            0,
+            6,
+            0,
+            0,
+            0,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            0,
+            6,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            6,
+            0,
+            6,
+            6,
+            0,
+            6,
+            0,
+            0
+          ]
+        ],
+        "group": "concentrated",
+        "total": 126,
+        "role_totals": [
+          42,
+          54,
+          30
+        ],
+        "fingerprint": "6a9f37a6d15fb3b02f70f48f9ad8387d7adbfe053e2a5c7ada48075f0eff68cc"
+      },
+      "groups": [
+        40191,
+        40192,
+        40321,
+        40322,
+        40411,
+        40412
+      ],
+      "supply": [
+        8,
+        8,
+        16,
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "dec578feae3d3c9caab639ffbca9050dec3226e4361d49ffc4db31a43155988d"
+    },
+    {
+      "name": "random_20261107_4",
+      "main_sigils": [
+        "鹿鸣",
+        "春日纪事",
+        "白日花园"
+      ],
+      "sub_sigils": [
+        "因缘而聚",
+        "夜宴谜影",
+        "闪光之时"
+      ],
+      "tower": 2,
+      "preset": {
+        "name": "120–144_role_skew_c97fedf90b",
+        "pools": [
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            6,
+            2,
+            2,
+            6,
+            2,
+            2,
+            2,
+            3,
+            4
+          ],
+          [
+            6,
+            4,
+            6
+          ],
+          [
+            4,
+            3,
+            2,
+            1,
+            2,
+            0,
+            6,
+            0,
+            2
+          ],
+          [
+            4,
+            6,
+            6
+          ],
+          [
+            6,
+            1,
+            6,
+            0,
+            6,
+            3,
+            6,
+            4,
+            6
+          ]
+        ],
+        "group": "role_skew",
+        "total": 126,
+        "role_totals": [
+          36,
+          36,
+          54
+        ],
+        "fingerprint": "ae926280848f8e612a9cb82eac4fc0a0370e124bcc23d91884ae5bd169def853"
+      },
+      "groups": [
+        40151,
+        40152,
+        40161,
+        40162,
+        40281,
+        40282
+      ],
+      "supply": [
+        0,
+        16,
+        0,
+        16,
+        8,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "8562889e84e8eda6a6216fdc2c26aacf23eaaac6ffd1293d467090a6a75d20a8"
+    },
+    {
+      "name": "random_20261107_5",
+      "main_sigils": [
+        "沐光祷告",
+        "涂鸦彩虹",
+        "午后间隙"
+      ],
+      "sub_sigils": [
+        "狼贪虎视",
+        "星光的印记",
+        "午后间隙"
+      ],
+      "tower": 1,
+      "preset": {
+        "name": "120–144_mixed_09bf96f632",
+        "pools": [
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            1,
+            3,
+            1,
+            2,
+            5,
+            3,
+            5,
+            1,
+            2
+          ],
+          [
+            3,
+            0,
+            5
+          ],
+          [
+            6,
+            3,
+            6,
+            1,
+            3,
+            6,
+            6,
+            5,
+            5
+          ],
+          [
+            5,
+            6,
+            1
+          ],
+          [
+            6,
+            3,
+            6,
+            0,
+            4,
+            4,
+            1,
+            6,
+            4
+          ]
+        ],
+        "group": "mixed",
+        "total": 126,
+        "role_totals": [
+          31,
+          49,
+          46
+        ],
+        "fingerprint": "2cdf338b829a174e3400b4b190f24b5fc6a20c3c082b5002396305c5e31c5306"
+      },
+      "groups": [
+        40101,
+        40102,
+        40231,
+        40232,
+        40301,
+        40302
+      ],
+      "supply": [
+        16,
+        8,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      "fingerprint": "832cef54098321e41b1a5b15b6143f52d10e637eb482f16fbcce5d180629dec1"
+    },
+    {
+      "name": "random_20261107_6",
+      "main_sigils": [
+        "甜言蜜果",
+        "酒暖灯明时",
+        "波光漫游"
+      ],
+      "sub_sigils": [
+        "猫神降歌",
+        "“空白”的序章",
+        "狼贪虎视"
+      ],
+      "tower": 1,
+      "preset": {
+        "name": "120–144_balanced_11585446b9",
+        "pools": [
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            5,
+            4,
+            3,
+            4,
+            5,
+            4,
+            4,
+            3,
+            2
+          ],
+          [
+            5,
+            3,
+            4
+          ],
+          [
+            4,
+            3,
+            3,
+            1,
+            3,
+            5,
+            5,
+            5,
+            4
+          ],
+          [
+            4,
+            2,
+            4
+          ],
+          [
+            4,
+            3,
+            3,
+            3,
+            4,
+            5,
+            3,
+            0,
+            2
+          ]
+        ],
+        "group": "balanced",
+        "total": 126,
+        "role_totals": [
+          44,
+          45,
+          37
+        ],
+        "fingerprint": "df0d3dddbdc41cfc1cc2a771eb8a524476e0b5fbb2e600ead93ecd47f86f058e"
+      },
+      "groups": [
+        40141,
+        40142,
+        40421,
+        40422,
+        40381,
+        40382
+      ],
+      "supply": [
+        16,
+        8,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "71bccb1bf018fb9395f086fa73904b1f94d29d370de47ad8aff0e180a7a508b8"
+    },
+    {
+      "name": "random_20261107_7",
+      "main_sigils": [
+        "罗帷春染岁朝新",
+        "星之所向",
+        "甜言蜜果"
+      ],
+      "sub_sigils": [
+        "革新的萌芽",
+        "星之所向",
+        "甜言蜜果"
+      ],
+      "tower": 1,
+      "preset": {
+        "name": "120–144_concentrated_597a976f1d",
+        "pools": [
+          [
+            0,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            0,
+            6,
+            0,
+            0,
+            6,
+            0,
+            6
+          ],
+          [
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            0,
+            0,
+            6,
+            6,
+            0,
+            6,
+            0
+          ],
+          [
+            6,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            6,
+            0,
+            0,
+            6,
+            6,
+            0
+          ]
+        ],
+        "group": "concentrated",
+        "total": 126,
+        "role_totals": [
+          42,
+          48,
+          36
+        ],
+        "fingerprint": "ee6bbf753e1915b9c1d5ffb6571acb5b5a720b138e40bd88b73f9165cef632ff"
+      },
+      "groups": [
+        40441,
+        40442,
+        40511,
+        40512,
+        40141,
+        40142
+      ],
+      "supply": [
+        0,
+        8,
+        0,
+        8,
+        8,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ],
+      "fingerprint": "72ed2463c63425437960566837a9be7d2252bb3c690cf2a543dd54fde757415d"
+    },
+    {
+      "name": "random_20261107_8",
+      "main_sigils": [
+        "美好，尽在昨日",
+        "冬夜后的黎明",
+        "鹿鸣"
+      ],
+      "sub_sigils": [
+        "花火",
+        "飞越青空",
+        "春日纪事"
+      ],
+      "tower": 2,
+      "preset": {
+        "name": "72–95_balanced_6a251642bc",
+        "pools": [
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            4,
+            2,
+            4,
+            3,
+            3,
+            1,
+            1,
+            1,
+            3
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            1,
+            2,
+            3,
+            3,
+            2,
+            0,
+            2,
+            4
+          ],
+          [
+            4,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            1,
+            3,
+            3,
+            3,
+            3,
+            1,
+            5
+          ]
+        ],
+        "group": "balanced",
+        "total": 90,
+        "role_totals": [
+          29,
+          26,
+          35
+        ],
+        "fingerprint": "9e56b5ee275f0e5c09f0dc418b10d636f36dae1e5c11f33a5b61e163c6b34e45"
+      },
+      "groups": [
+        40621,
+        40622,
+        40461,
+        40462,
+        40151,
+        40152
+      ],
+      "supply": [
+        16,
+        24,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "cbd3211d1e10c143728f7bc2df3033138b2a307ef4b60a3ec381d101b1e2c375"
+    },
+    {
+      "name": "random_20261107_9",
+      "main_sigils": [
+        "星之所向",
+        "波光漫游",
+        "迷途的朝圣者"
+      ],
+      "sub_sigils": [
+        "勇气之拳",
+        "抓住传说",
+        "刀与斧的铮鸣"
+      ],
+      "tower": 1,
+      "preset": {
+        "name": "72–95_concentrated_cade28c12e",
+        "pools": [
+          [
+            0,
+            6,
+            6
+          ],
+          [
+            6,
+            0,
+            0,
+            6,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            6
+          ],
+          [
+            0,
+            6,
+            6,
+            0,
+            0,
+            6,
+            6,
+            0,
+            6
+          ],
+          [
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0,
+            6,
+            0,
+            0,
+            0
+          ]
+        ],
+        "group": "concentrated",
+        "total": 90,
+        "role_totals": [
+          30,
+          42,
+          18
+        ],
+        "fingerprint": "018a71b64b8d0de6186b44f48da32b8f5160533a33905405ce3865f84e4e191f"
+      },
+      "groups": [
+        40511,
+        40512,
+        40381,
+        40382,
+        40361,
+        40362
+      ],
+      "supply": [
+        0,
+        16,
+        0,
+        0,
+        8,
+        0,
+        8,
+        8,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "977e0aebe7e66f39f3c1cf2b390e8acbc60477b6b1335f78c6d9cb1f7fa17713"
+    },
+    {
+      "name": "random_20261107_10",
+      "main_sigils": [
+        "启程的礼物",
+        "猫神降歌",
+        "夜宴谜影"
+      ],
+      "sub_sigils": [
+        "你与我相似",
+        "浮光掠影",
+        "潋滟故池水"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "96–119_concentrated_0cfb67c1da",
+        "pools": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            0,
+            6,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            6,
+            6,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            6,
+            6,
+            0,
+            6,
+            6,
+            0,
+            0,
+            6,
+            0
+          ]
+        ],
+        "group": "concentrated",
+        "total": 108,
+        "role_totals": [
+          36,
+          36,
+          36
+        ],
+        "fingerprint": "fd664efbd71ec630a385f05bb3be5d3dd47e0fc27704c54525cd333eebb86c45"
+      },
+      "groups": [
+        40411,
+        40412,
+        40011,
+        40012,
+        40501,
+        40502
+      ],
+      "supply": [
+        0,
+        16,
+        0,
+        0,
+        8,
+        0,
+        16,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "8d8b97b440071d1159acd338a932f0549e44ad6b7f247df6a588d1c97c8887e0"
+    },
+    {
+      "name": "random_20261107_11",
+      "main_sigils": [
+        "远航蓝图",
+        "雪夜惊喜",
+        "龙飞凤舞"
+      ],
+      "sub_sigils": [
+        "狼贪虎视",
+        "一发破的",
+        "迷途的朝圣者"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "96–119_rarity_skew_772fde7b20",
+        "pools": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            6,
+            2,
+            4,
+            6,
+            5,
+            2,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            6,
+            6,
+            0,
+            2,
+            6,
+            3,
+            5,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            6,
+            2,
+            2,
+            5,
+            5,
+            3,
+            5,
+            4,
+            2
+          ]
+        ],
+        "group": "rarity_skew",
+        "total": 108,
+        "role_totals": [
+          35,
+          35,
+          38
+        ],
+        "fingerprint": "6d6c143cb31fbfa42132349caa660d7d1102cd8e2173869418393f25c0c34777"
+      },
+      "groups": [
+        40131,
+        40132,
+        40481,
+        40482,
+        40271,
+        40272
+      ],
+      "supply": [
+        8,
+        8,
+        0,
+        16,
+        0,
+        8,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "38f83db88e5b8a608cb32a8897f19ad256a429a76299883473798ea9ad60b136"
+    }
+  ]
+}

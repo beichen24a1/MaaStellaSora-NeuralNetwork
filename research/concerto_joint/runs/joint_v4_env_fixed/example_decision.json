@@ -1,0 +1,89 @@
+{
+  "terminal": false,
+  "rules_version": "joint_offline_v3_environment_fixed",
+  "action": {
+    "kind": "NOTE",
+    "index": 2,
+    "donor": 0,
+    "target": 0,
+    "base": null
+  },
+  "action_key": "NOTE:2:0:0",
+  "policy_component": "learned_joint_critic",
+  "preference_weight": 3.0,
+  "residual_scale": 0.5,
+  "rankings": [
+    {
+      "action_key": "NOTE:2:0:0",
+      "preference_score": 73.49161529541016,
+      "ordinary_prior": 71.30224609375,
+      "ordinary_advantage_correction": -0.8182172775268555,
+      "public_concerto_progress": 0.09999999403953552,
+      "learned_concerto_correction": 1.5323184728622437
+    },
+    {
+      "action_key": "03_FREE_ENHANCE",
+      "preference_score": 73.47650146484375,
+      "ordinary_prior": 71.88276672363281,
+      "ordinary_advantage_correction": -0.7719147205352783,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.3197957277297974
+    },
+    {
+      "action_key": "05_BUY_02_0100",
+      "preference_score": 73.24292755126953,
+      "ordinary_prior": 71.7148666381836,
+      "ordinary_advantage_correction": -0.7089069485664368,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.255010962486267
+    },
+    {
+      "action_key": "05_BUY_01_0100",
+      "preference_score": 73.23847198486328,
+      "ordinary_prior": 71.7396240234375,
+      "ordinary_advantage_correction": -0.6813262701034546,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.226340889930725
+    },
+    {
+      "action_key": "NOTE:1:0:0",
+      "preference_score": 73.12621307373047,
+      "ordinary_prior": 71.30224609375,
+      "ordinary_advantage_correction": -0.7879098653793335,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.4786170721054077
+    },
+    {
+      "action_key": "NOTE:0:0:0",
+      "preference_score": 73.09231567382812,
+      "ordinary_prior": 71.40851593017578,
+      "ordinary_advantage_correction": -0.7264512777328491,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.3646811246871948
+    },
+    {
+      "action_key": "06_RESTOCK",
+      "preference_score": 71.6627426147461,
+      "ordinary_prior": 70.27490997314453,
+      "ordinary_advantage_correction": -0.5804139971733093,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.1186944246292114
+    },
+    {
+      "action_key": "NOTE:3:0:0",
+      "preference_score": 71.10321807861328,
+      "ordinary_prior": 69.17665100097656,
+      "ordinary_advantage_correction": -0.7450401186943054,
+      "public_concerto_progress": 0.04888888821005821,
+      "learned_concerto_correction": 1.4349489212036133
+    },
+    {
+      "action_key": "08_02_LEAVE",
+      "preference_score": 69.98545837402344,
+      "ordinary_prior": 68.6167221069336,
+      "ordinary_advantage_correction": -0.6171073913574219,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 1.1181952953338623
+    }
+  ]
+}

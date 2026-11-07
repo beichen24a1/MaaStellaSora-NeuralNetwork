@@ -1,34 +1,40 @@
 # 音符／协奏联合决策研究
 
-> **进一步环境审计发现阻塞问题：当前模型暂不推荐使用，PR 暂缓合并。** 事件动作被普通内核错误裁剪，音符定价还破坏了整架折扣约束。见 [ENVIRONMENT_AUDIT.md](ENVIRONMENT_AUDIT.md)。价格清洗验证不等于完整环境验证，修复后需要重新训练。
-
 离线实验模块：保留冻结 beta 的普通潜能选牌能力，新增双输出网络，学习商店与事件中潜能、音符和金币的取舍。它不注册 Maa 回调，也不更改插件当前默认模型。
 
-## 价格审计与当前结果
+## 环境修复与活动版本
 
-原聚合器把 9045／9072 当成价格，污染了 293/4,772 条商品观察。**旧 joint_v2 和 +1.85 结论已作废，不能继续作为正确价格环境的提升证据。** 详见 [PRICE_AUDIT.md](PRICE_AUDIT.md)。
+活动版本为 `joint_v4_env_fixed`，规则为 `joint_offline_v3_environment_fixed`。本轮修复三项实现错误：音符事件被普通 predictive 子集过滤、普通目标剪枝误删保留音符的替代项、音符独立定价破坏整架折扣约束。完整修复和条件采样推导见 [ENVIRONMENT_FIX.md](ENVIRONMENT_FIX.md)。
 
-活动版本为 `joint_v3_prices_clean`。已重新生成全部联合标签：训练 256 个公共根局面、1,479 个动作样本，开发 64 个根局面、371 个动作样本；每动作两次续局。新张量和全部根快照中，错误价格为零，货架归一化价格最大值为 1.0。冻结普通 beta 没有重训，文件校验值保持不变。
+原 80 家首店复现面板从 53 家折扣位错误变为零；扩展事件选项、音符／金币支付边界和刷新货架都有回归检查。旧 `joint_v2` 因价格污染作废，旧 `joint_v3_prices_clean` 因环境缺陷作废；旧权重与旧标签不能在当前规则下加载，历史报告不能作为当前环境的性能证据。详见 [价格审计](PRICE_AUDIT.md) 与 [旧环境审计](ENVIRONMENT_AUDIT.md)。
 
-最终使用六种未训练配置、每配置 32 个全新测试种子。三种策略共 576 局主评测，另有 192 局敏感性评测，18 项检查全部通过。
+当前版本重新生成联合训练／开发标签，再训练、在开发对局上选择残差强度、完成留出整局评测。新结果以活动目录为准：
+
+- [结果说明](runs/joint_v4_env_fixed/结果说明.txt)
+- [完整评测](runs/joint_v4_env_fixed/evaluation/report.json)
+- [逐局 CSV](runs/joint_v4_env_fixed/evaluation/episodes.csv)
+- [价格与模型身份验证](runs/joint_v4_env_fixed/clean_price_validation.json)
+- [环境及样本动作验证](runs/joint_v4_env_fixed/environment_validation.json)
+- [模型元数据](runs/joint_v4_env_fixed/joint_critic.json)
+- [输入来源](DATA_SOURCES.md)
+
+实验目标为 **普通潜能＋3×协奏等级总和**，固定核心六分不计入该目标；系数 3 是研究偏好，不是伤害换算。模拟性能与真实游戏效果必须分别判断。训练后的推荐状态由留出评测的配对置信区间决定，修好实现不自动意味着模型胜过规则。不同环境版本之间的均值差不构成单项修复的因果效应。
+
+## 本轮结果
+
+训练为 256 个根局面／1,579 个动作行，开发为 64 个根局面／393 行，每动作两次续局；新标签价格域、候选动作和剩余货架检查均通过。训练／开发／测试的数值配置交集均为零。冻结 beta 的 SHA256 保持不变。
+
+23 项检查全部通过，无跳过。六种留出配置、每种 32 个种子，三个策略共 576 局主评测，另有 192 局敏感性评测；未覆盖模拟异常为零。检查点按开发集选择，残差强度为 0.5。
 
 | 策略 | 普通潜能 | 协奏等级总和 | 实验目标 |
 | --- | ---: | ---: | ---: |
-| 冻结 beta，不买音符 | 72.45 | 6.28 | 91.28 |
-| beta＋公共音符规则 | 70.81 | 8.12 | 95.17 |
-| 清洗后联合模型 | 69.75 | 8.59 | 95.52 |
+| beta，不买音符 | 72.34 | 6.30 | 91.23 |
+| beta＋公共音符规则 | 70.92 | 8.11 | 95.27 |
+| 新联合模型 | 69.06 | 9.50 | 97.56 |
 
-实验目标为 **普通潜能＋3×协奏等级总和**，固定核心六分不计入该目标。系数 3 是实验偏好，不是伤害换算。
+相对公共音符规则，普通潜能 **−1.86**，协奏等级和 **+1.39**，目标 **+2.29**；192 对同种子差值的配对 bootstrap 95% 区间为 **[+1.56,+3.04]**。本次主模拟面板支持使用联合模型，仍不是实机成绩或伤害提升。
 
-相对音符规则，新模型潜能 **−1.06**、协奏等级总和 **+0.47**、实验目标 **+0.34**。192 对同种子目标差值的 bootstrap 95% 区间为 **[−0.37, +1.06]**，**本轮不能证明新模型优于音符规则，不推荐替换规则策略**。
-
-规则敏感性目标差值：低掉落 +1.17、高掉落 +0.12、无终局调整 −1.08、无音符事件 −0.75。原版本与本轮测试面板、随机种子和模型不同，不能把两轮均值直接相减当作价格修复的单项因果效应。
-
-- [完整报告](runs/joint_v3_prices_clean/evaluation/report.json)
-- [逐局 CSV](runs/joint_v3_prices_clean/evaluation/episodes.csv)
-- [干净价格训练审计](runs/joint_v3_prices_clean/clean_price_validation.json)
-- [模型元数据](runs/joint_v3_prices_clean/joint_critic.json)
-- [输入来源](DATA_SOURCES.md)
+敏感性目标变化及配对 95% 区间：低掉落 +1.04 [−0.75,+2.75]，高掉落 +3.54 [+1.04,+6.13]，无终局调整 +1.50 [−1.13,+4.00]，无音符事件 +0.17 [−1.58,+1.92]。每项仅 24 对，多数条件区间跨零，不能宣称所有规则条件下均优于公共规则。
 
 ## 运行
 
@@ -37,7 +43,7 @@
 ```bash
 python -m pip install numpy
 python -m unittest discover -s research/concerto_joint -v
-python research/concerto_joint/infer.py research/concerto_joint/runs/joint_v3_prices_clean/example_public_state.json
+python research/concerto_joint/infer.py research/concerto_joint/runs/joint_v4_env_fixed/example_public_state.json
 python research/concerto_joint/evaluate.py
 ```
 
@@ -50,7 +56,7 @@ python -m pip install -r research/concerto_joint/requirements.txt
 python research/concerto_joint/run_experiment.py
 ```
 
-本次干净价格版本随附约 1 MB 的冻结训练／开发张量和公共根快照，均为纯模拟样本，便于直接审计。可加 `--reuse-data` 复用它们；其他实验生成文件通常由 `.gitignore` 排除。首次重新生成需要执行数千次 CPU 续局，训练自动选择可用的 CUDA，否则使用 CPU。不依赖原始玩家日志。
+本次环境修复版本随附冻结训练／开发张量和公共根快照，均为纯模拟样本，便于直接审计。可加 `--reuse-data` 复用它们；其他实验生成文件通常由 `.gitignore` 排除。首次重新生成需要执行数千次 CPU 续局，训练自动选择可用的 CUDA，否则使用 CPU。不依赖原始玩家日志。
 
 ## 模型与接口
 
@@ -67,7 +73,7 @@ python research/concerto_joint/run_experiment.py
 - 客户端快照提供 150 组逐技能门槛；61 件双协奏秘纹与技能 ID、辅助供给完成匹配。单协奏或无协奏秘纹未纳入首版训练面板。
 - 沿用上游冻结的 45 节点潜能路线，不添加“补足到 53 个免费页面”等额外路线。
 - 战斗默认每场八枚音符，在当前塔九种音符中均匀抽样，与选中的秘纹需求无关。完整音符轨迹不足，尚未识别真实条件分布；另测每场四枚、十二枚。
-- 饮料货架沿用内核，剩余格补音符。商品大小与价格来自 4,772 条音符商品观察，种类均匀生成；原观察混合来源且含重复货架，不是 4,772 个独立成交样本。
+- 保留内核饮料货架，条件采样剩余折扣档，保证八格中的四个折扣位及最多两个半价位。音符包大小使用 4,772 条商品观察中的数量边际频次，价格由折扣档确定，种类均匀生成。观察不是独立成交样本；完整商品联合分布仍未校准。
 - 音符事件采用显式表效应和均匀随机音符，部分事件暴露全部建模选项；实际可见选项抽样和部分奖励细节仍未确定。
 - 终局最多十五次一换一调整，允许转向所需类型；实际时机、合法目标仍需证据，另测完全关闭调整。
 - 优化协奏等级，不建模角色触发条件及真实战斗伤害。
@@ -75,3 +81,5 @@ python research/concerto_joint/run_experiment.py
 上述不确定机制都属于实验假设。改动转移规则、目标或特征后，应重新生成联合标签、训练并评测，不能仅修改旧标签的版本号。
 
 重新生成标签后可执行 `python research/concerto_joint/audit_clean_run.py` 验证数据与模型；`build_handoff.py --include-training-data` 可生成附带纯模拟训练样本的本地对接包。
+
+环境机制与样本动作复核：`python research/concerto_joint/audit_environment.py --run joint_v4_env_fixed`。训练启动会执行当前机制诊断；打包要求当前规则、代码和环境验证均匹配。

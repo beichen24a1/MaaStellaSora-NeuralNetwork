@@ -193,19 +193,22 @@ def fit(train_path, dev_path, output, epochs, seed):
 
 
 def main():
-    audit_path = HERE / "data/environment_audit_v3.json"
-    if audit_path.exists() and json.loads(audit_path.read_text(encoding="utf-8")).get("confirmed_issues"):
-        raise RuntimeError("Known event-action/shelf-discount defects: fix the environment and rerun its audit before training")
     parser = argparse.ArgumentParser()
     parser.add_argument("--train-episodes", type=int, default=64)
     parser.add_argument("--dev-episodes", type=int, default=16)
     parser.add_argument("--rollouts", type=int, default=2)
     parser.add_argument("--epochs", type=int, default=120)
     parser.add_argument("--seed", type=int, default=20261107)
-    parser.add_argument("--run", default="joint_v3_prices_clean")
+    parser.add_argument("--run", default="joint_v4_env_fixed")
     parser.add_argument("--reuse-data", action="store_true")
     args = parser.parse_args()
+    from audit_environment import audit
+    check = audit()
+    if check["confirmed_issues"]:
+        raise RuntimeError("Environment audit blocks training: " + repr(check["confirmed_issues"]))
     out = HERE / "runs" / args.run
+    if (out / "KNOWN_ISSUES.json").exists() or (out / "INVALIDATED.json").exists():
+        raise ValueError("Use a new run directory; do not overwrite invalidated historical evidence")
     out.mkdir(parents=True, exist_ok=True)
     for split, episodes, offset in (("train", args.train_episodes, 0), ("dev", args.dev_episodes, 100000)):
         path = out / f"{split}.npz"

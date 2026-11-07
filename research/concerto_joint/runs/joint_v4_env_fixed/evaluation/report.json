@@ -1,0 +1,1815 @@
+{
+  "schema": "joint_episode_evaluation_v1",
+  "checkpoint_sha256": "137760fa16530fcf68d9c6870226cd253bb489bbc2abcd48aa0fef5894fc6ceb",
+  "rules": {
+    "version": "joint_offline_v3_environment_fixed",
+    "note_prices": "Quantity-specific legal prices; confirmed 9045->45 and 9072->72 OCR concatenations repaired before aggregation; unknown values fail validation",
+    "ordinary_kernel": "state_space_s75_l5of11_v2",
+    "ordinary_route": "unchanged frozen 45-node route",
+    "shelves": "Keep kernel drinks; sample remaining discount tiers from the exact conditional four-of-eight shelf law (at most two half-price slots), then empirical marginal note sizes; middle initial shops retain the kernel half-price prior",
+    "note_product_identity": "Uniform among tower drop-group notes, independent of selected skills",
+    "battle_notes": "Eight individual uniform draws per battle by default; uncalibrated, evaluate sensitivity",
+    "initial_supply": "Actual local wiki per-sigil supportSupply, not a blanket eight per type",
+    "note_events": "Client-table effects with uniform random-note draws; generic fixed-note IDs 10701..10707; any-note costs use a deterministic least-loss donor",
+    "visibility": "All modeled note options exposed for 107/108/114; actual server option sampling is unknown",
+    "event_legality": "All visible table options, without ordinary-objective dominance pruning; coin costs, every positive-mass wallet outcome and note costs checked before selection",
+    "adjustments": "At terminal, at most 15 one-for-one transfers between any owned donor and a required target; legality/timing need game evidence",
+    "objective": "Separate ordinary/concerto returns; lambda is an experimental preference, not measured damage",
+    "scope": "Offline research only, no Maa or live-game integration"
+  },
+  "held_out_seed": 20401107,
+  "rounds_per_primary_config": 32,
+  "config_count": 6,
+  "configs": [
+    {
+      "name": "reference_01",
+      "main_sigils": [
+        "潋滟故池水",
+        "浮光掠影",
+        "飞越青空"
+      ],
+      "sub_sigils": [
+        "斑驳夏影",
+        "晴之花",
+        "美好，尽在昨日"
+      ],
+      "tower": 2,
+      "preset": {
+        "name": "reference_01",
+        "pools": [
+          [
+            6,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            6,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            6
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0,
+            6,
+            0,
+            0,
+            6
+          ],
+          [
+            6,
+            0,
+            6
+          ],
+          [
+            0,
+            6,
+            0,
+            6,
+            0,
+            0,
+            6,
+            0,
+            0
+          ]
+        ],
+        "group": "user_team",
+        "total": 90,
+        "role_totals": [
+          30,
+          30,
+          30
+        ],
+        "fingerprint": "5d12fd4931d2d19c5ef4597b2a4923406f09412f1350a41d493eb95920e92c0a"
+      },
+      "groups": [
+        40261,
+        40262,
+        40551,
+        40552,
+        40081,
+        40082
+      ],
+      "supply": [
+        8,
+        0,
+        8,
+        0,
+        0,
+        8,
+        8,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "d4e816cdca0098f9941448b417f2923d7af872d459ba7144736e0b4c65dc0d93"
+    },
+    {
+      "name": "reference_02",
+      "main_sigils": [
+        "猫神降歌",
+        "花火",
+        "雪夜惊喜"
+      ],
+      "sub_sigils": [
+        "远航蓝图",
+        "一发破的",
+        "启程的礼物"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "reference_02",
+        "pools": [
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            6,
+            6,
+            0,
+            0,
+            6,
+            6,
+            0,
+            6
+          ],
+          [
+            6,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            6,
+            0,
+            6
+          ],
+          [
+            6,
+            0,
+            6,
+            6,
+            0,
+            0,
+            0,
+            6,
+            0
+          ]
+        ],
+        "group": "user_team",
+        "total": 90,
+        "role_totals": [
+          36,
+          18,
+          36
+        ],
+        "fingerprint": "2ae902476634cd03e4eca44421c82c1766a3f1c8e99504164bfab7a665c1bf2b"
+      },
+      "groups": [
+        40011,
+        40012,
+        40171,
+        40172,
+        40481,
+        40482
+      ],
+      "supply": [
+        8,
+        8,
+        8,
+        16,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "b23420a17a7dc09c07cc1ceb2652bff8ba4d1055b8df978daa14aea374fdc946"
+    },
+    {
+      "name": "reference_03",
+      "main_sigils": [
+        "伴我航行",
+        "魔女的秋千",
+        "繁花幻梦"
+      ],
+      "sub_sigils": [
+        "远航蓝图",
+        "甜言蜜果",
+        "“空白”的序章"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "reference_03",
+        "pools": [
+          [
+            6,
+            0,
+            6
+          ],
+          [
+            0,
+            6,
+            0,
+            6,
+            6,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            6,
+            0,
+            6,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            6,
+            0,
+            6,
+            0,
+            0
+          ]
+        ],
+        "group": "user_team",
+        "total": 90,
+        "role_totals": [
+          36,
+          24,
+          30
+        ],
+        "fingerprint": "71f3d7802b8a7ef3c06f2571dc5319df12aa865a0a08c1ad4ad9cb1cc22b16eb"
+      },
+      "groups": [
+        40571,
+        40572,
+        40061,
+        40062,
+        40451,
+        40452
+      ],
+      "supply": [
+        16,
+        0,
+        0,
+        24,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "edee27718b1f5eb05599600cdb502c3340fbb00ffd2d92c00dc0c1cf54eb28e1"
+    },
+    {
+      "name": "random_20401107_0",
+      "main_sigils": [
+        "信笺乘风而去",
+        "春日纪事",
+        "一二三，跳！"
+      ],
+      "sub_sigils": [
+        "与骨共舞",
+        "指引前路的启明星",
+        "“空白”的序章"
+      ],
+      "tower": 2,
+      "preset": {
+        "name": "96–119_mixed_dc83a46db0",
+        "pools": [
+          [
+            5,
+            3,
+            0
+          ],
+          [
+            4,
+            1,
+            3,
+            0,
+            5,
+            4,
+            3,
+            3,
+            3
+          ],
+          [
+            1,
+            5,
+            3
+          ],
+          [
+            3,
+            2,
+            5,
+            4,
+            5,
+            4,
+            4,
+            1,
+            5
+          ],
+          [
+            6,
+            1,
+            4
+          ],
+          [
+            2,
+            3,
+            0,
+            5,
+            2,
+            0,
+            0,
+            6,
+            3
+          ]
+        ],
+        "group": "mixed",
+        "total": 108,
+        "role_totals": [
+          34,
+          42,
+          32
+        ],
+        "fingerprint": "19f251272706897cfa3518587d834d3259693ef03624be4ddd7e9934cbf55247"
+      },
+      "groups": [
+        40471,
+        40472,
+        40161,
+        40162,
+        40241,
+        40242
+      ],
+      "supply": [
+        8,
+        12,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        10,
+        0
+      ],
+      "fingerprint": "5d7b5bc11594927bac8795b8d93bc307517d11642d813de4b7321034f6d9e717"
+    },
+    {
+      "name": "random_20401107_1",
+      "main_sigils": [
+        "永恒的闪耀",
+        "午后间隙",
+        "闪光之时"
+      ],
+      "sub_sigils": [
+        "罗帷春染岁朝新",
+        "雪夜惊喜",
+        "涂鸦彩虹"
+      ],
+      "tower": 1,
+      "preset": {
+        "name": "96–119_mixed_047aee063f",
+        "pools": [
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3,
+            1,
+            6,
+            1,
+            0,
+            0,
+            6
+          ],
+          [
+            5,
+            2,
+            3
+          ],
+          [
+            2,
+            4,
+            5,
+            3,
+            0,
+            0,
+            5,
+            6,
+            5
+          ],
+          [
+            5,
+            3,
+            2
+          ],
+          [
+            4,
+            0,
+            6,
+            2,
+            4,
+            3,
+            4,
+            4,
+            3
+          ]
+        ],
+        "group": "mixed",
+        "total": 108,
+        "role_totals": [
+          28,
+          40,
+          40
+        ],
+        "fingerprint": "da6ab4844b07e19dcc15fbd941bf277cce09282e64b92a59841ef3008e62398a"
+      },
+      "groups": [
+        40671,
+        40672,
+        40301,
+        40302,
+        40201,
+        40202
+      ],
+      "supply": [
+        0,
+        24,
+        0,
+        8,
+        0,
+        8,
+        0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "8fcc3c0edf6c67b66b1350a39672801ec793ba422e002f1a57810308aecd4af5"
+    },
+    {
+      "name": "random_20401107_2",
+      "main_sigils": [
+        "龙飞凤舞",
+        "魔女的秋千",
+        "伴我航行"
+      ],
+      "sub_sigils": [
+        "睡前童话",
+        "启程的礼物",
+        "星之所向"
+      ],
+      "tower": 3,
+      "preset": {
+        "name": "120–144_balanced_fc4c33ff67",
+        "pools": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            5,
+            5,
+            2,
+            5,
+            6,
+            4,
+            2,
+            4
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            4,
+            2,
+            2,
+            1,
+            0,
+            4,
+            6,
+            6,
+            4
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            4,
+            6,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5
+          ]
+        ],
+        "group": "balanced",
+        "total": 126,
+        "role_totals": [
+          45,
+          37,
+          44
+        ],
+        "fingerprint": "23bfa3a48bfcaee0210932624d3cdd5caba23ca7263098ce2aace7e47aaf7e9d"
+      },
+      "groups": [
+        40271,
+        40272,
+        40061,
+        40062,
+        40571,
+        40572
+      ],
+      "supply": [
+        0,
+        16,
+        8,
+        0,
+        0,
+        16,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "9a4b67b3e16a73de2b680f58ed6c713d2bdf37ef7d0e082a84285c2e5de7800c"
+    }
+  ],
+  "failures": [],
+  "status": "experimental_offline_model",
+  "conditions": {
+    "primary": {
+      "policies": {
+        "beta_only": {
+          "completed": 192,
+          "potential_total": {
+            "mean": 78.33854166666667,
+            "p5": 72.0,
+            "std": 4.026600866727488
+          },
+          "ordinary": {
+            "mean": 72.33854166666667,
+            "p5": 66.0,
+            "std": 4.026600866727488
+          },
+          "concerto": {
+            "mean": 6.296875,
+            "p5": 4.0,
+            "std": 1.3618272899704769
+          },
+          "objective": {
+            "mean": 91.22916666666667,
+            "p5": 81.0,
+            "std": 6.753824790854109
+          },
+          "note_spent": {
+            "mean": 0.0,
+            "p5": 0.0,
+            "std": 0.0
+          },
+          "note_purchases": {
+            "mean": 0.0,
+            "p5": 0.0,
+            "std": 0.0
+          }
+        },
+        "greedy": {
+          "completed": 192,
+          "potential_total": {
+            "mean": 76.921875,
+            "p5": 70.0,
+            "std": 4.216675801826402
+          },
+          "ordinary": {
+            "mean": 70.921875,
+            "p5": 64.0,
+            "std": 4.216675801826402
+          },
+          "concerto": {
+            "mean": 8.114583333333334,
+            "p5": 6.0,
+            "std": 1.467493552418166
+          },
+          "objective": {
+            "mean": 95.265625,
+            "p5": 85.55,
+            "std": 6.444253385203622
+          },
+          "note_spent": {
+            "mean": 395.796875,
+            "p5": 45.0,
+            "std": 287.073225615407
+          },
+          "note_purchases": {
+            "mean": 3.3177083333333335,
+            "p5": 1.0,
+            "std": 1.7730913912140067
+          }
+        },
+        "joint": {
+          "completed": 192,
+          "potential_total": {
+            "mean": 75.05729166666667,
+            "p5": 69.0,
+            "std": 3.881291795042456
+          },
+          "ordinary": {
+            "mean": 69.05729166666667,
+            "p5": 63.0,
+            "std": 3.881291795042456
+          },
+          "concerto": {
+            "mean": 9.5,
+            "p5": 6.0,
+            "std": 2.071633815776009
+          },
+          "objective": {
+            "mean": 97.55729166666667,
+            "p5": 86.0,
+            "std": 7.809372637943709
+          },
+          "note_spent": {
+            "mean": 806.3697916666666,
+            "p5": 342.0,
+            "std": 302.21664367214555
+          },
+          "note_purchases": {
+            "mean": 8.875,
+            "p5": 5.0,
+            "std": 2.6030831079062127
+          }
+        }
+      },
+      "joint_vs_greedy": {
+        "pairs": 192,
+        "potential_total": {
+          "paired_mean_delta": -1.8645833333333333,
+          "paired_seed_bootstrap_ci95": [
+            -2.3125,
+            -1.421875
+          ]
+        },
+        "concerto": {
+          "paired_mean_delta": 1.3854166666666667,
+          "paired_seed_bootstrap_ci95": [
+            1.1354166666666667,
+            1.6145833333333333
+          ]
+        },
+        "objective": {
+          "paired_mean_delta": 2.2916666666666665,
+          "paired_seed_bootstrap_ci95": [
+            1.5625,
+            3.036588541666667
+          ]
+        },
+        "note_spent": {
+          "paired_mean_delta": 410.5729166666667,
+          "paired_seed_bootstrap_ci95": [
+            361.79075520833334,
+            457.7307291666667
+          ]
+        }
+      },
+      "joint_vs_beta_only": {
+        "pairs": 192,
+        "potential_total": {
+          "paired_mean_delta": -3.28125,
+          "paired_seed_bootstrap_ci95": [
+            -3.7916666666666665,
+            -2.796875
+          ]
+        },
+        "concerto": {
+          "paired_mean_delta": 3.203125,
+          "paired_seed_bootstrap_ci95": [
+            2.9322916666666665,
+            3.46875
+          ]
+        },
+        "objective": {
+          "paired_mean_delta": 6.328125,
+          "paired_seed_bootstrap_ci95": [
+            5.484244791666667,
+            7.151041666666667
+          ]
+        },
+        "note_spent": {
+          "paired_mean_delta": 806.3697916666666,
+          "paired_seed_bootstrap_ci95": [
+            764.5095052083333,
+            848.1322916666667
+          ]
+        }
+      }
+    },
+    "low_drops": {
+      "policies": {
+        "greedy": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 79.41666666666667,
+            "p5": 72.3,
+            "std": 4.462031176742518
+          },
+          "ordinary": {
+            "mean": 73.41666666666667,
+            "p5": 66.3,
+            "std": 4.462031176742518
+          },
+          "concerto": {
+            "mean": 6.583333333333333,
+            "p5": 3.1500000000000004,
+            "std": 1.7539637649874324
+          },
+          "objective": {
+            "mean": 93.16666666666667,
+            "p5": 86.0,
+            "std": 5.351531452667441
+          },
+          "note_spent": {
+            "mean": 375.0,
+            "p5": 45.0,
+            "std": 301.1190240862684
+          },
+          "note_purchases": {
+            "mean": 2.9166666666666665,
+            "p5": 1.0,
+            "std": 1.552328000849763
+          }
+        },
+        "joint": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 77.45833333333333,
+            "p5": 71.15,
+            "std": 3.1882488227168775
+          },
+          "ordinary": {
+            "mean": 71.45833333333333,
+            "p5": 65.15,
+            "std": 3.1882488227168775
+          },
+          "concerto": {
+            "mean": 7.583333333333333,
+            "p5": 4.0,
+            "std": 2.079997329058114
+          },
+          "objective": {
+            "mean": 94.20833333333333,
+            "p5": 85.3,
+            "std": 5.978985188883552
+          },
+          "note_spent": {
+            "mean": 729.1666666666666,
+            "p5": 364.05,
+            "std": 318.4426513867484
+          },
+          "note_purchases": {
+            "mean": 7.458333333333333,
+            "p5": 4.15,
+            "std": 1.9786183450972943
+          }
+        }
+      },
+      "joint_vs_greedy": {
+        "pairs": 24,
+        "potential_total": {
+          "paired_mean_delta": -1.9583333333333333,
+          "paired_seed_bootstrap_ci95": [
+            -3.25,
+            -0.625
+          ]
+        },
+        "concerto": {
+          "paired_mean_delta": 1.0,
+          "paired_seed_bootstrap_ci95": [
+            0.3333333333333333,
+            1.625
+          ]
+        },
+        "objective": {
+          "paired_mean_delta": 1.0416666666666667,
+          "paired_seed_bootstrap_ci95": [
+            -0.75,
+            2.75
+          ]
+        },
+        "note_spent": {
+          "paired_mean_delta": 354.1666666666667,
+          "paired_seed_bootstrap_ci95": [
+            242.1125,
+            468.50208333333336
+          ]
+        }
+      }
+    },
+    "high_drops": {
+      "policies": {
+        "greedy": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 78.79166666666667,
+            "p5": 74.15,
+            "std": 3.0273636312071193
+          },
+          "ordinary": {
+            "mean": 72.79166666666667,
+            "p5": 68.15,
+            "std": 3.0273636312071193
+          },
+          "concerto": {
+            "mean": 10.708333333333334,
+            "p5": 8.15,
+            "std": 2.0305821551685344
+          },
+          "objective": {
+            "mean": 104.91666666666667,
+            "p5": 96.3,
+            "std": 6.93972061557396
+          },
+          "note_spent": {
+            "mean": 211.54166666666666,
+            "p5": 0.0,
+            "std": 213.63870965695543
+          },
+          "note_purchases": {
+            "mean": 1.875,
+            "p5": 0.0,
+            "std": 1.5360257159305635
+          }
+        },
+        "joint": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 76.95833333333333,
+            "p5": 72.15,
+            "std": 2.9788024252858545
+          },
+          "ordinary": {
+            "mean": 70.95833333333333,
+            "p5": 66.15,
+            "std": 2.9788024252858545
+          },
+          "concerto": {
+            "mean": 12.5,
+            "p5": 9.0,
+            "std": 2.345207879911715
+          },
+          "objective": {
+            "mean": 108.45833333333333,
+            "p5": 99.0,
+            "std": 7.297140802320378
+          },
+          "note_spent": {
+            "mean": 687.375,
+            "p5": 282.15000000000003,
+            "std": 283.9167736767238
+          },
+          "note_purchases": {
+            "mean": 7.666666666666667,
+            "p5": 4.15,
+            "std": 2.3033791601808757
+          }
+        }
+      },
+      "joint_vs_greedy": {
+        "pairs": 24,
+        "potential_total": {
+          "paired_mean_delta": -1.8333333333333333,
+          "paired_seed_bootstrap_ci95": [
+            -3.25,
+            -0.4583333333333333
+          ]
+        },
+        "concerto": {
+          "paired_mean_delta": 1.7916666666666667,
+          "paired_seed_bootstrap_ci95": [
+            0.9583333333333334,
+            2.6666666666666665
+          ]
+        },
+        "objective": {
+          "paired_mean_delta": 3.5416666666666665,
+          "paired_seed_bootstrap_ci95": [
+            1.0406250000000004,
+            6.125
+          ]
+        },
+        "note_spent": {
+          "paired_mean_delta": 475.8333333333333,
+          "paired_seed_bootstrap_ci95": [
+            363.2,
+            589.2187500000001
+          ]
+        }
+      }
+    },
+    "no_swaps": {
+      "policies": {
+        "greedy": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 79.29166666666667,
+            "p5": 75.0,
+            "std": 3.061578659595224
+          },
+          "ordinary": {
+            "mean": 73.29166666666667,
+            "p5": 69.0,
+            "std": 3.061578659595224
+          },
+          "concerto": {
+            "mean": 6.75,
+            "p5": 4.0,
+            "std": 2.384848003542364
+          },
+          "objective": {
+            "mean": 93.54166666666667,
+            "p5": 87.0,
+            "std": 6.422481131843743
+          },
+          "note_spent": {
+            "mean": 384.5,
+            "p5": 6.750000000000006,
+            "std": 260.14002639604183
+          },
+          "note_purchases": {
+            "mean": 2.75,
+            "p5": 0.15000000000000013,
+            "std": 1.4215601757693317
+          }
+        },
+        "joint": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 76.66666666666667,
+            "p5": 72.0,
+            "std": 3.4840908267278117
+          },
+          "ordinary": {
+            "mean": 70.66666666666667,
+            "p5": 66.0,
+            "std": 3.4840908267278117
+          },
+          "concerto": {
+            "mean": 8.125,
+            "p5": 6.0,
+            "std": 2.315032397181517
+          },
+          "objective": {
+            "mean": 95.04166666666667,
+            "p5": 87.0,
+            "std": 7.424504285734428
+          },
+          "note_spent": {
+            "mean": 701.0,
+            "p5": 388.35,
+            "std": 299.3558361994412
+          },
+          "note_purchases": {
+            "mean": 7.583333333333333,
+            "p5": 5.15,
+            "std": 2.119682890329484
+          }
+        }
+      },
+      "joint_vs_greedy": {
+        "pairs": 24,
+        "potential_total": {
+          "paired_mean_delta": -2.625,
+          "paired_seed_bootstrap_ci95": [
+            -4.166666666666667,
+            -1.0833333333333333
+          ]
+        },
+        "concerto": {
+          "paired_mean_delta": 1.375,
+          "paired_seed_bootstrap_ci95": [
+            0.4166666666666667,
+            2.2916666666666665
+          ]
+        },
+        "objective": {
+          "paired_mean_delta": 1.5,
+          "paired_seed_bootstrap_ci95": [
+            -1.125,
+            4.0
+          ]
+        },
+        "note_spent": {
+          "paired_mean_delta": 316.5,
+          "paired_seed_bootstrap_ci95": [
+            171.28333333333333,
+            464.64375000000007
+          ]
+        }
+      }
+    },
+    "no_note_events": {
+      "policies": {
+        "greedy": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 79.125,
+            "p5": 71.0,
+            "std": 4.399928976699511
+          },
+          "ordinary": {
+            "mean": 73.125,
+            "p5": 65.0,
+            "std": 4.399928976699511
+          },
+          "concerto": {
+            "mean": 8.041666666666666,
+            "p5": 5.300000000000001,
+            "std": 1.4571423708371427
+          },
+          "objective": {
+            "mean": 97.25,
+            "p5": 88.0,
+            "std": 5.84700778176325
+          },
+          "note_spent": {
+            "mean": 313.4166666666667,
+            "p5": 90.0,
+            "std": 221.59646444732724
+          },
+          "note_purchases": {
+            "mean": 2.4166666666666665,
+            "p5": 1.0,
+            "std": 1.076903998610007
+          }
+        },
+        "joint": {
+          "completed": 24,
+          "potential_total": {
+            "mean": 77.16666666666667,
+            "p5": 69.3,
+            "std": 3.9651257511234395
+          },
+          "ordinary": {
+            "mean": 71.16666666666667,
+            "p5": 63.3,
+            "std": 3.9651257511234395
+          },
+          "concerto": {
+            "mean": 8.75,
+            "p5": 7.15,
+            "std": 1.5343293866268306
+          },
+          "objective": {
+            "mean": 97.41666666666667,
+            "p5": 89.45,
+            "std": 4.489957931008064
+          },
+          "note_spent": {
+            "mean": 626.875,
+            "p5": 387.0,
+            "std": 216.86945237861417
+          },
+          "note_purchases": {
+            "mean": 7.625,
+            "p5": 5.0,
+            "std": 1.79843682124227
+          }
+        }
+      },
+      "joint_vs_greedy": {
+        "pairs": 24,
+        "potential_total": {
+          "paired_mean_delta": -1.9583333333333333,
+          "paired_seed_bootstrap_ci95": [
+            -3.5833333333333335,
+            -0.2916666666666667
+          ]
+        },
+        "concerto": {
+          "paired_mean_delta": 0.7083333333333334,
+          "paired_seed_bootstrap_ci95": [
+            0.16666666666666666,
+            1.25
+          ]
+        },
+        "objective": {
+          "paired_mean_delta": 0.16666666666666666,
+          "paired_seed_bootstrap_ci95": [
+            -1.5833333333333333,
+            1.9166666666666667
+          ]
+        },
+        "note_spent": {
+          "paired_mean_delta": 313.4583333333333,
+          "paired_seed_bootstrap_ci95": [
+            185.14375,
+            443.9197916666667
+          ]
+        }
+      }
+    }
+  },
+  "interpretation": [
+    "Primary score preference = ordinary potential + 3*sum(concerto levels); this is not measured damage",
+    "beta_only gets the same events/drop/adjustment environment but cannot buy notes",
+    "All three policies use the same fixed terminal greedy adjustment operator",
+    "Shop/event choices are learned; ordinary card choices retain frozen beta",
+    "Intervals resample paired seeds across the fixed configuration panel, not unseen games or real-world conditions",
+    "Held-out configurations and episode seeds are disjoint from train/dev",
+    "Uncertain drop/event/swap rules are evaluated as assumptions, not established game truth"
+  ],
+  "per_config": {
+    "reference_01": {
+      "beta_only": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 81.90625,
+          "p5": 78.1,
+          "std": 2.5782670415416633
+        },
+        "ordinary": {
+          "mean": 75.90625,
+          "p5": 72.1,
+          "std": 2.5782670415416633
+        },
+        "concerto": {
+          "mean": 8.28125,
+          "p5": 8.0,
+          "std": 0.4496092053105675
+        },
+        "objective": {
+          "mean": 100.75,
+          "p5": 97.0,
+          "std": 2.7726341266023544
+        },
+        "note_spent": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        },
+        "note_purchases": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        }
+      },
+      "greedy": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 80.125,
+          "p5": 75.0,
+          "std": 2.9764702249476644
+        },
+        "ordinary": {
+          "mean": 74.125,
+          "p5": 69.0,
+          "std": 2.9764702249476644
+        },
+        "concerto": {
+          "mean": 9.3125,
+          "p5": 8.0,
+          "std": 1.1301963325015703
+        },
+        "objective": {
+          "mean": 102.0625,
+          "p5": 96.55,
+          "std": 3.682199580413859
+        },
+        "note_spent": {
+          "mean": 282.4375,
+          "p5": 24.750000000000004,
+          "std": 228.881920635401
+        },
+        "note_purchases": {
+          "mean": 2.1875,
+          "p5": 0.55,
+          "std": 1.2854352375751958
+        }
+      },
+      "joint": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 77.21875,
+          "p5": 73.0,
+          "std": 3.1596516323006245
+        },
+        "ordinary": {
+          "mean": 71.21875,
+          "p5": 67.0,
+          "std": 3.1596516323006245
+        },
+        "concerto": {
+          "mean": 11.4375,
+          "p5": 9.0,
+          "std": 1.9675095298371492
+        },
+        "objective": {
+          "mean": 105.53125,
+          "p5": 96.55,
+          "std": 6.092948665260524
+        },
+        "note_spent": {
+          "mean": 721.46875,
+          "p5": 402.75,
+          "std": 274.73305047525224
+        },
+        "note_purchases": {
+          "mean": 8.40625,
+          "p5": 5.55,
+          "std": 1.9342210156804729
+        }
+      }
+    },
+    "reference_02": {
+      "beta_only": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 79.5,
+          "p5": 75.55,
+          "std": 2.75
+        },
+        "ordinary": {
+          "mean": 73.5,
+          "p5": 69.55,
+          "std": 2.75
+        },
+        "concerto": {
+          "mean": 6.9375,
+          "p5": 6.0,
+          "std": 1.0879309490955758
+        },
+        "objective": {
+          "mean": 94.3125,
+          "p5": 87.55,
+          "std": 4.4821695360617495
+        },
+        "note_spent": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        },
+        "note_purchases": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        }
+      },
+      "greedy": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 78.84375,
+          "p5": 73.1,
+          "std": 3.33644060901734
+        },
+        "ordinary": {
+          "mean": 72.84375,
+          "p5": 67.1,
+          "std": 3.33644060901734
+        },
+        "concerto": {
+          "mean": 8.25,
+          "p5": 6.0,
+          "std": 1.4577379737113252
+        },
+        "objective": {
+          "mean": 97.59375,
+          "p5": 90.0,
+          "std": 4.872495350177361
+        },
+        "note_spent": {
+          "mean": 276.65625,
+          "p5": 45.0,
+          "std": 261.22901941770846
+        },
+        "note_purchases": {
+          "mean": 2.25,
+          "p5": 1.0,
+          "std": 1.4361406616345072
+        }
+      },
+      "joint": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 77.5,
+          "p5": 74.0,
+          "std": 2.25
+        },
+        "ordinary": {
+          "mean": 71.5,
+          "p5": 68.0,
+          "std": 2.25
+        },
+        "concerto": {
+          "mean": 9.59375,
+          "p5": 6.55,
+          "std": 2.13394258064738
+        },
+        "objective": {
+          "mean": 100.28125,
+          "p5": 91.55,
+          "std": 6.03238331321046
+        },
+        "note_spent": {
+          "mean": 688.125,
+          "p5": 324.0,
+          "std": 261.76835537360125
+        },
+        "note_purchases": {
+          "mean": 7.46875,
+          "p5": 5.0,
+          "std": 2.076420823797527
+        }
+      }
+    },
+    "reference_03": {
+      "beta_only": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 81.84375,
+          "p5": 78.0,
+          "std": 2.5993914552256263
+        },
+        "ordinary": {
+          "mean": 75.84375,
+          "p5": 72.0,
+          "std": 2.5993914552256263
+        },
+        "concerto": {
+          "mean": 5.8125,
+          "p5": 4.0,
+          "std": 1.3792547806696194
+        },
+        "objective": {
+          "mean": 93.28125,
+          "p5": 85.55,
+          "std": 4.829818675426646
+        },
+        "note_spent": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        },
+        "note_purchases": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        }
+      },
+      "greedy": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 80.3125,
+          "p5": 76.1,
+          "std": 2.7092146002116553
+        },
+        "ordinary": {
+          "mean": 74.3125,
+          "p5": 70.1,
+          "std": 2.7092146002116553
+        },
+        "concerto": {
+          "mean": 8.03125,
+          "p5": 6.55,
+          "std": 1.1854422961494162
+        },
+        "objective": {
+          "mean": 98.40625,
+          "p5": 92.55,
+          "std": 4.182249506844373
+        },
+        "note_spent": {
+          "mean": 385.625,
+          "p5": 59.85,
+          "std": 258.9659425001674
+        },
+        "note_purchases": {
+          "mean": 2.90625,
+          "p5": 1.0,
+          "std": 1.3774835525333868
+        }
+      },
+      "joint": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 77.8125,
+          "p5": 73.55,
+          "std": 3.3113205447374012
+        },
+        "ordinary": {
+          "mean": 71.8125,
+          "p5": 67.55,
+          "std": 3.3113205447374012
+        },
+        "concerto": {
+          "mean": 9.28125,
+          "p5": 7.55,
+          "std": 1.3746448404951732
+        },
+        "objective": {
+          "mean": 99.65625,
+          "p5": 93.1,
+          "std": 4.559395347795583
+        },
+        "note_spent": {
+          "mean": 720.1875,
+          "p5": 289.35,
+          "std": 283.7376029780861
+        },
+        "note_purchases": {
+          "mean": 7.5,
+          "p5": 4.55,
+          "std": 1.8371173070873836
+        }
+      }
+    },
+    "random_20401107_0": {
+      "beta_only": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 74.78125,
+          "p5": 70.0,
+          "std": 2.4074672245951763
+        },
+        "ordinary": {
+          "mean": 68.78125,
+          "p5": 64.0,
+          "std": 2.4074672245951763
+        },
+        "concerto": {
+          "mean": 5.03125,
+          "p5": 4.0,
+          "std": 0.7699178121721825
+        },
+        "objective": {
+          "mean": 83.875,
+          "p5": 77.65,
+          "std": 3.585997071945263
+        },
+        "note_spent": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        },
+        "note_purchases": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        }
+      },
+      "greedy": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 73.1875,
+          "p5": 68.55,
+          "std": 2.6743866119168334
+        },
+        "ordinary": {
+          "mean": 67.1875,
+          "p5": 62.55,
+          "std": 2.6743866119168334
+        },
+        "concerto": {
+          "mean": 7.4375,
+          "p5": 6.0,
+          "std": 1.1709371246996996
+        },
+        "objective": {
+          "mean": 89.5,
+          "p5": 83.55,
+          "std": 3.952847075210474
+        },
+        "note_spent": {
+          "mean": 488.0,
+          "p5": 114.75,
+          "std": 311.688947510174
+        },
+        "note_purchases": {
+          "mean": 4.375,
+          "p5": 2.0,
+          "std": 1.709349291397168
+        }
+      },
+      "joint": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 70.875,
+          "p5": 65.65,
+          "std": 2.6896793489187516
+        },
+        "ordinary": {
+          "mean": 64.875,
+          "p5": 59.65,
+          "std": 2.6896793489187516
+        },
+        "concerto": {
+          "mean": 8.96875,
+          "p5": 7.55,
+          "std": 1.1587810136086973
+        },
+        "objective": {
+          "mean": 91.78125,
+          "p5": 85.55,
+          "std": 4.435188658614197
+        },
+        "note_spent": {
+          "mean": 979.90625,
+          "p5": 600.75,
+          "std": 294.86907681365557
+        },
+        "note_purchases": {
+          "mean": 11.0,
+          "p5": 6.55,
+          "std": 2.6575364531836625
+        }
+      }
+    },
+    "random_20401107_1": {
+      "beta_only": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 74.3125,
+          "p5": 69.65,
+          "std": 2.542605700850999
+        },
+        "ordinary": {
+          "mean": 68.3125,
+          "p5": 63.65,
+          "std": 2.542605700850999
+        },
+        "concerto": {
+          "mean": 5.8125,
+          "p5": 5.0,
+          "std": 0.3903123748998999
+        },
+        "objective": {
+          "mean": 85.75,
+          "p5": 80.0,
+          "std": 2.6575364531836625
+        },
+        "note_spent": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        },
+        "note_purchases": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        }
+      },
+      "greedy": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 73.09375,
+          "p5": 68.0,
+          "std": 2.84340657266948
+        },
+        "ordinary": {
+          "mean": 67.09375,
+          "p5": 62.0,
+          "std": 2.84340657266948
+        },
+        "concerto": {
+          "mean": 6.90625,
+          "p5": 6.0,
+          "std": 1.0999822441748777
+        },
+        "objective": {
+          "mean": 87.8125,
+          "p5": 84.0,
+          "std": 2.788788939665388
+        },
+        "note_spent": {
+          "mean": 484.90625,
+          "p5": 104.85,
+          "std": 329.9409378372703
+        },
+        "note_purchases": {
+          "mean": 4.25,
+          "p5": 2.0,
+          "std": 1.5612494995995996
+        }
+      },
+      "joint": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 71.875,
+          "p5": 67.55,
+          "std": 2.7810744326608736
+        },
+        "ordinary": {
+          "mean": 65.875,
+          "p5": 61.55,
+          "std": 2.7810744326608736
+        },
+        "concerto": {
+          "mean": 7.59375,
+          "p5": 6.0,
+          "std": 1.4111027381094545
+        },
+        "objective": {
+          "mean": 88.65625,
+          "p5": 83.55,
+          "std": 4.112552241309525
+        },
+        "note_spent": {
+          "mean": 836.46875,
+          "p5": 342.0,
+          "std": 317.9743488450562
+        },
+        "note_purchases": {
+          "mean": 8.8125,
+          "p5": 5.0,
+          "std": 2.603333199957316
+        }
+      }
+    },
+    "random_20401107_2": {
+      "beta_only": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 77.6875,
+          "p5": 72.1,
+          "std": 2.8986796563263075
+        },
+        "ordinary": {
+          "mean": 71.6875,
+          "p5": 66.1,
+          "std": 2.8986796563263075
+        },
+        "concerto": {
+          "mean": 5.90625,
+          "p5": 5.0,
+          "std": 0.7228145941387736
+        },
+        "objective": {
+          "mean": 89.40625,
+          "p5": 83.55,
+          "std": 3.29639362599493
+        },
+        "note_spent": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        },
+        "note_purchases": {
+          "mean": 0.0,
+          "p5": 0.0,
+          "std": 0.0
+        }
+      },
+      "greedy": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 75.96875,
+          "p5": 71.1,
+          "std": 3.0257682392245444
+        },
+        "ordinary": {
+          "mean": 69.96875,
+          "p5": 65.1,
+          "std": 3.0257682392245444
+        },
+        "concerto": {
+          "mean": 8.75,
+          "p5": 7.0,
+          "std": 1.3228756555322954
+        },
+        "objective": {
+          "mean": 96.21875,
+          "p5": 89.55,
+          "std": 4.4492581895749765
+        },
+        "note_spent": {
+          "mean": 457.15625,
+          "p5": 139.5,
+          "std": 231.10415798063326
+        },
+        "note_purchases": {
+          "mean": 3.9375,
+          "p5": 2.0,
+          "std": 1.71277370075559
+        }
+      },
+      "joint": {
+        "completed": 32,
+        "potential_total": {
+          "mean": 75.0625,
+          "p5": 71.55,
+          "std": 1.8864235340983213
+        },
+        "ordinary": {
+          "mean": 69.0625,
+          "p5": 65.55,
+          "std": 1.8864235340983213
+        },
+        "concerto": {
+          "mean": 10.125,
+          "p5": 7.55,
+          "std": 1.996089927833914
+        },
+        "objective": {
+          "mean": 99.4375,
+          "p5": 90.1,
+          "std": 6.595156840439809
+        },
+        "note_spent": {
+          "mean": 892.0625,
+          "p5": 410.4,
+          "std": 261.65721104863513
+        },
+        "note_purchases": {
+          "mean": 10.0625,
+          "p5": 6.1,
+          "std": 2.3175620272173947
+        }
+      }
+    }
+  },
+  "promotion": {
+    "recommended_over_greedy_in_primary_simulator": true,
+    "live_game_validated": false,
+    "reason": "Requires positive paired 95% lower bound and no simulation gaps; real-game transfer remains unvalidated"
+  },
+  "parameter_sha256": "95515f63b3cd98ae9ab2308c7b04f6eea54c76dc1b9002b8050bb13f53c63c92"
+}

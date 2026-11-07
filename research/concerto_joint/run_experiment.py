@@ -9,7 +9,7 @@ from bootstrap import HERE
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reuse-data", action="store_true")
-    parser.add_argument("--run", default="joint_v3_prices_clean")
+    parser.add_argument("--run", default="joint_v4_env_fixed")
     parser.add_argument("--train-episodes", type=int, default=64)
     parser.add_argument("--dev-episodes", type=int, default=16)
     parser.add_argument("--rollouts", type=int, default=2)
@@ -33,6 +33,9 @@ def main():
                     "--stress-rounds", str(args.stress_rounds), "--seed", str(args.eval_seed)], check=True)
     subprocess.run([sys.executable, str(HERE / "finalize.py"), "--run", args.run], check=True)
     subprocess.run([sys.executable, str(HERE / "audit_clean_run.py"), "--run", args.run], check=True)
+    subprocess.run([sys.executable, str(HERE / "audit_environment.py"), "--run", args.run,
+                    "--output", str(HERE / "runs" / args.run / "environment_validation.json")], check=True)
+    subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", str(HERE), "-v"], check=True)
     subprocess.run([sys.executable, str(HERE / "summarize.py"), "--run", args.run], check=True)
     subprocess.run([sys.executable, str(HERE / "build_handoff.py"), "--run", args.run], check=True)
 

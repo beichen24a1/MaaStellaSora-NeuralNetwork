@@ -8,7 +8,7 @@
 | `data/inputs.json` | 61 件秘纹的精确技能映射和辅助供给；历史音符商品大小／价格聚合频次。保留各原始输入的 SHA256，原始日志不在本 PR 中。 |
 | `data/reference_scenarios.json` | 三组匿名固定目标向量和秘纹配置；没有角色 ID、玩家身份或历史对局。其数值与原评测参考配置一致，名称及身份哈希已去掉本机命名。 |
 | `models/ordinary_beta_20261105.npz` | Dango 先前 beta 教师的固定副本；SHA256 `106b1271301dc05d702bc110b62a0b6b4f920b7144c7f61c98087e979a1d1070`。 |
-| `runs/joint_v3_prices_clean/joint_critic.npz` | 价格修复后重新生成联合标签、重新训练的双输出残差网络；旧 joint_v2 不再有效。 |
+| `runs/joint_v4_env_fixed/joint_critic.npz` | 价格与三项环境实现修复后，重新生成联合标签并训练的双输出残差网络；v2、v3 均不再有效。 |
 
 旧 joint_v2 参数校验值为 `54a6f10a0b8ef54fbf9f01a8b5634920d55399bd37a809bf6e9a4d3db4ef35d2`，该版本因价格污染作废。新权重的参数校验值以新运行目录元数据为准。它和整个 NPZ 文件的 SHA256 不同：元数据或文件布局变化会改变 NPZ 哈希，不应据此推断参数变化。
 

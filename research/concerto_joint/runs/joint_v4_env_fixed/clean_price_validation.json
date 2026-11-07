@@ -1,0 +1,31 @@
+{
+  "schema": "clean_price_training_audit_v1",
+  "run": "joint_v4_env_fixed",
+  "rules_version": "joint_offline_v3_environment_fixed",
+  "price_schema": "note_product_prices_v2_clean",
+  "input_sha256_lf": "045f4a362a2c225a2e263c3a453cdd76d5ca66eff28bd3a226d3cd7d319b6d46",
+  "splits": {
+    "train": {
+      "roots": 256,
+      "action_rows": 1579,
+      "rows_with_bad_price_features": 0,
+      "max_normalized_shelf_price": 1.0,
+      "all_snapshot_prices_legal": true,
+      "dataset_sha256": "0e5b4968182cf5935129eedaf0adb75aae799908d6fc941b1acd2a688d6722cf"
+    },
+    "dev": {
+      "roots": 64,
+      "action_rows": 393,
+      "rows_with_bad_price_features": 0,
+      "max_normalized_shelf_price": 1.0,
+      "all_snapshot_prices_legal": true,
+      "dataset_sha256": "90368fc28339f1124972913cc9b2634f3aae881065dc0196701d93a45bd7354c"
+    }
+  },
+  "frozen_beta_sha256": "106b1271301dc05d702bc110b62a0b6b4f920b7144c7f61c98087e979a1d1070",
+  "frozen_beta_retrained": false,
+  "checkpoint_sha256": "137760fa16530fcf68d9c6870226cd253bb489bbc2abcd48aa0fef5894fc6ceb",
+  "parameter_sha256": "95515f63b3cd98ae9ab2308c7b04f6eea54c76dc1b9002b8050bb13f53c63c92",
+  "status": "price_domain_and_artifact_identity_only_verified",
+  "scope": "This does not verify event-action completeness, joint dominance pruning, shelf discount correlations or game fidelity."
+}

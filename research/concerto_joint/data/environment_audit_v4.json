@@ -1,0 +1,152 @@
+{
+  "schema": "joint_environment_audit_v1",
+  "rules_version": "joint_offline_v3_environment_fixed",
+  "source_sha256": {
+    "research/concerto_joint/joint_env.py": "2dcc9a5b3406765aba95801b190afa206384db1e215c176fb6b1ca0e5f6f0996",
+    "research/concerto_joint/joint_model.py": "761ee323571481c2d22ae879db7d389897cfffa8b92bbaa5f9f655faf5ea1c0f",
+    "research/concerto_joint/note_state.py": "f8e97c9e38f504be9d2ee2cae3eeac99db0288d95290d3d90bf96063197ca729",
+    "research/concerto_joint/price_data.py": "d09e97f2573677abdb89bc1cf1f19e0dbf8e71c28f29581653bdfbcb33dc57af",
+    "research/concerto_joint/data/inputs.json": "045f4a362a2c225a2e263c3a453cdd76d5ca66eff28bd3a226d3cd7d319b6d46",
+    "research/concerto_joint/data/note_system.json": "f648a548fee15d20c5c421748c32bf433f0ada18115b0a0668b0894fe90631f4",
+    "research/concerto_joint/data/reference_scenarios.json": "8519bb6657feb978ffdd98f8ac4b0793cf8f96cc8b6098915eee91643552a20f",
+    "maa_value_plugin/critic/features.py": "5d323740ed7c538850500617d7baeb95845ac17f8b9f22b58245807980f0f701",
+    "maa_value_plugin/critic/environment.py": "fc70a8d09a380fb163ddd182e45af91bd063d64247d35dc63168e271d35464c1",
+    "maa_value_plugin/critic/presets.py": "8245eac590a7e151c7f99a3eb560ba2cf4e727babdf5e3dec4ed3de7b2dcf6b1",
+    "maa_value_plugin/critic/network.py": "c703d1b3dafdeef242749f11216f2e7b9bff5b57c3454d285c6ae7d281733282",
+    "maa_value_plugin/critic/vendor/stella_sim.py": "b7e991943fa7713613a838194ab0d8eb2bdfa0d5e067ffa4a17d985bf3d1c79b"
+  },
+  "event_probes": [
+    {
+      "event": 107,
+      "note_total": 50,
+      "visible_known_options": [
+        10701,
+        10702,
+        10703,
+        10704,
+        10705,
+        10706,
+        10707,
+        10708,
+        0
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010702",
+        "07_EVENT_107_010703",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010705",
+        "07_EVENT_107_010706",
+        "07_EVENT_107_010707",
+        "07_EVENT_107_010708"
+      ]
+    },
+    {
+      "event": 108,
+      "note_total": 50,
+      "visible_known_options": [
+        10801,
+        10802,
+        10803,
+        10804,
+        10805,
+        10806,
+        10807,
+        10808,
+        10809,
+        0
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_108_010801",
+        "07_EVENT_108_010802",
+        "07_EVENT_108_010803",
+        "07_EVENT_108_010804",
+        "07_EVENT_108_010805",
+        "07_EVENT_108_010806",
+        "07_EVENT_108_010807",
+        "07_EVENT_108_010808",
+        "07_EVENT_108_010809"
+      ]
+    },
+    {
+      "event": 103,
+      "note_total": 0,
+      "visible_known_options": [
+        0,
+        10301,
+        10302
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010302"
+      ]
+    },
+    {
+      "event": 103,
+      "note_total": 50,
+      "visible_known_options": [
+        0,
+        10301,
+        10302
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ]
+    },
+    {
+      "event": 104,
+      "note_total": 50,
+      "visible_known_options": [
+        0,
+        10401,
+        10402,
+        10403
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_104_010401",
+        "07_EVENT_104_010402",
+        "07_EVENT_104_010403"
+      ]
+    }
+  ],
+  "confirmed_issues": [],
+  "simulated_first_shops": {
+    "games": 80,
+    "scenario_seed": 91,
+    "discounted_slot_histogram": {
+      "4": 80
+    },
+    "not_four_discounted_slots": 0
+  },
+  "raw_observation_audit": {
+    "source_sha256": "fedf9db8f734dd22705c418b6e6fb283bddfcd5ddf6f3fdb6ca601996dad4bdf",
+    "stock_snapshots": 1331,
+    "discounted_slot_histogram": {
+      "4": 1331
+    },
+    "note_quantity_counts": {
+      "15": 1078,
+      "5": 3694
+    },
+    "half_price_slot_histogram": {
+      "2": 1079,
+      "0": 34,
+      "1": 218
+    },
+    "distinct_recorded_shelf_keys": 1331,
+    "repeats_by_recorded_shelf_key": 0,
+    "independence_caveat": "Inferred IDs cannot prove physical-shop independence; this is not a transaction count."
+  },
+  "unverified_assumptions": [
+    "battle-note quantity and distribution",
+    "terminal transfer legality/timing",
+    "some event reward branches, including note-or-heal",
+    "concerto level sum as a proxy for combat value"
+  ],
+  "status": "audited_mechanisms_pass_real_game_assumptions_unvalidated"
+}

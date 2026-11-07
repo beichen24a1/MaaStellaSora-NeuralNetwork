@@ -5,6 +5,7 @@ from dataclasses import dataclass, replace, asdict
 from functools import lru_cache
 import hashlib
 import json
+from math import comb
 from random import Random
 
 from bootstrap import HERE, ROOT
@@ -14,20 +15,74 @@ from maa_value_plugin.critic.environment import Episode, sim, legal_actions
 from maa_value_plugin.critic.presets import Preset, canonical_seed, sample_preset
 
 RULES = {
-    "version": "joint_offline_v2_note_prices_clean",
+    "version": "joint_offline_v3_environment_fixed",
     "note_prices": "Quantity-specific legal prices; confirmed 9045->45 and 9072->72 OCR concatenations repaired before aggregation; unknown values fail validation",
     "ordinary_kernel": sim.MODEL_VERSION,
     "ordinary_route": "unchanged frozen 45-node route",
-    "shelves": "Keep kernel drink stock and fill remaining slots to eight with empirical note product sizes/prices",
+    "shelves": "Keep kernel drinks; sample remaining discount tiers from the exact conditional four-of-eight shelf law (at most two half-price slots), then empirical marginal note sizes; middle initial shops retain the kernel half-price prior",
     "note_product_identity": "Uniform among tower drop-group notes, independent of selected skills",
     "battle_notes": "Eight individual uniform draws per battle by default; uncalibrated, evaluate sensitivity",
     "initial_supply": "Actual local wiki per-sigil supportSupply, not a blanket eight per type",
     "note_events": "Client-table effects with uniform random-note draws; generic fixed-note IDs 10701..10707; any-note costs use a deterministic least-loss donor",
     "visibility": "All modeled note options exposed for 107/108/114; actual server option sampling is unknown",
+    "event_legality": "All visible table options, without ordinary-objective dominance pruning; coin costs, every positive-mass wallet outcome and note costs checked before selection",
     "adjustments": "At terminal, at most 15 one-for-one transfers between any owned donor and a required target; legality/timing need game evidence",
     "objective": "Separate ordinary/concerto returns; lambda is an experimental preference, not measured damage",
     "scope": "Offline research only, no Maa or live-game integration",
 }
+
+
+class JointKernelEpisode(Episode):
+    """Change event legality locally; retain the frozen kernel's transitions.
+
+    Episode.step validates against this property as well, so a newly exposed
+    option is executable, not merely offered by the outer adapter.
+    """
+    @property
+    def actions(self):
+        state = self.state
+        if state.phase != "EVENT":
+            return super().actions
+        if state.eventId not in sim.EVENT_DATA:
+            raise sim.ModelGap("UNKNOWN_EVENT", state.eventId)
+        options = sim.EVENT_DATA[state.eventId][2]
+        out = []
+        for oid in sorted(set(state.eventOptions)):
+            if oid not in options:
+                raise sim.ModelGap("UNKNOWN_EVENT_OPTION", oid)
+            cost, outcomes = options[oid]
+            if state.coins < cost or any(n and state.coins + delta < 0
+                                         for n, _d, delta, _kind, _scope in outcomes):
+                continue
+            out.append(sim.Action("SKIP_EVENT", type=state.eventId) if oid == 0
+                       else sim.Action("EVENT_OPTION", oid, cost, state.eventId))
+        if not out:
+            raise sim.ModelGap("NO_COVERED_ACTION", state.eventId)
+        return tuple(out)
+
+
+def remaining_discount_tiers(stock, rng, *, middle_initial=False):
+    """Condition the reference eight-slot law on the already visible drinks.
+
+    Four slots are discounted. H=min(2, Binomial(3,p)) of those are half
+    price. Given h half-price and m 20%-off drinks, posterior weight for H
+    is prior(H)*C(H,h)*C(4-H,m); all omitted factors are constant in H.
+    This preserves the drink marginal instead of resampling or repricing it.
+    """
+    h, m, full = (sum(row[i] for row in stock) for i in range(3))
+    p = .75 if middle_initial else .7
+    prior = ((1-p)**3, 3*p*(1-p)**2, 3*p*p*(1-p) + p**3)
+    possible, weights = [], []
+    for total_half in range(3):
+        if h <= total_half and m <= 4-total_half and full <= 4:
+            possible.append(total_half)
+            weights.append(prior[total_half] * comb(total_half, h) * comb(4-total_half, m))
+    if not possible or sum(weights) <= 0:
+        raise ValueError("Drink stock is incompatible with the joint shelf law")
+    total_half = rng.choices(possible, weights=weights)[0]
+    tiers = [0]*(total_half-h) + [1]*(4-total_half-m) + [2]*(4-full)
+    rng.shuffle(tiers)
+    return tiers
 
 
 @lru_cache(maxsize=1)
@@ -102,7 +157,7 @@ class JointEpisode:
     def __init__(self, config, seed, drop_per_battle=8, swaps=15, note_events=True):
         self.config = config
         self.preset = Preset.from_dict(config["preset"])
-        self.ep = Episode(self.preset, canonical_seed("ordinary", seed))
+        self.ep = JointKernelEpisode(self.preset, canonical_seed("ordinary", seed))
         self.notes = tuple(config["supply"])
         self.skills = tuple(catalog()[g] for g in config["groups"])
         self.allowed = tuple(range(90011, 90018)) + {1: (90021, 90022), 2: (90018, 90020), 3: (90019, 90023)}[config["tower"]]
@@ -144,17 +199,20 @@ class JointEpisode:
         for _ in range(quantity):
             self._give(rng.choice(self.allowed), 1)
 
-    def _shelf(self):
+    def _shelf(self, *, initial=True):
         self.generation += 1
-        count = 8 - sum(map(sum, self.ep.state.stock))
         goods = inputs()["note_goods"]
-        weights = [row["observations"] for row in goods]
+        sizes = (5, 15)
+        weights = [sum(row["observations"] for row in goods if row["quantity"] == size) for size in sizes]
+        tiers = remaining_discount_tiers(self.ep.state.stock, self.shelf_rng,
+                    middle_initial=initial and self.ep.state.shopOrdinal in (2, 3))
         self.shelf = tuple(VisibleNoteOffer(f"{self.ep.state.shopOrdinal}-{self.generation}-{slot}",
-                            row["price"], ((self.shelf_rng.choice(self.allowed), row["quantity"]),))
-                           for slot in range(count)
-                           for row in [self.shelf_rng.choices(goods, weights=weights)[0]])
+                            {5: (45, 72, 90), 15: (200, 320, 400)}[size][tier],
+                            ((self.shelf_rng.choice(self.allowed), size),))
+                           for slot, tier in enumerate(tiers)
+                           for size in [self.shelf_rng.choices(sizes, weights=weights)[0]])
 
-    def _sync(self, new_shelf=False):
+    def _sync(self, new_shelf=False, *, initial=True):
         limit = min(self.ep.state.node - 1, len(sim.ROUTE))
         for index in range(self.crossed, limit):
             kind = sim.ROUTE[index][0]
@@ -164,7 +222,7 @@ class JointEpisode:
                 self.core += 1
         self.crossed = max(self.crossed, limit)
         if new_shelf:
-            self._shelf()
+            self._shelf(initial=initial)
         if self.note_events and self.ep.state.phase == "EVENT":
             eid = self.ep.state.eventId
             extra = {107: range(10701, 10709), 108: range(10801, 10810), 114: range(11401, 11406)}.get(eid, ())
@@ -245,7 +303,7 @@ class JointEpisode:
         self.ep.step(base)
         new = self.ep.state
         new_shelf = new.phase == "SHOP" and (new.shopOrdinal != before.shopOrdinal or base.kind == "RESTOCK")
-        self._sync(new_shelf)
+        self._sync(new_shelf, initial=base.kind != "RESTOCK")
 
     def outcome(self):
         return {"ordinary": sim.score(self.ep.state), "core": self.core,
@@ -272,7 +330,7 @@ class JointEpisode:
         obj.config = snapshot["config"]
         obj.preset = Preset.from_dict(obj.config["preset"])
         state = sim.state_from_dict(snapshot["ordinary_state"])
-        obj.ep = Episode.from_public(state, canonical_seed("ordinary_branch", seed), obj.preset)
+        obj.ep = JointKernelEpisode.from_public(state, canonical_seed("ordinary_branch", seed), obj.preset)
         obj.notes = tuple(snapshot["notes"])
         obj.skills = tuple(catalog()[g] for g in obj.config["groups"])
         obj.allowed = tuple(range(90011, 90018)) + {1: (90021, 90022), 2: (90018, 90020), 3: (90019, 90023)}[obj.config["tower"]]

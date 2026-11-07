@@ -7,4 +7,8 @@ runs/*/*.roots.jsonl
 !runs/joint_v3_prices_clean/dev.npz
 !runs/joint_v3_prices_clean/train.roots.jsonl
 !runs/joint_v3_prices_clean/dev.roots.jsonl
+!runs/joint_v4_env_fixed/train.npz
+!runs/joint_v4_env_fixed/dev.npz
+!runs/joint_v4_env_fixed/train.roots.jsonl
+!runs/joint_v4_env_fixed/dev.roots.jsonl
 handoff/

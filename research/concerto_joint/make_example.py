@@ -8,7 +8,7 @@ from joint_model import Baseline
 from infer import decide
 
 
-def make_example(run="joint_v3_prices_clean"):
+def make_example(run="joint_v4_env_fixed"):
     directory = HERE / "runs" / run
     env = JointEpisode(random_scenarios(1, 20361107)[0], 417)
     policy = Baseline()
@@ -24,6 +24,6 @@ def make_example(run="joint_v3_prices_clean"):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", default="joint_v3_prices_clean")
+    parser.add_argument("--run", default="joint_v4_env_fixed")
     args = parser.parse_args()
     make_example(args.run)
