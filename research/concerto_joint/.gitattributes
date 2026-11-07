@@ -1,4 +1,7 @@
 *.py text eol=lf
 *.json text eol=lf
+*.jsonl text eol=lf
 *.md text eol=lf
 *.npz binary
+data/*.json linguist-generated=true
+runs/** linguist-generated=true

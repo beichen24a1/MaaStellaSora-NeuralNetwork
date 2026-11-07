@@ -10,10 +10,10 @@ def main():
     counts = dict.fromkeys(NOTE_IDS, 0)
     counts.update(skill.requirements[0])
     missing = skill.requirements[0][0][0]
-    counts[missing] -= 1
+    counts[missing] -= 5
     state = NoteState.from_counts(counts, coins=90, floors_left=0,
                                  swaps_left=0, skills=(skill,))
-    offer = VisibleNoteOffer("constructed-visible-slot", 90, ((missing, 1),))
+    offer = VisibleNoteOffer("constructed-visible-slot", 90, ((missing, 5),))
     after, sold = purchase(state, offer)
     print(json.dumps({
         "scenario": "constructed threshold-crossing example, not a training benchmark",

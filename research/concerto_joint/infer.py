@@ -8,11 +8,14 @@ from bootstrap import HERE
 import numpy as np
 from joint_env import JointEpisode, RULES
 from joint_model import JointCritic, encode_joint, GREEDY_PROGRESS_INDEX
+from price_data import validate_note_price
 
 
 def decide(snapshot, checkpoint):
     if snapshot["ordinary_state"]["phase"] not in ("SHOP", "EVENT", "PAGE", "ENHANCE_PAGE", "END"):
         raise ValueError("Only an already observed decision boundary can be evaluated")
+    for offer in snapshot.get("shelf", []):
+        validate_note_price(sum(quantity for _note, quantity in offer["contents"]), offer["price"])
     env = JointEpisode.from_public(snapshot, 0)
     if env.done:
         return {"terminal": True, "action": None, "rules_version": RULES["version"]}

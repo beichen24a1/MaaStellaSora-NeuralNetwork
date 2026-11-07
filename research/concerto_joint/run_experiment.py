@@ -32,7 +32,9 @@ def main():
     subprocess.run([sys.executable, str(HERE / "evaluate.py"), "--run", args.run, "--rounds", str(args.rounds),
                     "--stress-rounds", str(args.stress_rounds), "--seed", str(args.eval_seed)], check=True)
     subprocess.run([sys.executable, str(HERE / "finalize.py"), "--run", args.run], check=True)
+    subprocess.run([sys.executable, str(HERE / "audit_clean_run.py"), "--run", args.run], check=True)
     subprocess.run([sys.executable, str(HERE / "summarize.py"), "--run", args.run], check=True)
+    subprocess.run([sys.executable, str(HERE / "build_handoff.py"), "--run", args.run], check=True)
 
 
 if __name__ == "__main__":

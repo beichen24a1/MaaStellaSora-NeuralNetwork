@@ -1,0 +1,30 @@
+{
+  "schema": "clean_price_training_audit_v1",
+  "run": "joint_v3_prices_clean",
+  "rules_version": "joint_offline_v2_note_prices_clean",
+  "price_schema": "note_product_prices_v2_clean",
+  "input_sha256_lf": "045f4a362a2c225a2e263c3a453cdd76d5ca66eff28bd3a226d3cd7d319b6d46",
+  "splits": {
+    "train": {
+      "roots": 256,
+      "action_rows": 1479,
+      "rows_with_bad_price_features": 0,
+      "max_normalized_shelf_price": 1.0,
+      "all_snapshot_prices_legal": true,
+      "dataset_sha256": "09a7d02cdde1621033701b6a10c97df665238967ff466440796c6ef9e86ff99d"
+    },
+    "dev": {
+      "roots": 64,
+      "action_rows": 371,
+      "rows_with_bad_price_features": 0,
+      "max_normalized_shelf_price": 1.0,
+      "all_snapshot_prices_legal": true,
+      "dataset_sha256": "ff5f4c0407a7dc96c9dfb06a8627e1062e0df5dbc3a5dbd2f9d84dd6d9b08bd8"
+    }
+  },
+  "frozen_beta_sha256": "106b1271301dc05d702bc110b62a0b6b4f920b7144c7f61c98087e979a1d1070",
+  "frozen_beta_retrained": false,
+  "checkpoint_sha256": "3a03b5576613cfa0e90c0590fc4145e5c92df97e2941aaf918d1eb41aa1523c4",
+  "parameter_sha256": "e9eb25ab619a41c179a35b70247353850637a3b3deec155bc93c66f4d9b321d5",
+  "status": "clean_inputs_fresh_labels_and_model_verified"
+}

@@ -1,0 +1,292 @@
+{
+  "rules_version": "joint_offline_v2_note_prices_clean",
+  "config": {
+    "name": "random_20361107_0",
+    "main_sigils": [
+      "荣誉时刻",
+      "因缘而聚",
+      "美好，尽在昨日"
+    ],
+    "sub_sigils": [
+      "空与花与诗",
+      "美好，尽在昨日",
+      "微小的乐园"
+    ],
+    "tower": 2,
+    "preset": {
+      "name": "120–144_concentrated_f804dd3220",
+      "pools": [
+        [
+          6,
+          6,
+          0
+        ],
+        [
+          6,
+          6,
+          0,
+          6,
+          6,
+          0,
+          0,
+          6,
+          6
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          6,
+          6,
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          6,
+          6,
+          0
+        ],
+        [
+          6,
+          0,
+          6,
+          6,
+          0,
+          6,
+          0,
+          6,
+          6
+        ]
+      ],
+      "group": "concentrated",
+      "total": 126,
+      "role_totals": [
+        48,
+        30,
+        48
+      ],
+      "fingerprint": "186780ad8091914553a34ea8122a649b2619fde3801105577e62db2b47f0b728"
+    },
+    "groups": [
+      40601,
+      40602,
+      40211,
+      40212,
+      40621,
+      40622
+    ],
+    "supply": [
+      8,
+      16,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      8,
+      8,
+      0,
+      0
+    ],
+    "fingerprint": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602"
+  },
+  "ordinary_state": {
+    "model": "state_space_s75_l5of11_v2",
+    "phase": "SHOP",
+    "node": 11,
+    "floor": 5,
+    "H": [
+      [
+        3,
+        2,
+        6,
+        3,
+        2
+      ]
+    ],
+    "pools": [
+      [
+        6,
+        6,
+        0
+      ],
+      [
+        6,
+        6,
+        0,
+        6,
+        6,
+        0,
+        0,
+        6,
+        6
+      ],
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        6,
+        6,
+        0
+      ],
+      [
+        6,
+        6,
+        0,
+        6,
+        0,
+        6,
+        0
+      ]
+    ],
+    "cap": 126,
+    "P": false,
+    "Q": false,
+    "h": 2,
+    "eBel": [
+      [
+        0,
+        0,
+        {
+          "numerator": 1,
+          "denominator": 1
+        }
+      ]
+    ],
+    "cBel": [
+      [
+        2,
+        1,
+        0,
+        {
+          "numerator": 1,
+          "denominator": 1
+        }
+      ]
+    ],
+    "coins": 780,
+    "freeEnhance": true,
+    "paidIndex": 0,
+    "stock": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "restocks": 2,
+    "firstInitial": false,
+    "shopReturnPhase": "ADVANCE",
+    "shopOrdinal": 1,
+    "offer": [],
+    "source": null,
+    "A": false,
+    "k": 1,
+    "seen": [
+      105,
+      114
+    ],
+    "eventId": 0,
+    "eventOptions": []
+  },
+  "notes": [
+    11,
+    21,
+    9,
+    3,
+    4,
+    3,
+    2,
+    12,
+    0,
+    9,
+    8,
+    0,
+    0
+  ],
+  "shelf": [
+    {
+      "item_id": "1-1-0",
+      "price": 90,
+      "contents": [
+        [
+          90016,
+          5
+        ]
+      ],
+      "stock": 1
+    },
+    {
+      "item_id": "1-1-1",
+      "price": 90,
+      "contents": [
+        [
+          90014,
+          5
+        ]
+      ],
+      "stock": 1
+    },
+    {
+      "item_id": "1-1-2",
+      "price": 90,
+      "contents": [
+        [
+          90012,
+          5
+        ]
+      ],
+      "stock": 1
+    },
+    {
+      "item_id": "1-1-3",
+      "price": 90,
+      "contents": [
+        [
+          90017,
+          5
+        ]
+      ],
+      "stock": 1
+    }
+  ],
+  "crossed": 10,
+  "generation": 1,
+  "core": 1,
+  "swaps_left": 15,
+  "drop_per_battle": 8,
+  "note_events": true,
+  "note_spent": 0,
+  "note_purchases": 0,
+  "swaps_used": 0,
+  "steps": 4,
+  "finished": false,
+  "provenance": "simulated_example_not_real_game"
+}

@@ -1,6 +1,7 @@
 import unittest
 
 from price_data import normalize_note_price, repair_note_goods, validate_note_goods, validate_note_price
+from infer import decide
 
 
 class PriceDataTests(unittest.TestCase):
@@ -23,6 +24,13 @@ class PriceDataTests(unittest.TestCase):
                 validate_note_price(5, price)
             with self.assertRaises(ValueError):
                 validate_note_goods([{"note": 90011, "quantity": 5, "price": price, "observations": 1}])
+
+    def test_public_inference_rejects_bad_price_before_model_load(self):
+        for price in (9045, 9072):
+            snapshot = {"ordinary_state": {"phase": "SHOP"},
+                        "shelf": [{"price": price, "contents": [[90011, 5]]}]}
+            with self.assertRaisesRegex(ValueError, "quantity/price"):
+                decide(snapshot, None)
 
     def test_mass_is_preserved_and_repair_is_idempotent(self):
         rows = [{"note": 90011, "quantity": 5, "price": price, "observations": count}

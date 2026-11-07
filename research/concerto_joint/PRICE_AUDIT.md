@@ -35,3 +35,11 @@ python research/concerto_joint/repair_prices.py
 ```
 
 规则版本升为 `joint_offline_v2_note_prices_clean`，旧模型和旧标签不能在该版本下复用。修复后使用 `joint_v3_prices_clean`，重新生成完整联合标签、重新训练和独立评测，不能只替换旧模型的价格文件或报告数字。
+
+## 修复后验证
+
+`joint_v3_prices_clean` 已完成整批新标签、重训和 768 局独立评测。训练 256 个根局面／1,479 行、开发 64 个根局面／371 行，坏价格特征均为 0，货架价格归一化最大值为 1.0；18 项检查通过，旧模型在新规则下拒绝加载。
+
+修复后相对规则的实验目标均值为 +0.34，95% 区间 [−0.37,+1.06]，目前不足以证明优于规则。旧 +1.85 已撤回；不能直接拿两轮差值当作价格错误的单项效应，因为测试种子、部分配置与模型均有变化。
+
+完整证据见 `runs/joint_v3_prices_clean/clean_price_validation.json` 和 `evaluation/report.json`。冻结 beta 校验值未变；这不等于审计了外部 beta 的原始训练数据。

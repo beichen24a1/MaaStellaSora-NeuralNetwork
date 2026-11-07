@@ -1,0 +1,95 @@
+{
+  "terminal": false,
+  "rules_version": "joint_offline_v2_note_prices_clean",
+  "action": {
+    "kind": "BASE",
+    "index": 0,
+    "donor": 0,
+    "target": 0,
+    "base": {
+      "kind": "ENHANCE",
+      "index": 0,
+      "price": 0,
+      "type": 0,
+      "key": ""
+    }
+  },
+  "action_key": "03_FREE_ENHANCE",
+  "policy_component": "learned_joint_critic",
+  "preference_weight": 3.0,
+  "residual_scale": 0.1,
+  "rankings": [
+    {
+      "action_key": "03_FREE_ENHANCE",
+      "preference_score": 71.66655731201172,
+      "ordinary_prior": 71.88276672363281,
+      "ordinary_advantage_correction": -12.990633010864258,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 3.609508991241455
+    },
+    {
+      "action_key": "NOTE:0:0:0",
+      "preference_score": 71.45126342773438,
+      "ordinary_prior": 71.30224609375,
+      "ordinary_advantage_correction": -14.672198295593262,
+      "public_concerto_progress": 0.14444443583488464,
+      "learned_concerto_correction": 3.943000316619873
+    },
+    {
+      "action_key": "05_BUY_02_0100",
+      "preference_score": 71.44685363769531,
+      "ordinary_prior": 71.7148666381836,
+      "ordinary_advantage_correction": -12.974039077758789,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 3.431309223175049
+    },
+    {
+      "action_key": "05_BUY_01_0100",
+      "preference_score": 71.3906021118164,
+      "ordinary_prior": 71.7396240234375,
+      "ordinary_advantage_correction": -14.681721687316895,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 3.730504274368286
+    },
+    {
+      "action_key": "NOTE:3:0:0",
+      "preference_score": 71.33132934570312,
+      "ordinary_prior": 71.30224609375,
+      "ordinary_advantage_correction": -14.20997142791748,
+      "public_concerto_progress": 0.09999999403953552,
+      "learned_concerto_correction": 3.8335931301116943
+    },
+    {
+      "action_key": "NOTE:2:0:0",
+      "preference_score": 71.13096618652344,
+      "ordinary_prior": 71.30224609375,
+      "ordinary_advantage_correction": -13.3704833984375,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 3.8858959674835205
+    },
+    {
+      "action_key": "NOTE:1:0:0",
+      "preference_score": 71.04407501220703,
+      "ordinary_prior": 71.30224609375,
+      "ordinary_advantage_correction": -14.816636085510254,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 4.078310966491699
+    },
+    {
+      "action_key": "06_RESTOCK",
+      "preference_score": 69.92908477783203,
+      "ordinary_prior": 70.27490997314453,
+      "ordinary_advantage_correction": -13.271995544433594,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 3.271242141723633
+    },
+    {
+      "action_key": "08_02_LEAVE",
+      "preference_score": 68.38516235351562,
+      "ordinary_prior": 68.6167221069336,
+      "ordinary_advantage_correction": -12.92581558227539,
+      "public_concerto_progress": 1.1102230246251565e-16,
+      "learned_concerto_correction": 3.536747932434082
+    }
+  ]
+}

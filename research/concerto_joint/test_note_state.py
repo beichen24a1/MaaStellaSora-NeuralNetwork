@@ -30,13 +30,13 @@ class NoteStateTests(unittest.TestCase):
         counts = dict.fromkeys(NOTE_IDS, 0)
         counts.update(skill.requirements[0])
         missing_note = skill.requirements[0][0][0]
-        counts[missing_note] -= 1
+        counts[missing_note] -= 5
         before = self.make_state(counts, skill)
-        offer = VisibleNoteOffer("observed-slot-3", 90, ((missing_note, 1),))
+        offer = VisibleNoteOffer("observed-slot-3", 90, ((missing_note, 5),))
         after, sold = purchase(before, offer)
         self.assertEqual((before.levels(), after.levels()), ((0,), (1,)))
         self.assertEqual((before.coins, after.coins, sold.stock), (90, 0, 0))
-        self.assertEqual(sum(after.counts) - sum(before.counts), 1)
+        self.assertEqual(sum(after.counts) - sum(before.counts), 5)
         with self.assertRaises(ValueError):
             purchase(after, sold)
         with self.assertRaises(ValueError):
