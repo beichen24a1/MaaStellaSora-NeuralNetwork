@@ -616,7 +616,7 @@
     }
   ],
   "failures": [],
-  "status": "experimental_offline_model",
+  "status": "blocked_for_model_recommendation_pending_environment_fixes",
   "conditions": {
     "primary": {
       "policies": {
@@ -1808,7 +1808,7 @@
   "promotion": {
     "recommended_over_greedy_in_primary_simulator": false,
     "live_game_validated": false,
-    "reason": "Requires positive paired 95% lower bound and no simulation gaps; real-game transfer remains unvalidated"
+    "reason": "Known event-action and shelf-discount implementation defects require correction and fresh labels; current numbers only describe the frozen defective environment."
   },
   "parameter_sha256": "e9eb25ab619a41c179a35b70247353850637a3b3deec155bc93c66f4d9b321d5",
   "clean_price_validation": {
@@ -1841,5 +1841,16 @@
     "parameter_sha256": "e9eb25ab619a41c179a35b70247353850637a3b3deec155bc93c66f4d9b321d5",
     "status": "clean_inputs_fresh_labels_and_model_verified"
   },
-  "prior_joint_v2_result_withdrawn": true
+  "prior_joint_v2_result_withdrawn": true,
+  "known_environment_issues": {
+    "status": "blocked_for_model_recommendation_pending_environment_fixes",
+    "issues": [
+      "note_event_options_filtered_by_ordinary_predictive_subset",
+      "ordinary_dominance_prunes_joint_alternatives_before_note_affordability",
+      "independent_note_price_sampling_breaks_reference_four_discount_slot_constraint"
+    ],
+    "evidence": "../../ENVIRONMENT_AUDIT.md",
+    "requires_fresh_labels_after_fix": true,
+    "price_domain_audit_remains_valid": true
+  }
 }

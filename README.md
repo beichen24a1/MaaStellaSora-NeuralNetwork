@@ -26,6 +26,8 @@ python3 build_installer.py
 
 原 `joint_v2` 因音符价格 OCR 污染已作废；已重新生成标签、重训和评测，新模型尚未显著优于规则。详见 [价格审计](research/concerto_joint/PRICE_AUDIT.md)。
 
+进一步环境审计发现待修复的事件动作与整架折扣问题，PR 暂缓合并；见 [环境审计](research/concerto_joint/ENVIRONMENT_AUDIT.md)。
+
 ## 许可
 
 第三方许可和来源说明见 `maa_value_plugin/licenses.json` 与 `maa_value_plugin/critic/vendor/SOURCE.json`。

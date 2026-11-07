@@ -1,0 +1,11 @@
+{
+  "status": "blocked_for_model_recommendation_pending_environment_fixes",
+  "issues": [
+    "note_event_options_filtered_by_ordinary_predictive_subset",
+    "ordinary_dominance_prunes_joint_alternatives_before_note_affordability",
+    "independent_note_price_sampling_breaks_reference_four_discount_slot_constraint"
+  ],
+  "evidence": "../../ENVIRONMENT_AUDIT.md",
+  "requires_fresh_labels_after_fix": true,
+  "price_domain_audit_remains_valid": true
+}

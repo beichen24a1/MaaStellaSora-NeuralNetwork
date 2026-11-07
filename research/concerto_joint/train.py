@@ -193,6 +193,9 @@ def fit(train_path, dev_path, output, epochs, seed):
 
 
 def main():
+    audit_path = HERE / "data/environment_audit_v3.json"
+    if audit_path.exists() and json.loads(audit_path.read_text(encoding="utf-8")).get("confirmed_issues"):
+        raise RuntimeError("Known event-action/shelf-discount defects: fix the environment and rerun its audit before training")
     parser = argparse.ArgumentParser()
     parser.add_argument("--train-episodes", type=int, default=64)
     parser.add_argument("--dev-episodes", type=int, default=16)

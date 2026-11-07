@@ -1,0 +1,124 @@
+{
+  "schema": "joint_environment_audit_v1",
+  "rules_version": "joint_offline_v2_note_prices_clean",
+  "status": "confirmed_implementation_issues_block_model_recommendation",
+  "event_probes": [
+    {
+      "event": 107,
+      "note_total": 50,
+      "visible_known_options": [
+        10701,
+        10702,
+        10703,
+        10704,
+        10705,
+        10706,
+        10707,
+        10708,
+        0
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT"
+      ]
+    },
+    {
+      "event": 108,
+      "note_total": 50,
+      "visible_known_options": [
+        10801,
+        10802,
+        10803,
+        10804,
+        10805,
+        10806,
+        10807,
+        10808,
+        10809,
+        0
+      ],
+      "actual_joint_actions": [
+        "07_EVENT_108_010809"
+      ]
+    },
+    {
+      "event": 103,
+      "note_total": 0,
+      "visible_known_options": [
+        0,
+        10301,
+        10302
+      ],
+      "actual_joint_actions": []
+    },
+    {
+      "event": 103,
+      "note_total": 50,
+      "visible_known_options": [
+        0,
+        10301,
+        10302
+      ],
+      "actual_joint_actions": [
+        "07_EVENT_103_010301"
+      ]
+    },
+    {
+      "event": 104,
+      "note_total": 50,
+      "visible_known_options": [
+        0,
+        10401,
+        10402,
+        10403
+      ],
+      "actual_joint_actions": [
+        "07_EVENT_104_010401",
+        "07_EVENT_104_010403"
+      ]
+    }
+  ],
+  "confirmed_issues": [
+    "note_event_options_filtered_by_ordinary_predictive_subset",
+    "ordinary_dominance_prunes_joint_alternatives_before_note_affordability",
+    "independent_note_price_sampling_breaks_reference_four_discount_slot_constraint"
+  ],
+  "simulated_first_shops": {
+    "games": 80,
+    "scenario_seed": 91,
+    "discounted_slot_histogram": {
+      "4": 27,
+      "5": 19,
+      "3": 17,
+      "2": 7,
+      "6": 6,
+      "1": 3,
+      "7": 1
+    },
+    "not_four_discounted_slots": 53
+  },
+  "raw_observation_audit": {
+    "source_sha256": "fedf9db8f734dd22705c418b6e6fb283bddfcd5ddf6f3fdb6ca601996dad4bdf",
+    "stock_snapshots": 1331,
+    "discounted_slot_histogram": {
+      "4": 1331
+    },
+    "note_quantity_counts": {
+      "15": 1078,
+      "5": 3694
+    },
+    "distinct_recorded_shelf_keys": 1331,
+    "repeats_by_recorded_shelf_key": 0,
+    "independence_caveat": "Inferred IDs cannot prove physical-shop independence; this is not a transaction count."
+  },
+  "numerical_configuration_overlap": {
+    "train_dev": 0,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "unverified_assumptions": [
+    "battle-note quantity and distribution",
+    "terminal transfer legality/timing",
+    "some event reward branches, including note-or-heal",
+    "concerto level sum as a proxy for combat value"
+  ]
+}

@@ -26,5 +26,6 @@
   "frozen_beta_retrained": false,
   "checkpoint_sha256": "3a03b5576613cfa0e90c0590fc4145e5c92df97e2941aaf918d1eb41aa1523c4",
   "parameter_sha256": "e9eb25ab619a41c179a35b70247353850637a3b3deec155bc93c66f4d9b321d5",
-  "status": "clean_inputs_fresh_labels_and_model_verified"
+  "status": "price_domain_and_artifact_identity_only_verified",
+  "scope": "Price checks do not establish event-action correctness, shelf discount correlations or game fidelity."
 }

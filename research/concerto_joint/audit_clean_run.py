@@ -60,7 +60,8 @@ def audit(run="joint_v3_prices_clean"):
     result["frozen_beta_retrained"] = False
     result["checkpoint_sha256"] = hashlib.sha256((directory / "joint_critic.npz").read_bytes()).hexdigest()
     result["parameter_sha256"] = model.metadata["parameter_sha256"]
-    result["status"] = "clean_inputs_fresh_labels_and_model_verified"
+    result["status"] = "price_domain_and_artifact_identity_only_verified"
+    result["scope"] = "This does not verify event-action completeness, joint dominance pruning, shelf discount correlations or game fidelity."
     (directory / "clean_price_validation.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, ensure_ascii=False))
     return result

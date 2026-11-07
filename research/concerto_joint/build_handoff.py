@@ -9,6 +9,8 @@ from bootstrap import HERE, ROOT
 
 def build(run="joint_v3_prices_clean", include_training_data=False):
     directory = HERE / "runs" / run
+    if (directory / "KNOWN_ISSUES.json").exists():
+        raise ValueError("This run has known environment issues; fix and retrain before packaging")
     validation = directory / "clean_price_validation.json"
     if not validation.exists():
         raise ValueError("Complete clean-price validation before packaging")
