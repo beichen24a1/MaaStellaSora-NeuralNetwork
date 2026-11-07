@@ -43,7 +43,7 @@ def decide(snapshot, checkpoint):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("snapshot", type=Path)
-    parser.add_argument("--run", default="joint_v2")
+    parser.add_argument("--run", default="joint_v3_prices_clean")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     result = decide(json.loads(args.snapshot.read_text(encoding="utf-8")),

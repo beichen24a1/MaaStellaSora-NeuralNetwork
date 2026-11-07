@@ -1,0 +1,10 @@
+{
+  "status": "invalidated_ocr_note_prices",
+  "reason": "293 of 4772 product observations used 9045/9072 as prices; old model and +1.85 result are not evidence for corrected-price behavior.",
+  "corrections": {
+    "9045": 45,
+    "9072": 72
+  },
+  "replacement_run": "joint_v3_prices_clean",
+  "frozen_beta_external_training_audited": false
+}

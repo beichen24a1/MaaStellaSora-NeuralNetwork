@@ -22,7 +22,7 @@ GREEDY_PROGRESS_INDEX = FEATURE_DIM + 496 + 128 + 6
 
 def source_identity():
     here = Path(__file__).resolve().parent
-    paths = [here / name for name in ("joint_env.py", "joint_model.py", "note_state.py", "data/inputs.json", "data/note_system.json", "data/reference_scenarios.json")]
+    paths = [here / name for name in ("joint_env.py", "joint_model.py", "note_state.py", "price_data.py", "data/inputs.json", "data/note_system.json", "data/reference_scenarios.json")]
     paths.extend(ROOT / "maa_value_plugin/critic" / name
                  for name in ("features.py", "environment.py", "presets.py", "network.py", "vendor/stella_sim.py"))
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest() for p in paths}

@@ -1,0 +1,101 @@
+{
+  "schema": "note_product_prices_v2_clean",
+  "total_observations": 4772,
+  "corrected_observations": 293,
+  "corrections": [
+    {
+      "quantity": 5,
+      "original_price": 9045,
+      "corrected_price": 45,
+      "observations": 276
+    },
+    {
+      "quantity": 5,
+      "original_price": 9072,
+      "corrected_price": 72,
+      "observations": 17
+    }
+  ],
+  "before": [
+    {
+      "quantity": 5,
+      "price": 45,
+      "observations": 535
+    },
+    {
+      "quantity": 5,
+      "price": 72,
+      "observations": 1007
+    },
+    {
+      "quantity": 5,
+      "price": 90,
+      "observations": 1859
+    },
+    {
+      "quantity": 5,
+      "price": 9045,
+      "observations": 276
+    },
+    {
+      "quantity": 5,
+      "price": 9072,
+      "observations": 17
+    },
+    {
+      "quantity": 15,
+      "price": 200,
+      "observations": 218
+    },
+    {
+      "quantity": 15,
+      "price": 320,
+      "observations": 303
+    },
+    {
+      "quantity": 15,
+      "price": 400,
+      "observations": 557
+    }
+  ],
+  "after": [
+    {
+      "quantity": 5,
+      "price": 45,
+      "observations": 811
+    },
+    {
+      "quantity": 5,
+      "price": 72,
+      "observations": 1024
+    },
+    {
+      "quantity": 5,
+      "price": 90,
+      "observations": 1859
+    },
+    {
+      "quantity": 15,
+      "price": 200,
+      "observations": 218
+    },
+    {
+      "quantity": 15,
+      "price": 320,
+      "observations": 303
+    },
+    {
+      "quantity": 15,
+      "price": 400,
+      "observations": 557
+    }
+  ],
+  "unknown_prices": 0,
+  "observation_mass_preserved": true,
+  "source_input_sha256_lf": "288978fb9ef92acde9051edaf4cd8150357e0f0bc13b8301a3d8f2c06cf97139",
+  "raw_observations_sha256": "fedf9db8f734dd22705c418b6e6fb283bddfcd5ddf6f3fdb6ca601996dad4bdf",
+  "repair_basis": "Collaborator confirmed original 90/45 and 90/72 price displays were OCR-concatenated; sampled raw texts are 09045 and 09072. No suffix guessing for other values.",
+  "repaired_input_sha256_lf": "045f4a362a2c225a2e263c3a453cdd76d5ca66eff28bd3a226d3cd7d319b6d46",
+  "matches_original_pr_input_blob": true,
+  "original_pr_commit": "f755cabf9343ad28603ede8da0459442316e3d39"
+}

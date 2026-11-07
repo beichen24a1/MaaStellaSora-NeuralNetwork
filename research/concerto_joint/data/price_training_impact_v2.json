@@ -1,0 +1,33 @@
+{
+  "status": "old_joint_model_invalidated",
+  "affected_values": [
+    9045,
+    9072
+  ],
+  "exposure_scope": "Direct bad shelf-price features only; complete future continuation exposure was not logged, so additional labels may be affected.",
+  "frozen_external_beta_training_audited": false,
+  "splits": {
+    "train": {
+      "root_count": 256,
+      "root_count_with_direct_bad_price_features": 47,
+      "bad_roots_by_phase": {
+        "SHOP": 40,
+        "EVENT": 7
+      },
+      "action_rows": 1447,
+      "action_rows_with_direct_bad_price_features": 256,
+      "max_normalized_shelf_price": 22.612499237060547
+    },
+    "dev": {
+      "root_count": 64,
+      "root_count_with_direct_bad_price_features": 8,
+      "bad_roots_by_phase": {
+        "EVENT": 3,
+        "SHOP": 5
+      },
+      "action_rows": 353,
+      "action_rows_with_direct_bad_price_features": 33,
+      "max_normalized_shelf_price": 22.612499237060547
+    }
+  }
+}

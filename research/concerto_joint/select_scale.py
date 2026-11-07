@@ -10,7 +10,7 @@ from joint_model import JointCritic, play
 from maa_value_plugin.critic.presets import canonical_seed
 
 
-def select(run="joint_v2", rounds=2):
+def select(run="joint_v3_prices_clean", rounds=2):
     directory = HERE / "runs" / run
     checkpoint = directory / "joint_critic.npz"
     model = JointCritic.load(checkpoint)
@@ -43,7 +43,7 @@ def select(run="joint_v2", rounds=2):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", default="joint_v2")
+    parser.add_argument("--run", default="joint_v3_prices_clean")
     parser.add_argument("--rounds", type=int, default=2)
     args = parser.parse_args()
     select(args.run, args.rounds)

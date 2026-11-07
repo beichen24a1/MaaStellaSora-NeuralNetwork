@@ -8,12 +8,14 @@
 | `data/inputs.json` | 61 件秘纹的精确技能映射和辅助供给；历史音符商品大小／价格聚合频次。保留各原始输入的 SHA256，原始日志不在本 PR 中。 |
 | `data/reference_scenarios.json` | 三组匿名固定目标向量和秘纹配置；没有角色 ID、玩家身份或历史对局。其数值与原评测参考配置一致，名称及身份哈希已去掉本机命名。 |
 | `models/ordinary_beta_20261105.npz` | Dango 先前 beta 教师的固定副本；SHA256 `106b1271301dc05d702bc110b62a0b6b4f920b7144c7f61c98087e979a1d1070`。 |
-| `runs/joint_v2/joint_critic.npz` | 本次新训练的双输出残差网络。迁入上游仅修改导入、路径和源文件身份记录，学习参数未改变。 |
+| `runs/joint_v3_prices_clean/joint_critic.npz` | 价格修复后重新生成联合标签、重新训练的双输出残差网络；旧 joint_v2 不再有效。 |
 
-新网络参数校验值为 `54a6f10a0b8ef54fbf9f01a8b5634920d55399bd37a809bf6e9a4d3db4ef35d2`。它和整个 NPZ 文件的 SHA256 不同：元数据或文件布局变化会改变 NPZ 哈希，不应据此推断参数变化。
+旧 joint_v2 参数校验值为 `54a6f10a0b8ef54fbf9f01a8b5634920d55399bd37a809bf6e9a4d3db4ef35d2`，该版本因价格污染作废。新权重的参数校验值以新运行目录元数据为准。它和整个 NPZ 文件的 SHA256 不同：元数据或文件布局变化会改变 NPZ 哈希，不应据此推断参数变化。
 
 普通潜能内核、特征、预设和网络实现直接复用 `maa_value_plugin/critic/`，遵循仓库已有的 [来源](../../maa_value_plugin/critic/vendor/SOURCE.json) 和 [许可记录](../../maa_value_plugin/licenses.json)。本模块不复制另一套潜能内核，也不修改插件运行时。
 
 迁入时，上游特征额外支持 `deployment_only`，上游状态校验限制 `h<=10`；本研究使用普通严格 Preset，实际轨迹位于该范围，重放用于验证这些差异没有改变本次结果。
 
 商品统计是重复观察的聚合，不是独立成交概率。掉落分布、随机事件细节和调整合法性仍按 [README](README.md) 的假设处理。匿名参考配置不是实机战绩。
+
+价格聚合已按协作者确认的 9045→45、9072→72 修正 293 条观察，并以数量／合法价档约束拒绝未知值。原始日志没有改写。详见 [价格审计](PRICE_AUDIT.md)。

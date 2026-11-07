@@ -5,7 +5,7 @@ import json
 from bootstrap import HERE
 
 
-def summarize(run="joint_v2"):
+def summarize(run="joint_v3_prices_clean"):
     directory = HERE / "runs" / run
     report = json.loads((directory / "evaluation/report.json").read_text(encoding="utf-8"))
     model = json.loads((directory / "joint_critic.json").read_text(encoding="utf-8"))
@@ -51,6 +51,6 @@ def summarize(run="joint_v2"):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", default="joint_v2")
+    parser.add_argument("--run", default="joint_v3_prices_clean")
     args = parser.parse_args()
     summarize(args.run)

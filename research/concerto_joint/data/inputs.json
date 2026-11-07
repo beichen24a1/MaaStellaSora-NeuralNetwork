@@ -1,5 +1,5 @@
 {
-  "schema": "joint_inputs_v1",
+  "schema": "joint_inputs_v2_clean_prices",
   "sigils": {
     "“空白”的序章": {
       "groups": [
@@ -741,31 +741,19 @@
       "note": 90011,
       "quantity": 5,
       "price": 45,
-      "observations": 56
+      "observations": 92
     },
     {
       "note": 90011,
       "quantity": 5,
       "price": 72,
-      "observations": 126
+      "observations": 131
     },
     {
       "note": 90011,
       "quantity": 5,
       "price": 90,
       "observations": 225
-    },
-    {
-      "note": 90011,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 36
-    },
-    {
-      "note": 90011,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 5
     },
     {
       "note": 90011,
@@ -789,31 +777,19 @@
       "note": 90012,
       "quantity": 5,
       "price": 45,
-      "observations": 71
+      "observations": 103
     },
     {
       "note": 90012,
       "quantity": 5,
       "price": 72,
-      "observations": 120
+      "observations": 121
     },
     {
       "note": 90012,
       "quantity": 5,
       "price": 90,
       "observations": 222
-    },
-    {
-      "note": 90012,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 32
-    },
-    {
-      "note": 90012,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 1
     },
     {
       "note": 90012,
@@ -837,31 +813,19 @@
       "note": 90013,
       "quantity": 5,
       "price": 45,
-      "observations": 67
+      "observations": 93
     },
     {
       "note": 90013,
       "quantity": 5,
       "price": 72,
-      "observations": 125
+      "observations": 126
     },
     {
       "note": 90013,
       "quantity": 5,
       "price": 90,
       "observations": 224
-    },
-    {
-      "note": 90013,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 26
-    },
-    {
-      "note": 90013,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 1
     },
     {
       "note": 90013,
@@ -885,31 +849,19 @@
       "note": 90014,
       "quantity": 5,
       "price": 45,
-      "observations": 69
+      "observations": 100
     },
     {
       "note": 90014,
       "quantity": 5,
       "price": 72,
-      "observations": 123
+      "observations": 124
     },
     {
       "note": 90014,
       "quantity": 5,
       "price": 90,
       "observations": 267
-    },
-    {
-      "note": 90014,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 31
-    },
-    {
-      "note": 90014,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 1
     },
     {
       "note": 90014,
@@ -933,31 +885,19 @@
       "note": 90015,
       "quantity": 5,
       "price": 45,
-      "observations": 61
+      "observations": 96
     },
     {
       "note": 90015,
       "quantity": 5,
       "price": 72,
-      "observations": 129
+      "observations": 133
     },
     {
       "note": 90015,
       "quantity": 5,
       "price": 90,
       "observations": 238
-    },
-    {
-      "note": 90015,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 35
-    },
-    {
-      "note": 90015,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 4
     },
     {
       "note": 90015,
@@ -981,7 +921,7 @@
       "note": 90016,
       "quantity": 5,
       "price": 45,
-      "observations": 61
+      "observations": 96
     },
     {
       "note": 90016,
@@ -994,12 +934,6 @@
       "quantity": 5,
       "price": 90,
       "observations": 253
-    },
-    {
-      "note": 90016,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 35
     },
     {
       "note": 90016,
@@ -1023,31 +957,19 @@
       "note": 90017,
       "quantity": 5,
       "price": 45,
-      "observations": 79
+      "observations": 127
     },
     {
       "note": 90017,
       "quantity": 5,
       "price": 72,
-      "observations": 133
+      "observations": 135
     },
     {
       "note": 90017,
       "quantity": 5,
       "price": 90,
       "observations": 214
-    },
-    {
-      "note": 90017,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 48
-    },
-    {
-      "note": 90017,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 2
     },
     {
       "note": 90017,
@@ -1071,7 +993,7 @@
       "note": 90022,
       "quantity": 5,
       "price": 45,
-      "observations": 8
+      "observations": 12
     },
     {
       "note": 90022,
@@ -1084,12 +1006,6 @@
       "quantity": 5,
       "price": 90,
       "observations": 13
-    },
-    {
-      "note": 90022,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 4
     },
     {
       "note": 90022,
@@ -1113,31 +1029,19 @@
       "note": 90023,
       "quantity": 5,
       "price": 45,
-      "observations": 63
+      "observations": 92
     },
     {
       "note": 90023,
       "quantity": 5,
       "price": 72,
-      "observations": 124
+      "observations": 127
     },
     {
       "note": 90023,
       "quantity": 5,
       "price": 90,
       "observations": 203
-    },
-    {
-      "note": 90023,
-      "quantity": 5,
-      "price": 9045,
-      "observations": 29
-    },
-    {
-      "note": 90023,
-      "quantity": 5,
-      "price": 9072,
-      "observations": 3
     },
     {
       "note": 90023,
@@ -1171,5 +1075,11 @@
     "Repeated shelf observations are not independent transactions",
     "Pooled client/language sources; conditional shop distribution is not established",
     "Uniform battle-note distribution and terminal swap timing remain experiment assumptions"
-  ]
+  ],
+  "price_schema": "note_product_prices_v2_clean",
+  "price_normalization": {
+    "source_input_sha256_lf": "288978fb9ef92acde9051edaf4cd8150357e0f0bc13b8301a3d8f2c06cf97139",
+    "corrected_observations": 293,
+    "audit": "price_audit.json"
+  }
 }

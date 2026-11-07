@@ -7,7 +7,7 @@ from bootstrap import HERE
 from joint_model import JointCritic, parameter_hash
 
 
-def finalize(run="joint_v2"):
+def finalize(run="joint_v3_prices_clean"):
     directory = HERE / "runs" / run
     checkpoint = directory / "joint_critic.npz"
     report_path = directory / "evaluation/report.json"
@@ -31,6 +31,6 @@ def finalize(run="joint_v2"):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run", default="joint_v2")
+    parser.add_argument("--run", default="joint_v3_prices_clean")
     args = parser.parse_args()
     finalize(args.run)

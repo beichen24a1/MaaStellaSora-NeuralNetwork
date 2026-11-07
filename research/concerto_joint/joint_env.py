@@ -9,11 +9,13 @@ from random import Random
 
 from bootstrap import HERE, ROOT
 from note_state import NOTE_IDS, NoteState, VisibleNoteOffer, load_catalog, purchase
+from price_data import PRICE_SCHEMA, validate_note_goods
 from maa_value_plugin.critic.environment import Episode, sim, legal_actions
 from maa_value_plugin.critic.presets import Preset, canonical_seed, sample_preset
 
 RULES = {
-    "version": "joint_offline_v1",
+    "version": "joint_offline_v2_note_prices_clean",
+    "note_prices": "Quantity-specific legal prices; confirmed 9045->45 and 9072->72 OCR concatenations repaired before aggregation; unknown values fail validation",
     "ordinary_kernel": sim.MODEL_VERSION,
     "ordinary_route": "unchanged frozen 45-node route",
     "shelves": "Keep kernel drink stock and fill remaining slots to eight with empirical note product sizes/prices",
@@ -33,7 +35,11 @@ def inputs():
     path = HERE / "data/inputs.json"
     if not path.exists():
         raise FileNotFoundError("Frozen research inputs are missing: " + str(path))
-    return json.loads(path.read_text(encoding="utf-8"))
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("price_schema") != PRICE_SCHEMA:
+        raise ValueError("Unvalidated note-price data; regenerate inputs with repair_prices.py")
+    validate_note_goods(data["note_goods"])
+    return data
 
 
 @lru_cache(maxsize=1)

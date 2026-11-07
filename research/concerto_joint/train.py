@@ -199,7 +199,7 @@ def main():
     parser.add_argument("--rollouts", type=int, default=2)
     parser.add_argument("--epochs", type=int, default=120)
     parser.add_argument("--seed", type=int, default=20261107)
-    parser.add_argument("--run", default="joint_v2")
+    parser.add_argument("--run", default="joint_v3_prices_clean")
     parser.add_argument("--reuse-data", action="store_true")
     args = parser.parse_args()
     out = HERE / "runs" / args.run
