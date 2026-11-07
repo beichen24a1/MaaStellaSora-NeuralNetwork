@@ -1,0 +1,4 @@
+__pycache__/
+runs/*/train.npz
+runs/*/dev.npz
+runs/*/*.roots.jsonl

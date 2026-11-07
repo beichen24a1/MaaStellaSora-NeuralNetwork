@@ -1,0 +1,1518 @@
+{
+  "architecture": [
+    1629,
+    256,
+    128,
+    2
+  ],
+  "preference_weight": 3.0,
+  "head_semantics": [
+    "ordinary advantage correction /20",
+    "concerto advantage correction to public greedy progress /5"
+  ],
+  "residual_scale": 1.0,
+  "continuation_teacher": "frozen beta plus public greedy joint baseline",
+  "terminal_adjustment_policy": "shared deterministic greedy reference, not learned",
+  "training_seed": 20261107,
+  "best_epoch": 5,
+  "best_dev_mc_regret": 1.1171875,
+  "train_roots": 256,
+  "dev_roots": 64,
+  "train_rows": 1447,
+  "dev_rows": 353,
+  "history": [
+    {
+      "epoch": 0,
+      "dev_mc_regret": 1.515625
+    },
+    {
+      "epoch": 1,
+      "dev_mc_regret": 1.5312498807907104
+    },
+    {
+      "epoch": 2,
+      "dev_mc_regret": 1.4843748807907104
+    },
+    {
+      "epoch": 3,
+      "dev_mc_regret": 1.3359373807907104
+    },
+    {
+      "epoch": 4,
+      "dev_mc_regret": 1.3593748807907104
+    },
+    {
+      "epoch": 5,
+      "dev_mc_regret": 1.1171875
+    },
+    {
+      "epoch": 6,
+      "dev_mc_regret": 1.15625
+    },
+    {
+      "epoch": 7,
+      "dev_mc_regret": 1.421875
+    },
+    {
+      "epoch": 8,
+      "dev_mc_regret": 1.1171875
+    },
+    {
+      "epoch": 9,
+      "dev_mc_regret": 1.4375
+    },
+    {
+      "epoch": 10,
+      "dev_mc_regret": 1.453125
+    },
+    {
+      "epoch": 11,
+      "dev_mc_regret": 1.515625
+    },
+    {
+      "epoch": 12,
+      "dev_mc_regret": 1.4609375
+    },
+    {
+      "epoch": 13,
+      "dev_mc_regret": 1.359375
+    },
+    {
+      "epoch": 14,
+      "dev_mc_regret": 1.2890625
+    },
+    {
+      "epoch": 15,
+      "dev_mc_regret": 1.4140625
+    },
+    {
+      "epoch": 16,
+      "dev_mc_regret": 1.203125
+    },
+    {
+      "epoch": 17,
+      "dev_mc_regret": 1.3515625
+    },
+    {
+      "epoch": 18,
+      "dev_mc_regret": 1.375
+    },
+    {
+      "epoch": 19,
+      "dev_mc_regret": 1.3828125
+    },
+    {
+      "epoch": 20,
+      "dev_mc_regret": 1.4140625
+    },
+    {
+      "epoch": 21,
+      "dev_mc_regret": 1.421875
+    },
+    {
+      "epoch": 22,
+      "dev_mc_regret": 1.53125
+    },
+    {
+      "epoch": 23,
+      "dev_mc_regret": 1.53125
+    },
+    {
+      "epoch": 24,
+      "dev_mc_regret": 1.4765625
+    },
+    {
+      "epoch": 25,
+      "dev_mc_regret": 1.4609375
+    },
+    {
+      "epoch": 26,
+      "dev_mc_regret": 1.5
+    },
+    {
+      "epoch": 27,
+      "dev_mc_regret": 1.484375
+    },
+    {
+      "epoch": 28,
+      "dev_mc_regret": 1.2890625
+    },
+    {
+      "epoch": 29,
+      "dev_mc_regret": 1.34375
+    },
+    {
+      "epoch": 30,
+      "dev_mc_regret": 1.5703125
+    },
+    {
+      "epoch": 31,
+      "dev_mc_regret": 1.4375
+    },
+    {
+      "epoch": 32,
+      "dev_mc_regret": 1.5
+    },
+    {
+      "epoch": 33,
+      "dev_mc_regret": 1.4375
+    },
+    {
+      "epoch": 34,
+      "dev_mc_regret": 1.546875
+    },
+    {
+      "epoch": 35,
+      "dev_mc_regret": 1.53125
+    },
+    {
+      "epoch": 36,
+      "dev_mc_regret": 1.609375
+    },
+    {
+      "epoch": 37,
+      "dev_mc_regret": 1.4140625
+    },
+    {
+      "epoch": 38,
+      "dev_mc_regret": 1.3984375
+    },
+    {
+      "epoch": 39,
+      "dev_mc_regret": 1.703125
+    },
+    {
+      "epoch": 40,
+      "dev_mc_regret": 1.4375
+    },
+    {
+      "epoch": 41,
+      "dev_mc_regret": 1.4453125
+    },
+    {
+      "epoch": 42,
+      "dev_mc_regret": 1.6171875
+    },
+    {
+      "epoch": 43,
+      "dev_mc_regret": 1.53125
+    },
+    {
+      "epoch": 44,
+      "dev_mc_regret": 1.65625
+    },
+    {
+      "epoch": 45,
+      "dev_mc_regret": 1.7734375
+    },
+    {
+      "epoch": 46,
+      "dev_mc_regret": 1.484375
+    },
+    {
+      "epoch": 47,
+      "dev_mc_regret": 1.703125
+    },
+    {
+      "epoch": 48,
+      "dev_mc_regret": 1.65625
+    },
+    {
+      "epoch": 49,
+      "dev_mc_regret": 1.78125
+    },
+    {
+      "epoch": 50,
+      "dev_mc_regret": 1.5078125
+    },
+    {
+      "epoch": 51,
+      "dev_mc_regret": 1.578125
+    },
+    {
+      "epoch": 52,
+      "dev_mc_regret": 1.6328125
+    },
+    {
+      "epoch": 53,
+      "dev_mc_regret": 1.6953125
+    },
+    {
+      "epoch": 54,
+      "dev_mc_regret": 1.84375
+    },
+    {
+      "epoch": 55,
+      "dev_mc_regret": 1.9140625
+    },
+    {
+      "epoch": 56,
+      "dev_mc_regret": 1.71875
+    },
+    {
+      "epoch": 57,
+      "dev_mc_regret": 1.9609375
+    },
+    {
+      "epoch": 58,
+      "dev_mc_regret": 1.734375
+    },
+    {
+      "epoch": 59,
+      "dev_mc_regret": 1.5859375
+    },
+    {
+      "epoch": 60,
+      "dev_mc_regret": 1.5703125
+    },
+    {
+      "epoch": 61,
+      "dev_mc_regret": 1.8359375
+    },
+    {
+      "epoch": 62,
+      "dev_mc_regret": 1.7265625
+    },
+    {
+      "epoch": 63,
+      "dev_mc_regret": 1.84375
+    },
+    {
+      "epoch": 64,
+      "dev_mc_regret": 1.703125
+    },
+    {
+      "epoch": 65,
+      "dev_mc_regret": 1.9375
+    },
+    {
+      "epoch": 66,
+      "dev_mc_regret": 1.71875
+    },
+    {
+      "epoch": 67,
+      "dev_mc_regret": 1.9453125
+    },
+    {
+      "epoch": 68,
+      "dev_mc_regret": 1.75
+    },
+    {
+      "epoch": 69,
+      "dev_mc_regret": 1.765625
+    },
+    {
+      "epoch": 70,
+      "dev_mc_regret": 1.765625
+    },
+    {
+      "epoch": 71,
+      "dev_mc_regret": 1.6953125
+    },
+    {
+      "epoch": 72,
+      "dev_mc_regret": 1.71875
+    },
+    {
+      "epoch": 73,
+      "dev_mc_regret": 1.734375
+    },
+    {
+      "epoch": 74,
+      "dev_mc_regret": 1.8203125
+    },
+    {
+      "epoch": 75,
+      "dev_mc_regret": 1.7890625
+    },
+    {
+      "epoch": 76,
+      "dev_mc_regret": 1.6796875
+    },
+    {
+      "epoch": 77,
+      "dev_mc_regret": 1.8125
+    },
+    {
+      "epoch": 78,
+      "dev_mc_regret": 1.953125
+    },
+    {
+      "epoch": 79,
+      "dev_mc_regret": 1.8125
+    },
+    {
+      "epoch": 80,
+      "dev_mc_regret": 1.8984375
+    },
+    {
+      "epoch": 81,
+      "dev_mc_regret": 1.671875
+    },
+    {
+      "epoch": 82,
+      "dev_mc_regret": 1.6015625
+    },
+    {
+      "epoch": 83,
+      "dev_mc_regret": 1.6484375
+    },
+    {
+      "epoch": 84,
+      "dev_mc_regret": 1.6875
+    },
+    {
+      "epoch": 85,
+      "dev_mc_regret": 1.6015625
+    },
+    {
+      "epoch": 86,
+      "dev_mc_regret": 1.859375
+    },
+    {
+      "epoch": 87,
+      "dev_mc_regret": 1.78125
+    },
+    {
+      "epoch": 88,
+      "dev_mc_regret": 1.8125
+    },
+    {
+      "epoch": 89,
+      "dev_mc_regret": 1.7578125
+    },
+    {
+      "epoch": 90,
+      "dev_mc_regret": 1.8515625
+    },
+    {
+      "epoch": 91,
+      "dev_mc_regret": 1.7421875
+    },
+    {
+      "epoch": 92,
+      "dev_mc_regret": 1.8671875
+    },
+    {
+      "epoch": 93,
+      "dev_mc_regret": 1.84375
+    },
+    {
+      "epoch": 94,
+      "dev_mc_regret": 1.8203125
+    },
+    {
+      "epoch": 95,
+      "dev_mc_regret": 1.78125
+    },
+    {
+      "epoch": 96,
+      "dev_mc_regret": 1.8828125
+    },
+    {
+      "epoch": 97,
+      "dev_mc_regret": 1.765625
+    },
+    {
+      "epoch": 98,
+      "dev_mc_regret": 1.6796875
+    },
+    {
+      "epoch": 99,
+      "dev_mc_regret": 1.75
+    },
+    {
+      "epoch": 100,
+      "dev_mc_regret": 1.7890625
+    },
+    {
+      "epoch": 101,
+      "dev_mc_regret": 1.7421875
+    },
+    {
+      "epoch": 102,
+      "dev_mc_regret": 1.7421875
+    },
+    {
+      "epoch": 103,
+      "dev_mc_regret": 1.7890625
+    },
+    {
+      "epoch": 104,
+      "dev_mc_regret": 1.59375
+    },
+    {
+      "epoch": 105,
+      "dev_mc_regret": 1.796875
+    },
+    {
+      "epoch": 106,
+      "dev_mc_regret": 1.640625
+    },
+    {
+      "epoch": 107,
+      "dev_mc_regret": 1.765625
+    },
+    {
+      "epoch": 108,
+      "dev_mc_regret": 1.6640625
+    },
+    {
+      "epoch": 109,
+      "dev_mc_regret": 1.65625
+    },
+    {
+      "epoch": 110,
+      "dev_mc_regret": 1.9453125
+    },
+    {
+      "epoch": 111,
+      "dev_mc_regret": 1.5859375
+    },
+    {
+      "epoch": 112,
+      "dev_mc_regret": 1.609375
+    },
+    {
+      "epoch": 113,
+      "dev_mc_regret": 1.796875
+    },
+    {
+      "epoch": 114,
+      "dev_mc_regret": 1.7890625
+    },
+    {
+      "epoch": 115,
+      "dev_mc_regret": 1.59375
+    },
+    {
+      "epoch": 116,
+      "dev_mc_regret": 1.7578125
+    },
+    {
+      "epoch": 117,
+      "dev_mc_regret": 1.765625
+    },
+    {
+      "epoch": 118,
+      "dev_mc_regret": 1.6171875
+    },
+    {
+      "epoch": 119,
+      "dev_mc_regret": 1.8203125
+    },
+    {
+      "epoch": 120,
+      "dev_mc_regret": 1.8984375
+    },
+    {
+      "epoch": 121,
+      "dev_mc_regret": 1.71875
+    },
+    {
+      "epoch": 122,
+      "dev_mc_regret": 1.671875
+    },
+    {
+      "epoch": 123,
+      "dev_mc_regret": 1.765625
+    },
+    {
+      "epoch": 124,
+      "dev_mc_regret": 1.7578125
+    },
+    {
+      "epoch": 125,
+      "dev_mc_regret": 1.84375
+    },
+    {
+      "epoch": 126,
+      "dev_mc_regret": 1.734375
+    },
+    {
+      "epoch": 127,
+      "dev_mc_regret": 1.8125
+    },
+    {
+      "epoch": 128,
+      "dev_mc_regret": 1.8359375
+    },
+    {
+      "epoch": 129,
+      "dev_mc_regret": 1.75
+    },
+    {
+      "epoch": 130,
+      "dev_mc_regret": 1.8671875
+    },
+    {
+      "epoch": 131,
+      "dev_mc_regret": 1.8203125
+    },
+    {
+      "epoch": 132,
+      "dev_mc_regret": 1.78125
+    },
+    {
+      "epoch": 133,
+      "dev_mc_regret": 1.859375
+    },
+    {
+      "epoch": 134,
+      "dev_mc_regret": 1.7421875
+    },
+    {
+      "epoch": 135,
+      "dev_mc_regret": 1.7734375
+    },
+    {
+      "epoch": 136,
+      "dev_mc_regret": 1.9296875
+    },
+    {
+      "epoch": 137,
+      "dev_mc_regret": 1.5390625
+    },
+    {
+      "epoch": 138,
+      "dev_mc_regret": 1.9453125
+    },
+    {
+      "epoch": 139,
+      "dev_mc_regret": 1.7578125
+    },
+    {
+      "epoch": 140,
+      "dev_mc_regret": 1.90625
+    }
+  ],
+  "training_source": "fresh simulated joint branches, not historical ordinary-only labels",
+  "status": "evaluated_offline_research",
+  "rules": {
+    "version": "joint_offline_v1",
+    "ordinary_kernel": "state_space_s75_l5of11_v2",
+    "ordinary_route": "unchanged frozen 45-node route",
+    "shelves": "Keep kernel drink stock and fill remaining slots to eight with empirical note product sizes/prices",
+    "note_product_identity": "Uniform among tower drop-group notes, independent of selected skills",
+    "battle_notes": "Eight individual uniform draws per battle by default; uncalibrated, evaluate sensitivity",
+    "initial_supply": "Actual local wiki per-sigil supportSupply, not a blanket eight per type",
+    "note_events": "Client-table effects with uniform random-note draws; generic fixed-note IDs 10701..10707; any-note costs use a deterministic least-loss donor",
+    "visibility": "All modeled note options exposed for 107/108/114; actual server option sampling is unknown",
+    "adjustments": "At terminal, at most 15 one-for-one transfers between any owned donor and a required target; legality/timing need game evidence",
+    "objective": "Separate ordinary/concerto returns; lambda is an experimental preference, not measured damage",
+    "scope": "Offline research only, no Maa or live-game integration"
+  },
+  "feature_version": "joint_public_action_v2_greedy_residual",
+  "rules_version": "joint_offline_v1",
+  "beta_sha256": "106b1271301dc05d702bc110b62a0b6b4f920b7144c7f61c98087e979a1d1070",
+  "source_sha256": {
+    "research/concerto_joint/joint_env.py": "59e626f256493464bf3253dad26b3d33d01925305f24f571bfa7883a33bfe141",
+    "research/concerto_joint/joint_model.py": "52f3bab9bc6341d6f252fa07bae39dd36d8539c763858b0fd6331a7134c2b027",
+    "research/concerto_joint/note_state.py": "f8e97c9e38f504be9d2ee2cae3eeac99db0288d95290d3d90bf96063197ca729",
+    "research/concerto_joint/data/inputs.json": "288978fb9ef92acde9051edaf4cd8150357e0f0bc13b8301a3d8f2c06cf97139",
+    "research/concerto_joint/data/note_system.json": "f648a548fee15d20c5c421748c32bf433f0ada18115b0a0668b0894fe90631f4",
+    "research/concerto_joint/data/reference_scenarios.json": "8519bb6657feb978ffdd98f8ac4b0793cf8f96cc8b6098915eee91643552a20f",
+    "maa_value_plugin/critic/features.py": "5d323740ed7c538850500617d7baeb95845ac17f8b9f22b58245807980f0f701",
+    "maa_value_plugin/critic/environment.py": "fc70a8d09a380fb163ddd182e45af91bd063d64247d35dc63168e271d35464c1",
+    "maa_value_plugin/critic/presets.py": "8245eac590a7e151c7f99a3eb560ba2cf4e727babdf5e3dec4ed3de7b2dcf6b1",
+    "maa_value_plugin/critic/network.py": "c703d1b3dafdeef242749f11216f2e7b9bff5b57c3454d285c6ae7d281733282",
+    "maa_value_plugin/critic/vendor/stella_sim.py": "b7e991943fa7713613a838194ab0d8eb2bdfa0d5e067ffa4a17d985bf3d1c79b"
+  },
+  "parameter_sha256": "54a6f10a0b8ef54fbf9f01a8b5634920d55399bd37a809bf6e9a4d3db4ef35d2",
+  "development_scale_selection": {
+    "selected": 1.0,
+    "rounds_per_dev_config": 2,
+    "seed_domain": "development_scale_selection",
+    "results": {
+      "0.0": {
+        "mean_objective": 93.875,
+        "mean_ordinary": 70.75,
+        "mean_concerto": 7.708333333333333,
+        "episodes": [
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "15399147962704363441",
+            "ordinary": 81,
+            "concerto": 6,
+            "objective": 99
+          },
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "2876253650255326197",
+            "ordinary": 83,
+            "concerto": 7,
+            "objective": 104
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "11370761621690250619",
+            "ordinary": 69,
+            "concerto": 10,
+            "objective": 99
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "8096104791464950789",
+            "ordinary": 75,
+            "concerto": 6,
+            "objective": 93
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "11834555105163972089",
+            "ordinary": 77,
+            "concerto": 6,
+            "objective": 95
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "3173946588597974649",
+            "ordinary": 77,
+            "concerto": 8,
+            "objective": 101
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "15414697634008903095",
+            "ordinary": 68,
+            "concerto": 7,
+            "objective": 89
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "12149609015044078786",
+            "ordinary": 67,
+            "concerto": 8,
+            "objective": 91
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "5537533129384740061",
+            "ordinary": 74,
+            "concerto": 6,
+            "objective": 92
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "8665204457292583939",
+            "ordinary": 71,
+            "concerto": 6,
+            "objective": 89
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15194831803326040785",
+            "ordinary": 56,
+            "concerto": 6,
+            "objective": 74
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15128340342882003366",
+            "ordinary": 63,
+            "concerto": 8,
+            "objective": 87
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "2449454957347863903",
+            "ordinary": 77,
+            "concerto": 9,
+            "objective": 104
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "17522035635872620058",
+            "ordinary": 82,
+            "concerto": 8,
+            "objective": 106
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "10190489529624789048",
+            "ordinary": 70,
+            "concerto": 7,
+            "objective": 91
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "13160884507084490434",
+            "ordinary": 74,
+            "concerto": 7,
+            "objective": 95
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "12738316593259029667",
+            "ordinary": 57,
+            "concerto": 12,
+            "objective": 93
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "3771056618077179069",
+            "ordinary": 58,
+            "concerto": 10,
+            "objective": 88
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "15439544002620952507",
+            "ordinary": 59,
+            "concerto": 8,
+            "objective": 83
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "18280653866710127286",
+            "ordinary": 64,
+            "concerto": 7,
+            "objective": 85
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "18390354014507143827",
+            "ordinary": 68,
+            "concerto": 9,
+            "objective": 95
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "16991994771186646774",
+            "ordinary": 73,
+            "concerto": 9,
+            "objective": 100
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "13435736747129908920",
+            "ordinary": 83,
+            "concerto": 7,
+            "objective": 104
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "4829933810467136446",
+            "ordinary": 72,
+            "concerto": 8,
+            "objective": 96
+          }
+        ]
+      },
+      "0.1": {
+        "mean_objective": 93.79166666666667,
+        "mean_ordinary": 71.16666666666667,
+        "mean_concerto": 7.541666666666667,
+        "episodes": [
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "15399147962704363441",
+            "ordinary": 80,
+            "concerto": 6,
+            "objective": 98
+          },
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "2876253650255326197",
+            "ordinary": 84,
+            "concerto": 7,
+            "objective": 105
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "11370761621690250619",
+            "ordinary": 67,
+            "concerto": 10,
+            "objective": 97
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "8096104791464950789",
+            "ordinary": 73,
+            "concerto": 8,
+            "objective": 97
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "11834555105163972089",
+            "ordinary": 77,
+            "concerto": 6,
+            "objective": 95
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "3173946588597974649",
+            "ordinary": 75,
+            "concerto": 9,
+            "objective": 102
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "15414697634008903095",
+            "ordinary": 72,
+            "concerto": 8,
+            "objective": 96
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "12149609015044078786",
+            "ordinary": 66,
+            "concerto": 8,
+            "objective": 90
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "5537533129384740061",
+            "ordinary": 79,
+            "concerto": 6,
+            "objective": 97
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "8665204457292583939",
+            "ordinary": 73,
+            "concerto": 6,
+            "objective": 91
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15194831803326040785",
+            "ordinary": 60,
+            "concerto": 5,
+            "objective": 75
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15128340342882003366",
+            "ordinary": 64,
+            "concerto": 8,
+            "objective": 88
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "2449454957347863903",
+            "ordinary": 73,
+            "concerto": 8,
+            "objective": 97
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "17522035635872620058",
+            "ordinary": 86,
+            "concerto": 8,
+            "objective": 110
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "10190489529624789048",
+            "ordinary": 68,
+            "concerto": 6,
+            "objective": 86
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "13160884507084490434",
+            "ordinary": 75,
+            "concerto": 7,
+            "objective": 96
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "12738316593259029667",
+            "ordinary": 58,
+            "concerto": 8,
+            "objective": 82
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "3771056618077179069",
+            "ordinary": 58,
+            "concerto": 10,
+            "objective": 88
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "15439544002620952507",
+            "ordinary": 59,
+            "concerto": 8,
+            "objective": 83
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "18280653866710127286",
+            "ordinary": 63,
+            "concerto": 7,
+            "objective": 84
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "18390354014507143827",
+            "ordinary": 67,
+            "concerto": 9,
+            "objective": 94
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "16991994771186646774",
+            "ordinary": 73,
+            "concerto": 8,
+            "objective": 97
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "13435736747129908920",
+            "ordinary": 83,
+            "concerto": 6,
+            "objective": 101
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "4829933810467136446",
+            "ordinary": 75,
+            "concerto": 9,
+            "objective": 102
+          }
+        ]
+      },
+      "0.25": {
+        "mean_objective": 94.625,
+        "mean_ordinary": 70.75,
+        "mean_concerto": 7.958333333333333,
+        "episodes": [
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "15399147962704363441",
+            "ordinary": 79,
+            "concerto": 6,
+            "objective": 97
+          },
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "2876253650255326197",
+            "ordinary": 80,
+            "concerto": 7,
+            "objective": 101
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "11370761621690250619",
+            "ordinary": 67,
+            "concerto": 9,
+            "objective": 94
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "8096104791464950789",
+            "ordinary": 69,
+            "concerto": 9,
+            "objective": 96
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "11834555105163972089",
+            "ordinary": 75,
+            "concerto": 6,
+            "objective": 93
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "3173946588597974649",
+            "ordinary": 78,
+            "concerto": 9,
+            "objective": 105
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "15414697634008903095",
+            "ordinary": 73,
+            "concerto": 8,
+            "objective": 97
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "12149609015044078786",
+            "ordinary": 66,
+            "concerto": 9,
+            "objective": 93
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "5537533129384740061",
+            "ordinary": 78,
+            "concerto": 6,
+            "objective": 96
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "8665204457292583939",
+            "ordinary": 70,
+            "concerto": 6,
+            "objective": 88
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15194831803326040785",
+            "ordinary": 62,
+            "concerto": 9,
+            "objective": 89
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15128340342882003366",
+            "ordinary": 62,
+            "concerto": 8,
+            "objective": 86
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "2449454957347863903",
+            "ordinary": 73,
+            "concerto": 9,
+            "objective": 100
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "17522035635872620058",
+            "ordinary": 83,
+            "concerto": 8,
+            "objective": 107
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "10190489529624789048",
+            "ordinary": 74,
+            "concerto": 7,
+            "objective": 95
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "13160884507084490434",
+            "ordinary": 75,
+            "concerto": 7,
+            "objective": 96
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "12738316593259029667",
+            "ordinary": 54,
+            "concerto": 9,
+            "objective": 81
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "3771056618077179069",
+            "ordinary": 54,
+            "concerto": 11,
+            "objective": 87
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "15439544002620952507",
+            "ordinary": 63,
+            "concerto": 9,
+            "objective": 90
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "18280653866710127286",
+            "ordinary": 60,
+            "concerto": 8,
+            "objective": 84
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "18390354014507143827",
+            "ordinary": 72,
+            "concerto": 9,
+            "objective": 99
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "16991994771186646774",
+            "ordinary": 71,
+            "concerto": 9,
+            "objective": 98
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "13435736747129908920",
+            "ordinary": 84,
+            "concerto": 5,
+            "objective": 99
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "4829933810467136446",
+            "ordinary": 76,
+            "concerto": 8,
+            "objective": 100
+          }
+        ]
+      },
+      "0.5": {
+        "mean_objective": 94.66666666666667,
+        "mean_ordinary": 70.29166666666667,
+        "mean_concerto": 8.125,
+        "episodes": [
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "15399147962704363441",
+            "ordinary": 81,
+            "concerto": 8,
+            "objective": 105
+          },
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "2876253650255326197",
+            "ordinary": 82,
+            "concerto": 7,
+            "objective": 103
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "11370761621690250619",
+            "ordinary": 68,
+            "concerto": 9,
+            "objective": 95
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "8096104791464950789",
+            "ordinary": 71,
+            "concerto": 9,
+            "objective": 98
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "11834555105163972089",
+            "ordinary": 73,
+            "concerto": 6,
+            "objective": 91
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "3173946588597974649",
+            "ordinary": 74,
+            "concerto": 9,
+            "objective": 101
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "15414697634008903095",
+            "ordinary": 74,
+            "concerto": 7,
+            "objective": 95
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "12149609015044078786",
+            "ordinary": 65,
+            "concerto": 10,
+            "objective": 95
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "5537533129384740061",
+            "ordinary": 76,
+            "concerto": 7,
+            "objective": 97
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "8665204457292583939",
+            "ordinary": 76,
+            "concerto": 4,
+            "objective": 88
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15194831803326040785",
+            "ordinary": 58,
+            "concerto": 9,
+            "objective": 85
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15128340342882003366",
+            "ordinary": 62,
+            "concerto": 8,
+            "objective": 86
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "2449454957347863903",
+            "ordinary": 75,
+            "concerto": 9,
+            "objective": 102
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "17522035635872620058",
+            "ordinary": 79,
+            "concerto": 8,
+            "objective": 103
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "10190489529624789048",
+            "ordinary": 66,
+            "concerto": 7,
+            "objective": 87
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "13160884507084490434",
+            "ordinary": 73,
+            "concerto": 7,
+            "objective": 94
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "12738316593259029667",
+            "ordinary": 55,
+            "concerto": 12,
+            "objective": 91
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "3771056618077179069",
+            "ordinary": 54,
+            "concerto": 12,
+            "objective": 90
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "15439544002620952507",
+            "ordinary": 62,
+            "concerto": 8,
+            "objective": 86
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "18280653866710127286",
+            "ordinary": 64,
+            "concerto": 8,
+            "objective": 88
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "18390354014507143827",
+            "ordinary": 72,
+            "concerto": 9,
+            "objective": 99
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "16991994771186646774",
+            "ordinary": 70,
+            "concerto": 8,
+            "objective": 94
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "13435736747129908920",
+            "ordinary": 80,
+            "concerto": 6,
+            "objective": 98
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "4829933810467136446",
+            "ordinary": 77,
+            "concerto": 8,
+            "objective": 101
+          }
+        ]
+      },
+      "1.0": {
+        "mean_objective": 94.79166666666667,
+        "mean_ordinary": 67.54166666666667,
+        "mean_concerto": 9.083333333333334,
+        "episodes": [
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "15399147962704363441",
+            "ordinary": 74,
+            "concerto": 9,
+            "objective": 101
+          },
+          {
+            "config": "ebc03ddb155cb57a55d6f631e862c4a01c1bdc3d520837f004d96016c5809602",
+            "seed": "2876253650255326197",
+            "ordinary": 80,
+            "concerto": 10,
+            "objective": 110
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "11370761621690250619",
+            "ordinary": 66,
+            "concerto": 10,
+            "objective": 96
+          },
+          {
+            "config": "de3483c4edc0724c9e5c366e2cbfb9d7b5fb56d02fc807abaf77544285339ed0",
+            "seed": "8096104791464950789",
+            "ordinary": 67,
+            "concerto": 9,
+            "objective": 94
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "11834555105163972089",
+            "ordinary": 75,
+            "concerto": 6,
+            "objective": 93
+          },
+          {
+            "config": "80f5e16f54a53766db411cd1a0b163e8f3ff86bc774c6ceeb27d2db8ca42b3db",
+            "seed": "3173946588597974649",
+            "ordinary": 74,
+            "concerto": 9,
+            "objective": 101
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "15414697634008903095",
+            "ordinary": 65,
+            "concerto": 12,
+            "objective": 101
+          },
+          {
+            "config": "b1207e92dff38958a2a3181f06cdae1e52e3f5b4bce6fa967a4707aeccc69d2e",
+            "seed": "12149609015044078786",
+            "ordinary": 64,
+            "concerto": 9,
+            "objective": 91
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "5537533129384740061",
+            "ordinary": 74,
+            "concerto": 7,
+            "objective": 95
+          },
+          {
+            "config": "274f8348e99f464774f1b445ec861817fc149ba7be62003e50a7debdf2047e32",
+            "seed": "8665204457292583939",
+            "ordinary": 70,
+            "concerto": 6,
+            "objective": 88
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15194831803326040785",
+            "ordinary": 58,
+            "concerto": 8,
+            "objective": 82
+          },
+          {
+            "config": "db1927d46fe7a2683504435680f7037b9bb6c8cbbd5bf004ab40b72f1b6db96b",
+            "seed": "15128340342882003366",
+            "ordinary": 65,
+            "concerto": 8,
+            "objective": 89
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "2449454957347863903",
+            "ordinary": 70,
+            "concerto": 9,
+            "objective": 97
+          },
+          {
+            "config": "885a649e22c7cb6f27cc98c97d94e2a626271892934e2441577705b443416699",
+            "seed": "17522035635872620058",
+            "ordinary": 79,
+            "concerto": 9,
+            "objective": 106
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "10190489529624789048",
+            "ordinary": 67,
+            "concerto": 8,
+            "objective": 91
+          },
+          {
+            "config": "106739237f438c14c445fe7d23d5ee01b664056c446789ff9999f266051a8c65",
+            "seed": "13160884507084490434",
+            "ordinary": 67,
+            "concerto": 8,
+            "objective": 91
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "12738316593259029667",
+            "ordinary": 56,
+            "concerto": 13,
+            "objective": 95
+          },
+          {
+            "config": "fed805a12c56cf5d05431dcaed36aee5dac87176364c52ca010c566c166baa78",
+            "seed": "3771056618077179069",
+            "ordinary": 53,
+            "concerto": 12,
+            "objective": 89
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "15439544002620952507",
+            "ordinary": 64,
+            "concerto": 8,
+            "objective": 88
+          },
+          {
+            "config": "8315164b75a389c36e1e8c4f248fbe6d19c6a5a93c2c8d39166e65c108896fd4",
+            "seed": "18280653866710127286",
+            "ordinary": 61,
+            "concerto": 8,
+            "objective": 85
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "18390354014507143827",
+            "ordinary": 62,
+            "concerto": 12,
+            "objective": 98
+          },
+          {
+            "config": "d2c623f1a632d175530cb7d35a6110e4060da85dec2278e1c1c4d0deaab75d77",
+            "seed": "16991994771186646774",
+            "ordinary": 63,
+            "concerto": 9,
+            "objective": 90
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "13435736747129908920",
+            "ordinary": 73,
+            "concerto": 11,
+            "objective": 106
+          },
+          {
+            "config": "ac402b383d4e15a075f00534bcf8f8de2cbeaf76facc0d55f95dc0be922fad56",
+            "seed": "4829933810467136446",
+            "ordinary": 74,
+            "concerto": 8,
+            "objective": 98
+          }
+        ]
+      }
+    },
+    "final_test_used": false
+  },
+  "evaluation_report": "evaluation/report.json",
+  "promotion": {
+    "recommended_over_greedy_in_primary_simulator": true,
+    "live_game_validated": false,
+    "reason": "Requires positive paired 95% lower bound and no simulation gaps; real-game transfer remains unvalidated"
+  },
+  "port_provenance": {
+    "original_checkpoint_sha256": "73171b4827294364749afa62e04bead586c0e3343ce632bbb929ffcec1656658",
+    "original_primary_results_preserved": true,
+    "original_upstream_base": "fb2b37e5bfb74efb0b9c25d23e39ad9c1ded5419",
+    "changes": "Repository-relative paths/imports and anonymous fixture names; learned parameters and numerical results unchanged"
+  },
+  "source_hash_normalization": "CRLF is normalized to LF for text sources"
+}

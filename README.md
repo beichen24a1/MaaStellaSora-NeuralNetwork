@@ -20,6 +20,10 @@ python3 build_installer.py
 
 公开版本的 `maa_value_plugin/upload_settings.json` 不包含上传令牌。需要使用数据上传功能时，请在本地配置令牌，不要提交到仓库。
 
+## 离线联合模型研究
+
+[`research/concerto_joint/`](research/concerto_joint/README.md) 提供音符／协奏与普通潜能联合决策的独立实验模块，包含训练、冻结权重、公共 JSON 推理接口和完整留出评测。它不更改插件当前默认模型；成绩只适用于文档列明的模拟规则与实验目标。
+
 ## 许可
 
 第三方许可和来源说明见 `maa_value_plugin/licenses.json` 与 `maa_value_plugin/critic/vendor/SOURCE.json`。

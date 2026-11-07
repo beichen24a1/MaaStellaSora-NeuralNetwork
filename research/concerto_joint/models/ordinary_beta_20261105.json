@@ -1,0 +1,26 @@
+{
+  "scope": [
+    84,
+    132
+  ],
+  "role_scope": [
+    18,
+    54
+  ],
+  "model_version": "numpy_residual_direct_q_v1",
+  "feature_version": "public_state_action_compact_v1",
+  "input_dim": 958,
+  "hidden": [
+    1024,
+    768,
+    512
+  ],
+  "target_scale": 20.0,
+  "parameter_count": 2164415,
+  "parameter_sha256": "ce60eb56fa4fd4ac6ae1112fad5a12d3cb917cbc44f220d45b5bf4757be5143c",
+  "value_semantics": "expected terminal ordinary score minus current score after action, then frozen teacher",
+  "preset_version": "structures4960_team84_132_v1",
+  "rules_version": "state_space_s75_l5of11_v2",
+  "protocol": "catalogue4960_per_preset_champions_v1",
+  "model_id": "beta"
+}

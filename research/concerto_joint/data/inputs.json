@@ -1,0 +1,1175 @@
+{
+  "schema": "joint_inputs_v1",
+  "sigils": {
+    "“空白”的序章": {
+      "groups": [
+        40091,
+        40092
+      ],
+      "supply": {
+        "90011": 8,
+        "90014": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "一二三，跳！": {
+      "groups": [
+        40241,
+        40242
+      ],
+      "supply": {
+        "90013": 8,
+        "90020": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "一发破的": {
+      "groups": [
+        40191,
+        40192
+      ],
+      "supply": {
+        "90012": 8,
+        "90014": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "与骨共舞": {
+      "groups": [
+        40331,
+        40332
+      ],
+      "supply": {
+        "90012": 8,
+        "90021": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "仙踪良梦": {
+      "groups": [
+        40041,
+        40042
+      ],
+      "supply": {
+        "90012": 8,
+        "90016": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "伴我航行": {
+      "groups": [
+        40571,
+        40572
+      ],
+      "supply": {
+        "90011": 8,
+        "90012": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "你与我相似": {
+      "groups": [
+        40031,
+        40032
+      ],
+      "supply": {
+        "90015": 8,
+        "90017": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "信笺乘风而去": {
+      "groups": [
+        40471,
+        40472
+      ],
+      "supply": {
+        "90013": 8,
+        "90018": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "冬夜后的黎明": {
+      "groups": [
+        40461,
+        40462
+      ],
+      "supply": {
+        "90015": 8,
+        "90017": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "冰柠与红茶": {
+      "groups": [
+        40181,
+        40182
+      ],
+      "supply": {
+        "90012": 8,
+        "90014": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "刀与斧的铮鸣": {
+      "groups": [
+        40311,
+        40312
+      ],
+      "supply": {
+        "90012": 8,
+        "90018": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "勇气之拳": {
+      "groups": [
+        40401,
+        40402
+      ],
+      "supply": {
+        "90015": 8,
+        "90019": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "午后间隙": {
+      "groups": [
+        40301,
+        40302
+      ],
+      "supply": {
+        "90012": 8,
+        "90022": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "午夜喵铃": {
+      "groups": [
+        40221,
+        40222
+      ],
+      "supply": {
+        "90012": 8,
+        "90014": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "午夜，堕天使": {
+      "groups": [
+        40071,
+        40072
+      ],
+      "supply": {
+        "90016": 8,
+        "90017": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "启程的礼物": {
+      "groups": [
+        40411,
+        40412
+      ],
+      "supply": {
+        "90013": 8,
+        "90016": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "因缘而聚": {
+      "groups": [
+        40211,
+        40212
+      ],
+      "supply": {
+        "90012": 8,
+        "90014": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "夏日午后的雨": {
+      "groups": [
+        40111,
+        40112
+      ],
+      "supply": {
+        "90011": 8,
+        "90014": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "夏日栖息地": {
+      "groups": [
+        40391,
+        40392
+      ],
+      "supply": {
+        "90013": 8,
+        "90022": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "夏日进行曲": {
+      "groups": [
+        40581,
+        40582
+      ],
+      "supply": {
+        "90013": 8,
+        "90016": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "夜宴谜影": {
+      "groups": [
+        40501,
+        40502
+      ],
+      "supply": {
+        "90015": 8,
+        "90017": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "奇迹一触": {
+      "groups": [
+        40521,
+        40522
+      ],
+      "supply": {
+        "90015": 8,
+        "90017": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "微小的乐园": {
+      "groups": [
+        40541,
+        40542
+      ],
+      "supply": {
+        "90012": 8,
+        "90021": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "抓住传说": {
+      "groups": [
+        40371,
+        40372
+      ],
+      "supply": {
+        "90012": 8,
+        "90017": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "斑驳夏影": {
+      "groups": [
+        40561,
+        40562
+      ],
+      "supply": {
+        "90013": 8,
+        "90016": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "星之所向": {
+      "groups": [
+        40511,
+        40512
+      ],
+      "supply": {
+        "90012": 8,
+        "90016": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "星光的印记": {
+      "groups": [
+        40491,
+        40492
+      ],
+      "supply": {
+        "90011": 8,
+        "90014": 8
+      },
+      "element": "无",
+      "star": "5"
+    },
+    "春日纪事": {
+      "groups": [
+        40161,
+        40162
+      ],
+      "supply": {
+        "90011": 8,
+        "90012": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "晴之花": {
+      "groups": [
+        40051,
+        40052
+      ],
+      "supply": {
+        "90017": 8,
+        "90018": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "欢聚时刻": {
+      "groups": [
+        40531,
+        40532
+      ],
+      "supply": {
+        "90015": 8,
+        "90017": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "沐光祷告": {
+      "groups": [
+        40101,
+        40102
+      ],
+      "supply": {
+        "90014": 8,
+        "90016": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "波光漫游": {
+      "groups": [
+        40381,
+        40382
+      ],
+      "supply": {
+        "90012": 8,
+        "90017": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "浮光掠影": {
+      "groups": [
+        40551,
+        40552
+      ],
+      "supply": {
+        "90012": 8,
+        "90018": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "涂鸦彩虹": {
+      "groups": [
+        40231,
+        40232
+      ],
+      "supply": {
+        "90012": 8,
+        "90014": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "潋滟故池水": {
+      "groups": [
+        40261,
+        40262
+      ],
+      "supply": {
+        "90012": 8,
+        "90017": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "狼贪虎视": {
+      "groups": [
+        40121,
+        40122
+      ],
+      "supply": {
+        "90011": 8,
+        "90014": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "猫之珍藏": {
+      "groups": [
+        40291,
+        40292
+      ],
+      "supply": {
+        "90011": 8,
+        "90012": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "猫神降歌": {
+      "groups": [
+        40011,
+        40012
+      ],
+      "supply": {
+        "90012": 8,
+        "90019": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "甜言蜜果": {
+      "groups": [
+        40141,
+        40142
+      ],
+      "supply": {
+        "90014": 8,
+        "90016": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "白日花园": {
+      "groups": [
+        40281,
+        40282
+      ],
+      "supply": {
+        "90017": 8,
+        "90020": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "真相☆梦工厂": {
+      "groups": [
+        40321,
+        40322
+      ],
+      "supply": {
+        "90012": 8,
+        "90023": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "睡前童话": {
+      "groups": [
+        40611,
+        40612
+      ],
+      "supply": {
+        "90012": 8,
+        "90018": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "空与花与诗": {
+      "groups": [
+        40021,
+        40022
+      ],
+      "supply": {
+        "90012": 8,
+        "90020": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "繁花幻梦": {
+      "groups": [
+        40451,
+        40452
+      ],
+      "supply": {
+        "90012": 8,
+        "90023": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "罗帷春染岁朝新": {
+      "groups": [
+        40441,
+        40442
+      ],
+      "supply": {
+        "90012": 8,
+        "90016": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "美好，尽在昨日": {
+      "groups": [
+        40621,
+        40622
+      ],
+      "supply": {
+        "90011": 8,
+        "90018": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "花火": {
+      "groups": [
+        40171,
+        40172
+      ],
+      "supply": {
+        "90012": 8,
+        "90016": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "荣誉时刻": {
+      "groups": [
+        40601,
+        40602
+      ],
+      "supply": {
+        "90011": 8,
+        "90020": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "远航蓝图": {
+      "groups": [
+        40131,
+        40132
+      ],
+      "supply": {
+        "90011": 8,
+        "90014": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "迷途的朝圣者": {
+      "groups": [
+        40361,
+        40362
+      ],
+      "supply": {
+        "90016": 8,
+        "90017": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "酒暖灯明时": {
+      "groups": [
+        40421,
+        40422
+      ],
+      "supply": {
+        "90013": 8,
+        "90021": 8
+      },
+      "element": "地",
+      "star": "5"
+    },
+    "闪光之时": {
+      "groups": [
+        40201,
+        40202
+      ],
+      "supply": {
+        "90012": 8,
+        "90014": 8
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "雪夜惊喜": {
+      "groups": [
+        40481,
+        40482
+      ],
+      "supply": {
+        "90012": 8,
+        "90019": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "革新的萌芽": {
+      "groups": [
+        40431,
+        40432
+      ],
+      "supply": {
+        "90015": 8,
+        "90023": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "飞吧，笼中鸟": {
+      "groups": [
+        40591,
+        40592
+      ],
+      "supply": {
+        "90012": 8,
+        "90020": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "飞越青空": {
+      "groups": [
+        40081,
+        40082
+      ],
+      "supply": {
+        "90011": 8,
+        "90012": 8
+      },
+      "element": "水",
+      "star": "5"
+    },
+    "魔女的秋千": {
+      "groups": [
+        40061,
+        40062
+      ],
+      "supply": {
+        "90011": 8,
+        "90016": 8
+      },
+      "element": "暗",
+      "star": "5"
+    },
+    "鹿鸣": {
+      "groups": [
+        40151,
+        40152
+      ],
+      "supply": {
+        "90012": 8,
+        "90017": 8
+      },
+      "element": "风",
+      "star": "5"
+    },
+    "龙飞凤舞": {
+      "groups": [
+        40271,
+        40272
+      ],
+      "supply": {
+        "90011": 8,
+        "90016": 8
+      },
+      "element": "火",
+      "star": "5"
+    },
+    "指引前路的启明星": {
+      "groups": [
+        40661,
+        40662
+      ],
+      "supply": {
+        "90022": 10,
+        "90012": 4
+      },
+      "element": "光",
+      "star": "5"
+    },
+    "永恒的闪耀": {
+      "groups": [
+        40671,
+        40672
+      ],
+      "supply": {
+        "90022": 7,
+        "90016": 7
+      },
+      "element": "光",
+      "star": "5"
+    }
+  },
+  "unresolved_sigils": [],
+  "wiki_client_differences": [],
+  "note_goods": [
+    {
+      "note": 90011,
+      "quantity": 5,
+      "price": 45,
+      "observations": 56
+    },
+    {
+      "note": 90011,
+      "quantity": 5,
+      "price": 72,
+      "observations": 126
+    },
+    {
+      "note": 90011,
+      "quantity": 5,
+      "price": 90,
+      "observations": 225
+    },
+    {
+      "note": 90011,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 36
+    },
+    {
+      "note": 90011,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 5
+    },
+    {
+      "note": 90011,
+      "quantity": 15,
+      "price": 200,
+      "observations": 22
+    },
+    {
+      "note": 90011,
+      "quantity": 15,
+      "price": 320,
+      "observations": 30
+    },
+    {
+      "note": 90011,
+      "quantity": 15,
+      "price": 400,
+      "observations": 74
+    },
+    {
+      "note": 90012,
+      "quantity": 5,
+      "price": 45,
+      "observations": 71
+    },
+    {
+      "note": 90012,
+      "quantity": 5,
+      "price": 72,
+      "observations": 120
+    },
+    {
+      "note": 90012,
+      "quantity": 5,
+      "price": 90,
+      "observations": 222
+    },
+    {
+      "note": 90012,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 32
+    },
+    {
+      "note": 90012,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 1
+    },
+    {
+      "note": 90012,
+      "quantity": 15,
+      "price": 200,
+      "observations": 39
+    },
+    {
+      "note": 90012,
+      "quantity": 15,
+      "price": 320,
+      "observations": 37
+    },
+    {
+      "note": 90012,
+      "quantity": 15,
+      "price": 400,
+      "observations": 63
+    },
+    {
+      "note": 90013,
+      "quantity": 5,
+      "price": 45,
+      "observations": 67
+    },
+    {
+      "note": 90013,
+      "quantity": 5,
+      "price": 72,
+      "observations": 125
+    },
+    {
+      "note": 90013,
+      "quantity": 5,
+      "price": 90,
+      "observations": 224
+    },
+    {
+      "note": 90013,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 26
+    },
+    {
+      "note": 90013,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 1
+    },
+    {
+      "note": 90013,
+      "quantity": 15,
+      "price": 200,
+      "observations": 35
+    },
+    {
+      "note": 90013,
+      "quantity": 15,
+      "price": 320,
+      "observations": 39
+    },
+    {
+      "note": 90013,
+      "quantity": 15,
+      "price": 400,
+      "observations": 88
+    },
+    {
+      "note": 90014,
+      "quantity": 5,
+      "price": 45,
+      "observations": 69
+    },
+    {
+      "note": 90014,
+      "quantity": 5,
+      "price": 72,
+      "observations": 123
+    },
+    {
+      "note": 90014,
+      "quantity": 5,
+      "price": 90,
+      "observations": 267
+    },
+    {
+      "note": 90014,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 31
+    },
+    {
+      "note": 90014,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 1
+    },
+    {
+      "note": 90014,
+      "quantity": 15,
+      "price": 200,
+      "observations": 19
+    },
+    {
+      "note": 90014,
+      "quantity": 15,
+      "price": 320,
+      "observations": 39
+    },
+    {
+      "note": 90014,
+      "quantity": 15,
+      "price": 400,
+      "observations": 66
+    },
+    {
+      "note": 90015,
+      "quantity": 5,
+      "price": 45,
+      "observations": 61
+    },
+    {
+      "note": 90015,
+      "quantity": 5,
+      "price": 72,
+      "observations": 129
+    },
+    {
+      "note": 90015,
+      "quantity": 5,
+      "price": 90,
+      "observations": 238
+    },
+    {
+      "note": 90015,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 35
+    },
+    {
+      "note": 90015,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 4
+    },
+    {
+      "note": 90015,
+      "quantity": 15,
+      "price": 200,
+      "observations": 35
+    },
+    {
+      "note": 90015,
+      "quantity": 15,
+      "price": 320,
+      "observations": 44
+    },
+    {
+      "note": 90015,
+      "quantity": 15,
+      "price": 400,
+      "observations": 58
+    },
+    {
+      "note": 90016,
+      "quantity": 5,
+      "price": 45,
+      "observations": 61
+    },
+    {
+      "note": 90016,
+      "quantity": 5,
+      "price": 72,
+      "observations": 114
+    },
+    {
+      "note": 90016,
+      "quantity": 5,
+      "price": 90,
+      "observations": 253
+    },
+    {
+      "note": 90016,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 35
+    },
+    {
+      "note": 90016,
+      "quantity": 15,
+      "price": 200,
+      "observations": 20
+    },
+    {
+      "note": 90016,
+      "quantity": 15,
+      "price": 320,
+      "observations": 38
+    },
+    {
+      "note": 90016,
+      "quantity": 15,
+      "price": 400,
+      "observations": 63
+    },
+    {
+      "note": 90017,
+      "quantity": 5,
+      "price": 45,
+      "observations": 79
+    },
+    {
+      "note": 90017,
+      "quantity": 5,
+      "price": 72,
+      "observations": 133
+    },
+    {
+      "note": 90017,
+      "quantity": 5,
+      "price": 90,
+      "observations": 214
+    },
+    {
+      "note": 90017,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 48
+    },
+    {
+      "note": 90017,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 2
+    },
+    {
+      "note": 90017,
+      "quantity": 15,
+      "price": 200,
+      "observations": 22
+    },
+    {
+      "note": 90017,
+      "quantity": 15,
+      "price": 320,
+      "observations": 40
+    },
+    {
+      "note": 90017,
+      "quantity": 15,
+      "price": 400,
+      "observations": 86
+    },
+    {
+      "note": 90022,
+      "quantity": 5,
+      "price": 45,
+      "observations": 8
+    },
+    {
+      "note": 90022,
+      "quantity": 5,
+      "price": 72,
+      "observations": 13
+    },
+    {
+      "note": 90022,
+      "quantity": 5,
+      "price": 90,
+      "observations": 13
+    },
+    {
+      "note": 90022,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 4
+    },
+    {
+      "note": 90022,
+      "quantity": 15,
+      "price": 200,
+      "observations": 4
+    },
+    {
+      "note": 90022,
+      "quantity": 15,
+      "price": 320,
+      "observations": 3
+    },
+    {
+      "note": 90022,
+      "quantity": 15,
+      "price": 400,
+      "observations": 3
+    },
+    {
+      "note": 90023,
+      "quantity": 5,
+      "price": 45,
+      "observations": 63
+    },
+    {
+      "note": 90023,
+      "quantity": 5,
+      "price": 72,
+      "observations": 124
+    },
+    {
+      "note": 90023,
+      "quantity": 5,
+      "price": 90,
+      "observations": 203
+    },
+    {
+      "note": 90023,
+      "quantity": 5,
+      "price": 9045,
+      "observations": 29
+    },
+    {
+      "note": 90023,
+      "quantity": 5,
+      "price": 9072,
+      "observations": 3
+    },
+    {
+      "note": 90023,
+      "quantity": 15,
+      "price": 200,
+      "observations": 22
+    },
+    {
+      "note": 90023,
+      "quantity": 15,
+      "price": 320,
+      "observations": 33
+    },
+    {
+      "note": 90023,
+      "quantity": 15,
+      "price": 400,
+      "observations": 56
+    }
+  ],
+  "stock_snapshot_observations": 1331,
+  "source_sha256": {
+    "re_tools/note_system.json": "507a63720b19cf1a420239eb004b87aa0d7d4f295c3775b216ee20afcda688df",
+    "re_tools/bindata_text/713.bin": "cf90689403d2bb76f49224538e779d16044ca9a99bb54a4e36f20c33c189949c",
+    "given/sigils_raw.json": "10ced1411af72d609d952ef22684ae8eed7bb45d659b0a5532c7187179bf6288",
+    "given/sigils_supplement.json": "b639d9164d4cacf9da027eb18b74b7524517ee1f296aac326a0f97b32c7222c7",
+    "dist/塔8队伍配置器/kernel/stella/vendor/stella_sim.py": "ed1a71a33260afaf6cdf0a36b37ae05fd1ff651356ea410d8775b834f8cccb2c",
+    "dist/_archive/_evidence/TOWER8_EVIDENCE_20261031/RealGameData/data/observations.jsonl": "fedf9db8f734dd22705c418b6e6fb283bddfcd5ddf6f3fdb6ca601996dad4bdf"
+  },
+  "limitations": [
+    "Repeated shelf observations are not independent transactions",
+    "Pooled client/language sources; conditional shop distribution is not established",
+    "Uniform battle-note distribution and terminal swap timing remain experiment assumptions"
+  ]
+}

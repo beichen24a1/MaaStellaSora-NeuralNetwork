@@ -1,0 +1,12 @@
+{
+  "schema": "upstream_port_validation_v1",
+  "learned_parameter_sha256": "54a6f10a0b8ef54fbf9f01a8b5634920d55399bd37a809bf6e9a4d3db4ef35d2",
+  "checkpoint_sha256": "061303a1fb22c54230bd764439b55b8c8f0cec4239d1cbbdfe0c8d5df62d81fd",
+  "replayed_episodes": 768,
+  "all_numeric_episode_fields_match_original": true,
+  "all_primary_and_sensitivity_summaries_match_original": true,
+  "unit_checks_passed": 12,
+  "text_hash_normalization": "CRLF to LF",
+  "private_player_logs_included": false,
+  "changes": "Repository-relative paths/imports and anonymous reference fixture labels; no learned tensor changes"
+}
