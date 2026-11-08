@@ -1,0 +1,18 @@
+{
+  "schema": "joint_known_issues_v2",
+  "status": "historical_hypothesis_simulator_only_no_active_checkpoint",
+  "review_comment": "https://github.com/dango636/MaaStellaSora-NeuralNetwork/pull/1#issuecomment-6722015341",
+  "upstream_commit": "46372929b35212875a493b3a4d7dfa19820aaeed",
+  "known_mismatches": [
+    "114 wrong answers rewarded notes",
+    "12002 heal branch omitted",
+    "all 107/108 note options exposed instead of observed menus",
+    "independent large bundles could exceed one per shelf",
+    "least-loss deterministic note deduction",
+    "auxiliary supply lacked explicit disc phase",
+    "ordinary choices frozen beta and continuation teacher differed from execution"
+  ],
+  "old_metrics_scope": "Only the frozen v4 hypothesis environment; +2.29 is not evidence of real-game or corrected-rule improvement",
+  "fresh_labels_and_full_joint_policy_required": true,
+  "corrected_rule_training_performed": false
+}

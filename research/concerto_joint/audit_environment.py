@@ -10,6 +10,7 @@ from bootstrap import HERE
 from joint_env import JointEpisode, RULES, random_scenarios, sim
 from joint_model import Baseline, source_identity
 from price_data import normalize_note_price
+from rule_alignment import SANDBOX_PROFILE
 
 
 def observe(path):
@@ -61,11 +62,11 @@ def audit(observations=None, games=80, run=None):
     config = random_scenarios(1, 91)[0]
     result = {"schema": "joint_environment_audit_v1", "rules_version": RULES["version"],
               "source_sha256": source_identity(), "event_probes": [], "confirmed_issues": []}
-    for eid, options, count in ((107, tuple(range(10701, 10709)) + (0,), 50),
-                                (108, tuple(range(10801, 10810)) + (0,), 50),
+    for eid, options, count in ((107, (10701, 10704, 10708, 0), 50),
+                                (108, (10802, 10806, 10808, 10809, 0), 50),
                                 (103, (0, 10301, 10302), 0), (103, (0, 10301, 10302), 50),
                                 (104, (0, 10401, 10402, 10403), 50)):
-        env = JointEpisode(config, 1)
+        env = JointEpisode(config, 1, assumptions=SANDBOX_PROFILE)
         env.notes = (count,) + (0,) * 12
         env.ep.state = replace(env.ep.state, phase="EVENT", eventId=eid,
                                eventOptions=options, seen=(eid,), coins=1000,
@@ -75,23 +76,27 @@ def audit(observations=None, games=80, run=None):
         result["event_probes"].append({"event": eid, "note_total": count,
                                        "visible_known_options": list(options),
                                        "actual_joint_actions": [action.key() for action in env.actions]})
-    if len(result["event_probes"][0]["actual_joint_actions"]) != 9 or len(result["event_probes"][1]["actual_joint_actions"]) != 10:
+    if len(result["event_probes"][0]["actual_joint_actions"]) != 4 or len(result["event_probes"][1]["actual_joint_actions"]) != 5:
         result["confirmed_issues"].append("note_event_options_filtered_by_ordinary_predictive_subset")
     if (len(result["event_probes"][2]["actual_joint_actions"]) != 2 or
             len(result["event_probes"][3]["actual_joint_actions"]) != 3 or
             len(result["event_probes"][4]["actual_joint_actions"]) != 4):
         result["confirmed_issues"].append("ordinary_dominance_prunes_joint_alternatives_before_note_affordability")
-    generated = Counter()
+    generated, large_bundles = Counter(), Counter()
     for seed in range(games):
-        env, policy = JointEpisode(config, seed), Baseline()
+        env, policy = JointEpisode(config, seed, assumptions=SANDBOX_PROFILE), Baseline()
         while env.phase != "SHOP":
             env.step(policy(env))
         discounted = sum(row[0] + row[1] for row in env.ep.state.stock)
         discounted += sum(item.price < {5: 90, 15: 400}[sum(q for _, q in item.contents)] for item in env.shelf)
         generated[discounted] += 1
+        large_bundles[sum(sum(q for _, q in item.contents) == 15 for item in env.shelf)] += 1
     result["simulated_first_shops"] = {"games": games, "scenario_seed": 91,
                                         "discounted_slot_histogram": dict(generated),
                                         "not_four_discounted_slots": sum(n for k, n in generated.items() if k != 4)}
+    result['simulated_first_shops']['large_bundle_histogram'] = dict(large_bundles)
+    if any(k > 1 for k in large_bundles):
+        result['confirmed_issues'].append('more_than_one_large_bundle_per_shelf')
     if any(k != 4 for k in generated):
         result["confirmed_issues"].append("independent_note_price_sampling_breaks_reference_four_discount_slot_constraint")
     if observations is not None:
@@ -131,10 +136,14 @@ def audit(observations=None, games=80, run=None):
             if mismatch or bad_shelves:
                 result["confirmed_issues"].append(f"invalid_{split}_root_actions_or_shelves")
         result["dataset_checks"] = checks
-    result["unverified_assumptions"] = ["battle-note quantity and distribution", "terminal transfer legality/timing",
-                                         "some event reward branches, including note-or-heal", "concerto level sum as a proxy for combat value"]
+    result["unverified_assumptions"] = ["battle-note quantity and distribution", "random note deduction kernel",
+                                         "menu pair and item/discount conditional probabilities",
+                                         "health-state impacts and server outcome verification",
+                                         "terminal modification legality/timing", "concerto level sum as a proxy for combat value"]
+    result['joint_training_ready'] = False
+    result['sandbox_profile'] = SANDBOX_PROFILE
     result["status"] = ("confirmed_implementation_issues_block_model_recommendation" if result["confirmed_issues"]
-                        else "audited_mechanisms_pass_real_game_assumptions_unvalidated")
+                        else "sandbox_rule_checks_pass_training_still_blocked")
     return result
 
 

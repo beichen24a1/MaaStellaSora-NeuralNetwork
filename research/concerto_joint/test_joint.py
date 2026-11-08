@@ -10,6 +10,10 @@ from joint_env import JointEpisode, JointAction, catalog, random_scenarios, rema
 from maa_value_plugin.critic.environment import Episode, sim
 from joint_model import Baseline, JointCritic, encode_joint, play, delta_notes
 from joint_env import note_progress
+from rule_alignment import SANDBOX_PROFILE
+
+def sandbox_episode(*args, **kwargs):
+    return JointEpisode(*args, **kwargs, assumptions=SANDBOX_PROFILE)
 
 
 class JointTests(unittest.TestCase):
@@ -26,7 +30,7 @@ class JointTests(unittest.TestCase):
     def test_drop_distribution_independent_of_objective(self):
         other = copy.deepcopy(self.config)
         other["groups"] = list(catalog())[:6]
-        a, b = JointEpisode(self.config, 31), JointEpisode(other, 31)
+        a, b = sandbox_episode(self.config, 31), sandbox_episode(other, 31)
         a._random_notes(80, a.note_rng)
         b._random_notes(80, b.note_rng)
         self.assertEqual(a.notes, b.notes)
@@ -35,7 +39,7 @@ class JointTests(unittest.TestCase):
         self.assertEqual(a.notes, before)
 
     def test_explicit_shop_budget_stock_and_branch(self):
-        env = JointEpisode(self.config, 32)
+        env = sandbox_episode(self.config, 32)
         policy = Baseline()
         while env.phase != "SHOP":
             env.step(policy(env))
@@ -63,7 +67,7 @@ class JointTests(unittest.TestCase):
         self.assertFalse(any("rng" in key or "latent" in key for key in snapshot))
 
     def test_full_run_and_swap_conservation(self):
-        a, b = JointEpisode(self.config, 33), JointEpisode(self.config, 33)
+        a, b = sandbox_episode(self.config, 33), sandbox_episode(self.config, 33)
         one, two = play(a, Baseline()), play(b, Baseline())
         self.assertEqual(one, two)
         self.assertEqual(one["core"], 6)
@@ -85,7 +89,7 @@ class JointTests(unittest.TestCase):
         self.assertEqual(sum(env.notes), 0)
 
     def event(self, eid, options, notes=50, coins=1000):
-        env = JointEpisode(self.config, 34)
+        env = sandbox_episode(self.config, 34)
         env.notes = (notes,) + (0,)*12
         env.ep.state = replace(env.ep.state, phase="EVENT", eventId=eid,
                                eventOptions=tuple(options), seen=(eid,), coins=coins,
@@ -96,7 +100,7 @@ class JointTests(unittest.TestCase):
     def test_every_exposed_note_event_executes_and_charges_exactly(self):
         for eid, ids, quantity in ((107, range(10701, 10709), 5),
                                   (108, range(10801, 10809), 10),
-                                  (114, range(11401, 11406), 10)):
+                                  (114, (11403,), 10)):
             for oid in ids:
                 with self.subTest(option=oid):
                     env = self.event(eid, (0, oid))
@@ -142,7 +146,7 @@ class JointTests(unittest.TestCase):
             env.step(JointAction("BASE", base=sim.Action("EVENT_OPTION", 10501, 0, 105)))
 
     def test_joint_shelf_constraints_initial_and_restock(self):
-        env = JointEpisode(self.config, 32)
+        env = sandbox_episode(self.config, 32)
         policy = Baseline()
         generations = 0
         while not env.done:
@@ -157,6 +161,7 @@ class JointTests(unittest.TestCase):
                         half += item.price == {5: 45, 15: 200}[quantity]
                     self.assertEqual(discounted, 4)
                     self.assertLessEqual(half, 2)
+                    self.assertLessEqual(sum(sum(q for _, q in item.contents) == 15 for item in env.shelf), 1)
                     generations += 1
                 restock = next((a for a in env.actions if a.base and a.base.kind == "RESTOCK"), None)
                 if restock:
@@ -184,7 +189,7 @@ class JointTests(unittest.TestCase):
         self.assertEqual({a.base.index for a in joint.actions}, {0, 10301, 10302})
 
     def test_zero_residual_reproduces_greedy_preferences(self):
-        env = JointEpisode(self.config, 32)
+        env = sandbox_episode(self.config, 32)
         baseline = Baseline()
         while env.phase != "SHOP":
             env.step(baseline(env))

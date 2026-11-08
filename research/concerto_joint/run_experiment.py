@@ -4,6 +4,7 @@ import subprocess
 import sys
 
 from bootstrap import HERE
+from rule_alignment import require_training_ready
 
 
 def main():
@@ -18,6 +19,7 @@ def main():
     parser.add_argument("--stress-rounds", type=int, default=8)
     parser.add_argument("--eval-seed", type=int, default=20401107)
     args = parser.parse_args()
+    require_training_ready()
     if not (HERE / "data/inputs.json").exists():
         raise FileNotFoundError("Frozen research inputs are missing")
     subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", str(HERE), "-v"], check=True)

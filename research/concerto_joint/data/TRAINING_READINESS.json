@@ -1,0 +1,17 @@
+{
+  "schema": "joint_training_readiness_v1",
+  "joint_training_ready": false,
+  "active_checkpoint": null,
+  "status": "rules_alignment_and_real_transition_collection",
+  "upstream_commit": "46372929b35212875a493b3a4d7dfa19820aaeed",
+  "blocking_requirements": [
+    "Observed complete battle-note transitions and a calibrated reward kernel",
+    "Observed random note deduction outcomes; no least-loss donor rule",
+    "Visible menu and failed-option handling; verified reward and health branches",
+    "Verified auxiliary disc IDs and phases or a complete observed entry inventory",
+    "A joint policy that learns ordinary selections as well as shop/event choices",
+    "Continuation-policy identity, iterative teacher alignment, broader coverage and held-out evaluation"
+  ],
+  "sandbox_profile_is_not_calibration": true,
+  "historical_v4_score_scope": "Frozen hypothesis simulator only; not valid evidence of real-game improvement or corrected-rule performance"
+}

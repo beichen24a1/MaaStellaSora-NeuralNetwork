@@ -7,9 +7,11 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from bootstrap import HERE, ROOT
 from joint_model import JointCritic, source_identity
 from joint_env import RULES
+from rule_alignment import require_training_ready
 
 
 def build(run="joint_v4_env_fixed", include_training_data=False):
+    require_training_ready()
     directory = HERE / "runs" / run
     if (directory / "KNOWN_ISSUES.json").exists():
         raise ValueError("This run has known environment issues; fix and retrain before packaging")

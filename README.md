@@ -22,11 +22,9 @@ python3 build_installer.py
 
 ## 离线联合模型研究
 
-[`research/concerto_joint/`](research/concerto_joint/README.md) 提供音符／协奏与普通潜能联合决策的独立实验模块，包含训练、冻结权重、公共 JSON 推理接口和完整留出评测。它不更改插件当前默认模型；成绩只适用于文档列明的模拟规则与实验目标。
+[`research/concerto_joint/`](research/concerto_joint/README.md) 当前进行音符规则对齐和真实转移数据准备，没有活动联合检查点，暂停进一步联合训练。
 
-原 `joint_v2` 因音符价格 OCR 污染、`joint_v3_prices_clean` 因环境缺陷作废。当前活动运行是 `joint_v4_env_fixed`，使用新规则重新生成标签、训练和评测；推荐状态以当前报告为准。
-
-已修复音符事件动作过滤、普通目标剪枝和整架折扣约束，见 [环境修复](research/concerto_joint/ENVIRONMENT_FIX.md)；实际掉落和调整规则仍待实测验证。
+v2/v3/v4权重与模拟结果只保留为历史研究证据。已根据协作者新资料修正事件、菜单、大包和阶段供给，并增加采集格式、质量检查及完整联合训练合同；详见 [本轮对齐](research/concerto_joint/ALIGNMENT_20261108.md)。原潜能内核、教师和插件默认运行时未修改。
 
 ## 许可
 

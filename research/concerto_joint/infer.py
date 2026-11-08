@@ -16,10 +16,10 @@ def decide(snapshot, checkpoint):
         raise ValueError("Only an already observed decision boundary can be evaluated")
     for offer in snapshot.get("shelf", []):
         validate_note_price(sum(quantity for _note, quantity in offer["contents"]), offer["price"])
+    critic = JointCritic.load(checkpoint)
     env = JointEpisode.from_public(snapshot, 0)
     if env.done:
         return {"terminal": True, "action": None, "rules_version": RULES["version"]}
-    critic = JointCritic.load(checkpoint)
     action = critic.choose(env)
     output = {"terminal": False, "rules_version": RULES["version"],
               "action": asdict(action), "action_key": action.key(),
@@ -46,7 +46,7 @@ def decide(snapshot, checkpoint):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("snapshot", type=Path)
-    parser.add_argument("--run", default="joint_v4_env_fixed")
+    parser.add_argument("--run", required=True, help="Explicit run required; there is no active calibrated checkpoint")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     result = decide(json.loads(args.snapshot.read_text(encoding="utf-8")),

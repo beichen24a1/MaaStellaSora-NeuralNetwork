@@ -14,6 +14,7 @@ import numpy as np
 from joint_env import JointEpisode, RULES, random_scenarios, reference_scenarios
 from joint_model import Baseline, JointCritic, play
 from maa_value_plugin.critic.presets import canonical_seed
+from rule_alignment import require_training_ready
 
 
 def paired_summary(rows, comparator, weight=3.):
@@ -47,6 +48,7 @@ def summarize(rows):
 
 
 def evaluate(checkpoint, rounds=32, seed=20401107, stress_rounds=8):
+    require_training_ready()
     critic = JointCritic.load(checkpoint)
     configs = reference_scenarios() + random_scenarios(3, seed)
     training_dir = checkpoint.parent

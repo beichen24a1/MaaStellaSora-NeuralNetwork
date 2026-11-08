@@ -617,7 +617,7 @@
     }
   ],
   "failures": [],
-  "status": "experimental_offline_model",
+  "status": "historical_hypothesis_simulator_only_no_active_checkpoint",
   "conditions": {
     "primary": {
       "policies": {
@@ -1807,9 +1807,10 @@
     }
   },
   "promotion": {
-    "recommended_over_greedy_in_primary_simulator": true,
+    "recommended_over_greedy_in_primary_simulator": false,
     "live_game_validated": false,
-    "reason": "Requires positive paired 95% lower bound and no simulation gaps; real-game transfer remains unvalidated"
+    "reason": "Only the frozen v4 hypothesis environment; +2.29 is not evidence of real-game or corrected-rule improvement"
   },
-  "parameter_sha256": "95515f63b3cd98ae9ab2308c7b04f6eea54c76dc1b9002b8050bb13f53c63c92"
+  "parameter_sha256": "95515f63b3cd98ae9ab2308c7b04f6eea54c76dc1b9002b8050bb13f53c63c92",
+  "known_issues_file": "../KNOWN_ISSUES.json"
 }

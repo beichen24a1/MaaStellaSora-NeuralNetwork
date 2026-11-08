@@ -22,7 +22,7 @@ GREEDY_PROGRESS_INDEX = FEATURE_DIM + 496 + 128 + 6
 
 def source_identity():
     here = Path(__file__).resolve().parent
-    paths = [here / name for name in ("joint_env.py", "joint_model.py", "note_state.py", "price_data.py", "data/inputs.json", "data/note_system.json", "data/reference_scenarios.json")]
+    paths = [here / name for name in ("joint_env.py", "joint_model.py", "note_state.py", "price_data.py", "rule_alignment.py", "data/phase_supply.json", "data/inputs.json", "data/note_system.json", "data/reference_scenarios.json")]
     paths.extend(ROOT / "maa_value_plugin/critic" / name
                  for name in ("features.py", "environment.py", "presets.py", "network.py", "vendor/stella_sim.py"))
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest() for p in paths}
@@ -57,21 +57,15 @@ def delta_notes(env, action):
             delta[oid % 100 - 1] += 5
         elif 10801 <= oid <= 10807:
             delta[oid % 100 - 1] += 10
-        elif oid in (10708, 12702, 12001, 12002, 10808) or 11401 <= oid <= 11405:
-            quantity = 10 if oid == 10808 or 11401 <= oid <= 11405 else 5
+        elif oid in (10708, 12702, 12001, 12002, 10808, 11403):
+            quantity = 10 if oid in (10808, 11403) else 2.5 if oid == 12002 else 5
             for note in env.allowed:
                 delta[note - 90011] += quantity / len(env.allowed)
         elif oid in (10301, 10401):
-            # Exact deterministic public donor rule used by this environment.
-            counts = list(env.notes)
-            for _ in range(5 if oid == 10301 else 10):
-                candidates = []
-                for i, count in enumerate(counts):
-                    if count:
-                        after = counts.copy(); after[i] -= 1
-                        candidates.append((note_progress(tuple(after), env.skills), i))
-                index = max(candidates)[1]
-                counts[index] -= 1; delta[index] -= 1
+            # Expected vector under the explicit count-weighted sandbox law;
+            # not the actual server outcome, and not a deterministic donor.
+            quantity = 5 if oid == 10301 else 10
+            delta -= np.asarray(env.notes) * quantity / sum(env.notes)
     return delta
 
 

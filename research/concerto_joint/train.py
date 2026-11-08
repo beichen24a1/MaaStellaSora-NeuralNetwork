@@ -13,6 +13,7 @@ import numpy as np
 from joint_env import JointEpisode, RULES, random_scenarios, fingerprint
 from joint_model import Baseline, JointCritic, encode_joint, play, FEATURE_VERSION, GREEDY_PROGRESS_INDEX
 from maa_value_plugin.critic.presets import canonical_seed
+from rule_alignment import require_training_ready
 
 
 def log(message):
@@ -20,6 +21,7 @@ def log(message):
 
 
 def generate(path, episodes, seed, rollouts, roots_per_episode=4):
+    require_training_ready()
     configs = random_scenarios(12, seed)
     teacher = Baseline("greedy")
     all_x, all_y, all_ids, roots, failures = [], [], [], [], Counter()
@@ -96,6 +98,7 @@ def generate(path, episodes, seed, rollouts, roots_per_episode=4):
 
 
 def fit(train_path, dev_path, output, epochs, seed):
+    require_training_ready()
     import torch
     from torch import nn
     torch.manual_seed(seed)
@@ -202,6 +205,7 @@ def main():
     parser.add_argument("--run", default="joint_v4_env_fixed")
     parser.add_argument("--reuse-data", action="store_true")
     args = parser.parse_args()
+    require_training_ready()
     from audit_environment import audit
     check = audit()
     if check["confirmed_issues"]:

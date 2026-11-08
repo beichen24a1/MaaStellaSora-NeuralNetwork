@@ -1,0 +1,123 @@
+{
+  "schema": "joint_environment_audit_v1",
+  "rules_version": "joint_rules_alignment_v5_no_trained_checkpoint",
+  "source_sha256": {
+    "research/concerto_joint/joint_env.py": "ce37f0babffe22185bd07954793c2049f5dc693cea3d3c4de313b79335ac8739",
+    "research/concerto_joint/joint_model.py": "ae2e0c75c2c6d1531888dbb4cbb84ed461e9566a6a81538f6ea5bc46b55bd615",
+    "research/concerto_joint/note_state.py": "f8e97c9e38f504be9d2ee2cae3eeac99db0288d95290d3d90bf96063197ca729",
+    "research/concerto_joint/price_data.py": "d09e97f2573677abdb89bc1cf1f19e0dbf8e71c28f29581653bdfbcb33dc57af",
+    "research/concerto_joint/rule_alignment.py": "e7b33a070c7c71e4716552c59486c3325a747f079fd7f034792f7b97551628fd",
+    "research/concerto_joint/data/phase_supply.json": "15ae9ccd5f123c94e7523a0e4afeb10591d57e33a82148f2b9e1493e213f0dd2",
+    "research/concerto_joint/data/inputs.json": "045f4a362a2c225a2e263c3a453cdd76d5ca66eff28bd3a226d3cd7d319b6d46",
+    "research/concerto_joint/data/note_system.json": "f648a548fee15d20c5c421748c32bf433f0ada18115b0a0668b0894fe90631f4",
+    "research/concerto_joint/data/reference_scenarios.json": "8519bb6657feb978ffdd98f8ac4b0793cf8f96cc8b6098915eee91643552a20f",
+    "maa_value_plugin/critic/features.py": "5d323740ed7c538850500617d7baeb95845ac17f8b9f22b58245807980f0f701",
+    "maa_value_plugin/critic/environment.py": "fc70a8d09a380fb163ddd182e45af91bd063d64247d35dc63168e271d35464c1",
+    "maa_value_plugin/critic/presets.py": "8245eac590a7e151c7f99a3eb560ba2cf4e727babdf5e3dec4ed3de7b2dcf6b1",
+    "maa_value_plugin/critic/network.py": "c703d1b3dafdeef242749f11216f2e7b9bff5b57c3454d285c6ae7d281733282",
+    "maa_value_plugin/critic/vendor/stella_sim.py": "b7e991943fa7713613a838194ab0d8eb2bdfa0d5e067ffa4a17d985bf3d1c79b"
+  },
+  "event_probes": [
+    {
+      "event": 107,
+      "note_total": 50,
+      "visible_known_options": [
+        10701,
+        10704,
+        10708,
+        0
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_107_010701",
+        "07_EVENT_107_010704",
+        "07_EVENT_107_010708"
+      ]
+    },
+    {
+      "event": 108,
+      "note_total": 50,
+      "visible_known_options": [
+        10802,
+        10806,
+        10808,
+        10809,
+        0
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_108_010802",
+        "07_EVENT_108_010806",
+        "07_EVENT_108_010808",
+        "07_EVENT_108_010809"
+      ]
+    },
+    {
+      "event": 103,
+      "note_total": 0,
+      "visible_known_options": [
+        0,
+        10301,
+        10302
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010302"
+      ]
+    },
+    {
+      "event": 103,
+      "note_total": 50,
+      "visible_known_options": [
+        0,
+        10301,
+        10302
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_103_010301",
+        "07_EVENT_103_010302"
+      ]
+    },
+    {
+      "event": 104,
+      "note_total": 50,
+      "visible_known_options": [
+        0,
+        10401,
+        10402,
+        10403
+      ],
+      "actual_joint_actions": [
+        "08_03_SKIP_EVENT",
+        "07_EVENT_104_010401",
+        "07_EVENT_104_010402",
+        "07_EVENT_104_010403"
+      ]
+    }
+  ],
+  "confirmed_issues": [],
+  "simulated_first_shops": {
+    "games": 80,
+    "scenario_seed": 91,
+    "discounted_slot_histogram": {
+      "4": 80
+    },
+    "not_four_discounted_slots": 0,
+    "large_bundle_histogram": {
+      "1": 62,
+      "0": 18
+    }
+  },
+  "unverified_assumptions": [
+    "battle-note quantity and distribution",
+    "random note deduction kernel",
+    "menu pair and item/discount conditional probabilities",
+    "health-state impacts and server outcome verification",
+    "terminal modification legality/timing",
+    "concerto level sum as a proxy for combat value"
+  ],
+  "joint_training_ready": false,
+  "sandbox_profile": "uncalibrated_uniform_notes_count_weighted_costs_v1",
+  "status": "sandbox_rule_checks_pass_training_still_blocked"
+}

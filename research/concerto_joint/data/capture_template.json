@@ -1,0 +1,24 @@
+{
+  "schema": "joint_note_transition_v1",
+  "run_id": null,
+  "action_id": null,
+  "sequence": null,
+  "event_type": null,
+  "option_id": null,
+  "operation_confirmed": null,
+  "response_linked": null,
+  "confirmation_source": null,
+  "intervening_note_actions": null,
+  "before": {"notes": null, "notes_complete": false, "coins": null, "hp": null, "max_hp": null},
+  "after": {"notes": null, "notes_complete": false, "coins": null, "hp": null, "max_hp": null},
+  "note_infos": null,
+  "raw_evidence_reference": null,
+  "conditions": {
+    "client_version": null,
+    "server_region": null,
+    "tower_id": null,
+    "floor": null,
+    "main_discs": null,
+    "auxiliary_discs": null
+  }
+}
