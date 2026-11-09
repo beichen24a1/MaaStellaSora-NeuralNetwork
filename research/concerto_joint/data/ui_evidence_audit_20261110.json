@@ -1,0 +1,261 @@
+{
+  "schema": "joint_ui_evidence_audit_v1",
+  "run_id": "local-ui-run02-20261109",
+  "media_checks": {
+    "original": "sha256_and_size_match",
+    "review": "sha256_and_size_match"
+  },
+  "snapshots": 33,
+  "unique_inventory_intervals": 20,
+  "interval_kinds": {
+    "reward_sequence": 10,
+    "event_purchase": 2,
+    "mixed_sequence": 5,
+    "exchange": 1,
+    "note_purchase": 2
+  },
+  "visible_note_ids": [
+    90011,
+    90012,
+    90013,
+    90014,
+    90015,
+    90016,
+    90017,
+    90018,
+    90020
+  ],
+  "unknown_note_ids": [
+    90019,
+    90021,
+    90022,
+    90023
+  ],
+  "visible_initial_total": 45,
+  "visible_final_total": 166,
+  "visible_net_delta": 121,
+  "inventory_reconciliation": "passed_on_observed_components_only",
+  "complete_shelves": 4,
+  "shelf_note_prices": {
+    "72": 2,
+    "45": 2,
+    "400": 2,
+    "90": 7,
+    "200": 1,
+    "320": 1
+  },
+  "wallet_and_stock_verified_note_purchases": 3,
+  "displayed_rule_conflicts": [
+    {
+      "evidence": "m-gamble",
+      "review_seconds": 176,
+      "legacy_option_mapping_hypothesis": 10502,
+      "displayed_coin_expectation": 55.0,
+      "frozen_r12_coin_expectation": 229.2929292929293,
+      "status": "Client/version binding unresolved. Displayed law conflicts with the frozen table; not an empirical server-frequency estimate."
+    }
+  ],
+  "final_concerto_computed": [
+    1,
+    1,
+    2,
+    1,
+    2,
+    1
+  ],
+  "final_concerto_ui_match": true,
+  "accepted_complete_training_transitions": 0,
+  "training_eligible": false,
+  "probability_eligible": false,
+  "limitations": [
+    "Only nine note types displayed. IDs 90019,90021,90022,90023 remain null throughout.",
+    "Intervals containing battle, level-up, ordinary selection or NPC outcomes are not separated into a battle reward kernel.",
+    "Static event IDs are mapping hypotheses; no raw server request/response IDs are observed.",
+    "No client version, verified disc phase or complete 13-note inventory was captured.",
+    "Menu text is evidence of advertised rewards/probabilities, not an empirical estimate of the server random kernel.",
+    "All shelves and rewards come from one run and one configuration; frames and repeated popup views are not independent samples.",
+    "This is a selected note/concerto annotation, not a complete ordinary-card choice dataset or joint-policy training set."
+  ],
+  "intervals": [
+    {
+      "id": "v02-01",
+      "start": 131,
+      "end": 168,
+      "kind": "reward_sequence",
+      "known_delta_sum": 3,
+      "description": "第一层至等级2选择结束：幸运之音+3；包含战斗奖励和潜能选择，来源不拆分",
+      "isolated": false
+    },
+    {
+      "id": "v02-02",
+      "start": 180,
+      "end": 184,
+      "kind": "reward_sequence",
+      "known_delta_sum": 9,
+      "description": "强攻之音7→16（+9）；战斗／潜能奖励序列",
+      "isolated": false
+    },
+    {
+      "id": "v02-03",
+      "start": 198,
+      "end": 205,
+      "kind": "event_purchase",
+      "known_delta_sum": 10,
+      "description": "选择140币换10个强攻音符，强攻16→26，金币460→320",
+      "isolated": true
+    },
+    {
+      "id": "v02-04",
+      "start": 205,
+      "end": 214,
+      "kind": "reward_sequence",
+      "known_delta_sum": 12,
+      "description": "幸运3→12（+9）、水17→20（+3），按整个奖励序列保存",
+      "isolated": false
+    },
+    {
+      "id": "v02-05",
+      "start": 214,
+      "end": 248,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 6,
+      "description": "经过商店及强化和推进：技巧7→10、水20→23；不当成单动作",
+      "isolated": false
+    },
+    {
+      "id": "v02-06",
+      "start": 254,
+      "end": 256,
+      "kind": "reward_sequence",
+      "known_delta_sum": 9,
+      "description": "绝招7→16（+9），弹窗与奖励提示一致",
+      "isolated": false
+    },
+    {
+      "id": "v02-07",
+      "start": 268,
+      "end": 276,
+      "kind": "reward_sequence",
+      "known_delta_sum": 3,
+      "description": "专注0→3；后续NPC菜单已经出现，尚未确认选择",
+      "isolated": false
+    },
+    {
+      "id": "v02-08",
+      "start": 276,
+      "end": 284,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 12,
+      "description": "经过NPC潜能选择及推进：水23→35（+12），来源不拆分",
+      "isolated": false
+    },
+    {
+      "id": "v02-09",
+      "start": 284,
+      "end": 308,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 3,
+      "description": "经过战斗和NPC选择：技巧10→13（+3），来源不拆分",
+      "isolated": false
+    },
+    {
+      "id": "v02-10",
+      "start": 312,
+      "end": 350,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 15,
+      "description": "经过商店强化及推进：强攻+9、暴发+3、技巧+3，合计可见+15",
+      "isolated": false
+    },
+    {
+      "id": "v02-11",
+      "start": 350,
+      "end": 362,
+      "kind": "reward_sequence",
+      "known_delta_sum": 3,
+      "description": "幸运12→15（+3），弹窗与奖励提示一致",
+      "isolated": false
+    },
+    {
+      "id": "v02-12",
+      "start": 372,
+      "end": 374.5,
+      "kind": "exchange",
+      "known_delta_sum": -5,
+      "description": "消耗5音符换150币：强攻−1、绝招−1、水−3；金币1550→1700",
+      "isolated": true
+    },
+    {
+      "id": "v02-13",
+      "start": 374.5,
+      "end": 383,
+      "kind": "reward_sequence",
+      "known_delta_sum": 6,
+      "description": "兑换完成后新的奖励序列：水32→38（+6）；不与扣除混合",
+      "isolated": false
+    },
+    {
+      "id": "v02-14",
+      "start": 392,
+      "end": 396,
+      "kind": "event_purchase",
+      "known_delta_sum": 5,
+      "description": "选择50币换5随机音符：强攻+1、幸运+1、技巧+2、水+1",
+      "isolated": true
+    },
+    {
+      "id": "v02-15",
+      "start": 400,
+      "end": 404,
+      "kind": "reward_sequence",
+      "known_delta_sum": 6,
+      "description": "强攻35→38（+3）、暴发10→13（+3）",
+      "isolated": false
+    },
+    {
+      "id": "v02-16",
+      "start": 417,
+      "end": 424,
+      "kind": "reward_sequence",
+      "known_delta_sum": 3,
+      "description": "专注3→6（+3）；包含等级选择，尚未进入商店",
+      "isolated": false
+    },
+    {
+      "id": "v02-17",
+      "start": 456,
+      "end": 464,
+      "kind": "reward_sequence",
+      "known_delta_sum": 6,
+      "description": "末段奖励序列：强攻38→41、暴发13→16，各+3",
+      "isolated": false
+    },
+    {
+      "id": "v02-18",
+      "start": 468,
+      "end": 519,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 5,
+      "description": "末店首笔音符购买：技巧18→23；前读数较早，另有即时价格／钱包／库存证据",
+      "isolated": false
+    },
+    {
+      "id": "v02-19",
+      "start": 519,
+      "end": 525,
+      "kind": "note_purchase",
+      "known_delta_sum": 5,
+      "description": "末店暴发音符×5：暴发16→21；658→568币，商品售罄",
+      "isolated": true
+    },
+    {
+      "id": "v02-20",
+      "start": 525,
+      "end": 529,
+      "kind": "note_purchase",
+      "known_delta_sum": 5,
+      "description": "末店技巧音符×5：技巧23→28；568→478币，商品售罄",
+      "isolated": true
+    }
+  ]
+}

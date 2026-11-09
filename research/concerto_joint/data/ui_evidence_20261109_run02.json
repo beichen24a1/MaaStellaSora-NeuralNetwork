@@ -1,0 +1,1950 @@
+{
+  "schema": "joint_ui_evidence_v1",
+  "run_id": "local-ui-run02-20261109",
+  "annotation_date": "2026-11-10",
+  "training_eligible": false,
+  "probability_eligible": false,
+  "review_scope": "One completed built-in hosting run; manually transcribed selected inventory boundaries, menus and shelves. Not a frame-complete action log.",
+  "media": {
+    "original": {
+      "file": "tower_full_run_02.mp4",
+      "sha256": "4c840c50625d1a1e04b4b8e303f927916649eca80b683989a6b9a9dbd20f6fcd",
+      "bytes": 690967253,
+      "duration_seconds": 16916.199
+    },
+    "review": {
+      "file": "tower_run_02_review.mp4",
+      "sha256": "29bbcf0d08455e7ac928428ef8a08d216b74d1a813fe91c53368fbd503419542",
+      "bytes": 83186259,
+      "duration_seconds": 776.2
+    },
+    "review_segments": [
+      {
+        "review_start": 0,
+        "review_end": 600,
+        "original_start": 0
+      },
+      {
+        "review_start": 600,
+        "review_end": 776.2,
+        "original_start": 16740
+      }
+    ],
+    "extraction": "ffmpeg -i tower_run_02_review.mp4 -vf fps=2 -q:v 2 frames/frame_%04d.jpg",
+    "sample_timing": "fps=2 bin labels; inspect within +/-0.5 seconds; final review is reencoded",
+    "raw_media_public": false,
+    "failed_run01_video_excluded": true
+  },
+  "conditions": {
+    "tower_name": "烈焰与尘埃",
+    "difficulty": 8,
+    "client_version": null,
+    "server_region": null,
+    "main_sigils": [
+      "因缘而聚",
+      "浮光掠影",
+      "潋滟故池水"
+    ],
+    "auxiliary_sigils": [
+      "晴之花",
+      "美好，尽在昨日",
+      "斑驳夏影"
+    ],
+    "phases": null,
+    "policy": "game_builtin_exploration_preset_1",
+    "research_model_deployed": false
+  },
+  "snapshots": [
+    {
+      "id": "s131",
+      "review_seconds": 131,
+      "original_seconds": 131,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0263.jpg",
+      "sample_frame_sha256": "6f10574e1ca3c05cca88807ea299aff216b7ee992fbf4bc8cc0cbaabc5f48c03",
+      "notes": [
+        7,
+        0,
+        7,
+        0,
+        0,
+        7,
+        7,
+        17,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 400,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s168",
+      "review_seconds": 168,
+      "original_seconds": 168,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0337.jpg",
+      "sample_frame_sha256": "57a541a5a1c195f4e6060418072681bd7a42951ea9f8e29935ee8ee090b5b09a",
+      "notes": [
+        7,
+        3,
+        7,
+        0,
+        0,
+        7,
+        7,
+        17,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 480,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s180",
+      "review_seconds": 180,
+      "original_seconds": 180,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0361.jpg",
+      "sample_frame_sha256": "4fdb46854c36a91752005afc2cf05d66bd562cd46eaf66171dfe8016aa987a22",
+      "notes": [
+        7,
+        3,
+        7,
+        0,
+        0,
+        7,
+        7,
+        17,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 380,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s184",
+      "review_seconds": 184,
+      "original_seconds": 184,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0369.jpg",
+      "sample_frame_sha256": "0216eaf7cb83880930832a19bafa7a69b88d255aacbab9b7209943f6750f08dc",
+      "notes": [
+        16,
+        3,
+        7,
+        0,
+        0,
+        7,
+        7,
+        17,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s198",
+      "review_seconds": 198,
+      "original_seconds": 198,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0397.jpg",
+      "sample_frame_sha256": "44f4abb14093e9b53acbe5357bfd15c9abf4f96b72414be5db720fa4da549547",
+      "notes": [
+        16,
+        3,
+        7,
+        0,
+        0,
+        7,
+        7,
+        17,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 460,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s205",
+      "review_seconds": 205,
+      "original_seconds": 205,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0411.jpg",
+      "sample_frame_sha256": "5a3dcbffbac1ac73bb1d4ce61138972e7ca33fe8855157fcc72fad4308588829",
+      "notes": [
+        26,
+        3,
+        7,
+        0,
+        0,
+        7,
+        7,
+        17,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 320,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s214",
+      "review_seconds": 214,
+      "original_seconds": 214,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0429.jpg",
+      "sample_frame_sha256": "6bc251bfdd13bf5b9708ef1ca4948a4e35b2b98aaf7479fd47d636399ca35eda",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        0,
+        7,
+        7,
+        20,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 690,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s248",
+      "review_seconds": 248,
+      "original_seconds": 248,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0497.jpg",
+      "sample_frame_sha256": "ced5e60b1ab26cc0cfc92e26e91868fe9ee1d8f08c36129d3517114808468d3b",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        0,
+        10,
+        7,
+        23,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 830,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s254",
+      "review_seconds": 254,
+      "original_seconds": 254,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0509.jpg",
+      "sample_frame_sha256": "7c51220bd25e4f73a4c22757138ea52ea391208cdf4e766aaa88fe53623c56f8",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        0,
+        10,
+        7,
+        23,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 830,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s256",
+      "review_seconds": 256,
+      "original_seconds": 256,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0513.jpg",
+      "sample_frame_sha256": "e3abc6477a594513009ef3a12e710b0f880eef5a90637b68b8e58583795e3780",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        0,
+        10,
+        16,
+        23,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s268",
+      "review_seconds": 268,
+      "original_seconds": 268,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0537.jpg",
+      "sample_frame_sha256": "0760c373ce0431995f5dcca9e18aa4b71884e378bf44bad7a0e0b4381aa275a2",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        0,
+        10,
+        16,
+        23,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1280,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s276",
+      "review_seconds": 276,
+      "original_seconds": 276,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0553.jpg",
+      "sample_frame_sha256": "5881e521461703c0cc1432011da117031d53090db88a86c98ca5c8bce5ecf3a8",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        3,
+        10,
+        16,
+        23,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1280,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s284",
+      "review_seconds": 284,
+      "original_seconds": 284,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0569.jpg",
+      "sample_frame_sha256": "63df680052e5f9a2affaf5c9529eaafd85a1d10185f33139f672a77bbd0d348d",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        3,
+        10,
+        16,
+        35,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1360,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s308",
+      "review_seconds": 308,
+      "original_seconds": 308,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0617.jpg",
+      "sample_frame_sha256": "33c4e77fc63f00de0542d49a11e05d10312e01b8707a3948259696c48c8b353f",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        3,
+        13,
+        16,
+        35,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1680,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s312",
+      "review_seconds": 312,
+      "original_seconds": 312,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0625.jpg",
+      "sample_frame_sha256": "fe3532e0c630349092eb50fcd078a0d4a8e1a0e1f627a903dfffc3e99e448db4",
+      "notes": [
+        26,
+        12,
+        7,
+        0,
+        3,
+        13,
+        16,
+        35,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s350",
+      "review_seconds": 350,
+      "original_seconds": 350,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0701.jpg",
+      "sample_frame_sha256": "92e5e650e32b34575734d4caa1e643ca543400f28b83b7322b5b6adb7511f2e5",
+      "notes": [
+        35,
+        12,
+        10,
+        0,
+        3,
+        16,
+        16,
+        35,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s362",
+      "review_seconds": 362,
+      "original_seconds": 362,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0725.jpg",
+      "sample_frame_sha256": "8e043f9f28b47e1f1dc8a440d7b330a6da5d0089b0f038af51fbd46c96b5efb2",
+      "notes": [
+        35,
+        15,
+        10,
+        0,
+        3,
+        16,
+        16,
+        35,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s372",
+      "review_seconds": 372,
+      "original_seconds": 372,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0745.jpg",
+      "sample_frame_sha256": "11ac86cc1073b4cbdf29dc544569a16d930c5a2d7937e86f59ea125ba6877c2e",
+      "notes": [
+        35,
+        15,
+        10,
+        0,
+        3,
+        16,
+        16,
+        35,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1550,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s374.5",
+      "review_seconds": 374.5,
+      "original_seconds": 374.5,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0750.jpg",
+      "sample_frame_sha256": "b0c3e4e85f7805d5d977d5b49c173661eaeaa7ecd6cc7cd68a54cfa811c1e13f",
+      "notes": [
+        34,
+        15,
+        10,
+        0,
+        3,
+        16,
+        15,
+        32,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1700,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s383",
+      "review_seconds": 383,
+      "original_seconds": 383,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0767.jpg",
+      "sample_frame_sha256": "647a824e8286eac8bd4485e7dbdedd0993ee5998a1742e20cec4214d87e3062c",
+      "notes": [
+        34,
+        15,
+        10,
+        0,
+        3,
+        16,
+        15,
+        38,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 2030,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s392",
+      "review_seconds": 392,
+      "original_seconds": 392,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0785.jpg",
+      "sample_frame_sha256": "c0233d29890f9856022c65a384101ca358974f8df55255e9aefecb97e82c0860",
+      "notes": [
+        34,
+        15,
+        10,
+        0,
+        3,
+        16,
+        15,
+        38,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 2030,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s396",
+      "review_seconds": 396,
+      "original_seconds": 396,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0793.jpg",
+      "sample_frame_sha256": "efadb4f09863f5783e2505e69ebddf4b169240b706682503547b464aaf734c80",
+      "notes": [
+        35,
+        16,
+        10,
+        0,
+        3,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s400",
+      "review_seconds": 400,
+      "original_seconds": 400,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0801.jpg",
+      "sample_frame_sha256": "962a0b5fe1668da2ebdef439f63d40474e1282e2544a0f5ec9945f10aaa628fe",
+      "notes": [
+        35,
+        16,
+        10,
+        0,
+        3,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1980,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s404",
+      "review_seconds": 404,
+      "original_seconds": 404,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0809.jpg",
+      "sample_frame_sha256": "d997077639673d464be8370dbc75d1adeaf638fa7e73e1940cddcc126731b5de",
+      "notes": [
+        38,
+        16,
+        13,
+        0,
+        3,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s417",
+      "review_seconds": 417,
+      "original_seconds": 417,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0835.jpg",
+      "sample_frame_sha256": "d22d99008f6b9bbbd4b7edbd7e1c2f1ececf6c5b7b81638c28fde87e76ad5ae8",
+      "notes": [
+        38,
+        16,
+        13,
+        0,
+        3,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 2060,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s424",
+      "review_seconds": 424,
+      "original_seconds": 424,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0849.jpg",
+      "sample_frame_sha256": "311aaacdaf5db89c616f903fe381e8e06bdb399d5773eb34cffe0591f4bfec1f",
+      "notes": [
+        38,
+        16,
+        13,
+        0,
+        6,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s456",
+      "review_seconds": 456,
+      "original_seconds": 456,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0913.jpg",
+      "sample_frame_sha256": "905fdb416bc35fd2d28e2942b7787c8f5377dcdf74256106979141157bf32201",
+      "notes": [
+        38,
+        16,
+        13,
+        0,
+        6,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1420,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s464",
+      "review_seconds": 464,
+      "original_seconds": 464,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0929.jpg",
+      "sample_frame_sha256": "a03d588e973266ddbaf7a58bdb8ba2080253051793e1bf76d7c2e9291ae726d3",
+      "notes": [
+        41,
+        16,
+        16,
+        0,
+        6,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 2130,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s468",
+      "review_seconds": 468,
+      "original_seconds": 468,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_0937.jpg",
+      "sample_frame_sha256": "b1251be8c83b8ee1f12e179098558d4bbe34e2fe4a5a49883e89c5e2abcb4cb7",
+      "notes": [
+        41,
+        16,
+        16,
+        0,
+        6,
+        18,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s519",
+      "review_seconds": 519,
+      "original_seconds": 519,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_1039.jpg",
+      "sample_frame_sha256": "15874c145500faf7a9e51698f8166bb955c7f0d89439bb9e7b218b27b2da92f1",
+      "notes": [
+        41,
+        16,
+        16,
+        0,
+        6,
+        23,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s525",
+      "review_seconds": 525,
+      "original_seconds": 525,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_1051.jpg",
+      "sample_frame_sha256": "537cbcc6ac5951eef35ceda3916c8ca8bcb8ef4cde55915b1afa3898a152998d",
+      "notes": [
+        41,
+        16,
+        21,
+        0,
+        6,
+        23,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s529",
+      "review_seconds": 529,
+      "original_seconds": 529,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_1059.jpg",
+      "sample_frame_sha256": "5c7170a001122a5a69d4e9f0b5fafbcd659adc73526f2cbac21a091db2df9121",
+      "notes": [
+        41,
+        16,
+        21,
+        0,
+        6,
+        28,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    },
+    {
+      "id": "s736",
+      "review_seconds": 736,
+      "original_seconds": 16876,
+      "time_tolerance_seconds": 0.5,
+      "sample_frame": "frame_1473.jpg",
+      "sample_frame_sha256": "ad77433c230a31819c2e6c5770855f7bb5b4dd603233873c5284246e76cd91cd",
+      "notes": [
+        41,
+        16,
+        21,
+        0,
+        6,
+        28,
+        15,
+        39,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "v02-01",
+      "before": "s131",
+      "after": "s168",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "第一层至等级2选择结束：幸运之音+3；包含战斗奖励和潜能选择，来源不拆分",
+      "observed_delta": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-02",
+      "before": "s180",
+      "after": "s184",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "强攻之音7→16（+9）；战斗／潜能奖励序列",
+      "observed_delta": [
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-03",
+      "before": "s198",
+      "after": "s205",
+      "kind": "event_purchase",
+      "isolated_note_action": true,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "选择140币换10个强攻音符，强攻16→26，金币460→320",
+      "observed_delta": [
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "displayed_coin_cost": 140,
+      "displayed_note_reward": 10,
+      "wallet_before_snapshot": "s198",
+      "wallet_after_snapshot": "s205"
+    },
+    {
+      "id": "v02-04",
+      "before": "s205",
+      "after": "s214",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "幸运3→12（+9）、水17→20（+3），按整个奖励序列保存",
+      "observed_delta": [
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-05",
+      "before": "s214",
+      "after": "s248",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "经过商店及强化和推进：技巧7→10、水20→23；不当成单动作",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        3,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-06",
+      "before": "s254",
+      "after": "s256",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "绝招7→16（+9），弹窗与奖励提示一致",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-07",
+      "before": "s268",
+      "after": "s276",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "专注0→3；后续NPC菜单已经出现，尚未确认选择",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-08",
+      "before": "s276",
+      "after": "s284",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "经过NPC潜能选择及推进：水23→35（+12），来源不拆分",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-09",
+      "before": "s284",
+      "after": "s308",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "经过战斗和NPC选择：技巧10→13（+3），来源不拆分",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-10",
+      "before": "s312",
+      "after": "s350",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "经过商店强化及推进：强攻+9、暴发+3、技巧+3，合计可见+15",
+      "observed_delta": [
+        9,
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-11",
+      "before": "s350",
+      "after": "s362",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "幸运12→15（+3），弹窗与奖励提示一致",
+      "observed_delta": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-12",
+      "before": "s372",
+      "after": "s374.5",
+      "kind": "exchange",
+      "isolated_note_action": true,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "消耗5音符换150币：强攻−1、绝招−1、水−3；金币1550→1700",
+      "observed_delta": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -3,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "displayed_note_cost": 5
+    },
+    {
+      "id": "v02-13",
+      "before": "s374.5",
+      "after": "s383",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "兑换完成后新的奖励序列：水32→38（+6）；不与扣除混合",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-14",
+      "before": "s392",
+      "after": "s396",
+      "kind": "event_purchase",
+      "isolated_note_action": true,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "选择50币换5随机音符：强攻+1、幸运+1、技巧+2、水+1",
+      "observed_delta": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "displayed_coin_cost": 50,
+      "displayed_note_reward": 5,
+      "wallet_before_snapshot": "s392",
+      "wallet_after_snapshot": "s400"
+    },
+    {
+      "id": "v02-15",
+      "before": "s400",
+      "after": "s404",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "强攻35→38（+3）、暴发10→13（+3）",
+      "observed_delta": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-16",
+      "before": "s417",
+      "after": "s424",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "专注3→6（+3）；包含等级选择，尚未进入商店",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-17",
+      "before": "s456",
+      "after": "s464",
+      "kind": "reward_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "末段奖励序列：强攻38→41、暴发13→16，各+3",
+      "observed_delta": [
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-18",
+      "before": "s468",
+      "after": "s519",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "末店首笔音符购买：技巧18→23；前读数较早，另有即时价格／钱包／库存证据",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-19",
+      "before": "s519",
+      "after": "s525",
+      "kind": "note_purchase",
+      "isolated_note_action": true,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "末店暴发音符×5：暴发16→21；658→568币，商品售罄",
+      "observed_delta": [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "v02-20",
+      "before": "s525",
+      "after": "s529",
+      "kind": "note_purchase",
+      "isolated_note_action": true,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_option_id": null,
+      "server_response_observed": false,
+      "description": "末店技巧音符×5：技巧23→28；568→478币，商品售罄",
+      "observed_delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "shelves": [
+    {
+      "id": "shop-first-initial",
+      "review_seconds": 218,
+      "kind": "initial",
+      "goods": [
+        {
+          "slot": 1,
+          "kind": "drink",
+          "price": 160,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "kind": "drink",
+          "price": 100,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 5,
+          "kind": "note",
+          "note_id": 90014,
+          "quantity": 5,
+          "price": 72
+        },
+        {
+          "slot": 6,
+          "kind": "note",
+          "note_id": 90011,
+          "quantity": 5,
+          "price": 45
+        },
+        {
+          "slot": 7,
+          "kind": "note",
+          "note_id": 90014,
+          "quantity": 15,
+          "price": 400
+        },
+        {
+          "slot": 8,
+          "kind": "note",
+          "note_id": 90018,
+          "quantity": 5,
+          "price": 90
+        }
+      ],
+      "first_view_before_purchases": true,
+      "independent_run": false
+    },
+    {
+      "id": "shop-first-refresh1",
+      "review_seconds": 220,
+      "kind": "refresh",
+      "goods": [
+        {
+          "slot": 1,
+          "kind": "drink",
+          "price": 160,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "kind": "drink",
+          "price": 160,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "kind": "drink",
+          "price": 100,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 5,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 6,
+          "kind": "note",
+          "note_id": 90015,
+          "quantity": 5,
+          "price": 45
+        },
+        {
+          "slot": 7,
+          "kind": "note",
+          "note_id": 90017,
+          "quantity": 15,
+          "price": 400
+        },
+        {
+          "slot": 8,
+          "kind": "note",
+          "note_id": 90014,
+          "quantity": 5,
+          "price": 90
+        }
+      ],
+      "first_view_before_purchases": true,
+      "independent_run": false
+    },
+    {
+      "id": "shop-middle-initial",
+      "review_seconds": 316,
+      "kind": "initial",
+      "goods": [
+        {
+          "slot": 1,
+          "kind": "drink",
+          "price": 160,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "kind": "drink",
+          "price": 160,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "kind": "drink",
+          "price": 100,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 5,
+          "kind": "note",
+          "note_id": 90011,
+          "quantity": 15,
+          "price": 200
+        },
+        {
+          "slot": 6,
+          "kind": "note",
+          "note_id": 90012,
+          "quantity": 5,
+          "price": 90
+        },
+        {
+          "slot": 7,
+          "kind": "note",
+          "note_id": 90012,
+          "quantity": 5,
+          "price": 90
+        },
+        {
+          "slot": 8,
+          "kind": "note",
+          "note_id": 90014,
+          "quantity": 5,
+          "price": 90
+        }
+      ],
+      "first_view_before_purchases": true,
+      "independent_run": false
+    },
+    {
+      "id": "shop-final-initial",
+      "review_seconds": 500,
+      "kind": "initial",
+      "goods": [
+        {
+          "slot": 1,
+          "kind": "drink",
+          "price": 100,
+          "quantity": 1
+        },
+        {
+          "slot": 2,
+          "kind": "drink",
+          "price": 100,
+          "quantity": 1
+        },
+        {
+          "slot": 3,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 4,
+          "kind": "drink",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "slot": 5,
+          "kind": "note",
+          "note_id": 90011,
+          "quantity": 15,
+          "price": 320
+        },
+        {
+          "slot": 6,
+          "kind": "note",
+          "note_id": 90016,
+          "quantity": 5,
+          "price": 72
+        },
+        {
+          "slot": 7,
+          "kind": "note",
+          "note_id": 90013,
+          "quantity": 5,
+          "price": 90
+        },
+        {
+          "slot": 8,
+          "kind": "note",
+          "note_id": 90016,
+          "quantity": 5,
+          "price": 90
+        }
+      ],
+      "first_view_before_purchases": true,
+      "independent_run": false
+    }
+  ],
+  "purchases": [
+    {
+      "id": "p1",
+      "shelf_id": "shop-final-initial",
+      "slot": 6,
+      "note_id": 90016,
+      "quantity": 5,
+      "price": 72,
+      "coins_before": 730,
+      "coins_after": 658,
+      "stock_before": 1,
+      "stock_after": 0,
+      "review_seconds": [
+        517,
+        519,
+        523
+      ]
+    },
+    {
+      "id": "p2",
+      "shelf_id": "shop-final-initial",
+      "slot": 7,
+      "note_id": 90013,
+      "quantity": 5,
+      "price": 90,
+      "coins_before": 658,
+      "coins_after": 568,
+      "stock_before": 1,
+      "stock_after": 0,
+      "review_seconds": [
+        523,
+        525,
+        528
+      ]
+    },
+    {
+      "id": "p3",
+      "shelf_id": "shop-final-initial",
+      "slot": 8,
+      "note_id": 90016,
+      "quantity": 5,
+      "price": 90,
+      "coins_before": 568,
+      "coins_after": 478,
+      "stock_before": 1,
+      "stock_after": 0,
+      "review_seconds": [
+        528,
+        529,
+        533
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "id": "m-gamble",
+      "review_seconds": 176,
+      "static_event_mapping_hypothesis": 105,
+      "server_id_observed": false,
+      "options": [
+        {
+          "text": "相信运气",
+          "coin_outcomes": [
+            [
+              0.5,
+              200
+            ],
+            [
+              0.5,
+              -100
+            ]
+          ]
+        },
+        {
+          "text": "相信命运",
+          "coin_outcomes": [
+            [
+              0.3,
+              650
+            ],
+            [
+              0.7,
+              -200
+            ]
+          ]
+        },
+        {
+          "text": "相信现实",
+          "coin_outcomes": [
+            [
+              1,
+              30
+            ]
+          ],
+          "partly_faded": true
+        }
+      ],
+      "scope": "Displayed probabilities, not empirical server frequency"
+    },
+    {
+      "id": "m-specific-notes",
+      "review_seconds": 198,
+      "static_event_mapping_hypothesis": 108,
+      "server_id_observed": false,
+      "options": [
+        {
+          "coin_cost": 140,
+          "note_id": 90011,
+          "quantity": 10
+        },
+        {
+          "coin_cost": 140,
+          "note_id": 90017,
+          "quantity": 10
+        },
+        {
+          "coin_cost": 90,
+          "random_notes": 10
+        },
+        {
+          "coin_reward": 30
+        }
+      ]
+    },
+    {
+      "id": "m-support-potential",
+      "review_seconds": 276,
+      "static_event_mapping_hypothesis": 127,
+      "server_id_observed": false,
+      "options": [
+        {
+          "support_random_potentials": 1
+        },
+        {
+          "random_notes": 5
+        }
+      ]
+    },
+    {
+      "id": "m-exchange",
+      "review_seconds": 372,
+      "static_event_mapping_hypothesis": 103,
+      "server_id_observed": false,
+      "options": [
+        {
+          "random_note_cost": 5,
+          "coin_reward": 150
+        },
+        {
+          "coin_reward": 30
+        }
+      ]
+    },
+    {
+      "id": "m-paid-or-heal",
+      "review_seconds": 392,
+      "static_event_mapping_hypothesis": 120,
+      "server_id_observed": false,
+      "options": [
+        {
+          "coin_cost": 50,
+          "random_notes": 5
+        },
+        {
+          "branches": [
+            {
+              "probability": 0.5,
+              "heal_fraction": 0.3
+            },
+            {
+              "probability": 0.5,
+              "random_notes": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m-question",
+      "review_seconds": 412,
+      "static_event_mapping_hypothesis": null,
+      "question_event_family_candidates": [
+        114,
+        115,
+        116
+      ],
+      "reward_compatible_legacy_event": 116,
+      "server_id_observed": false,
+      "question": "二的十次方是多少",
+      "displayed_answers": [
+        "64",
+        "256",
+        "1024"
+      ],
+      "selected_display_index": 3,
+      "correct_reward_text": "1个随机稀有潜能",
+      "note_reward_in_this_text": false,
+      "scope": "Do not map the third displayed answer to 11403. The advertised rare-potential reward differs from pinned 114 note reward. No wrong-answer retry captured."
+    }
+  ],
+  "final_concerto": {
+    "review_seconds": 736,
+    "group_ids": [
+      40211,
+      40212,
+      40551,
+      40552,
+      40261,
+      40262
+    ],
+    "names": [
+      "坚固的三角",
+      "同心的瞬间",
+      "碧海回音",
+      "白沙映日",
+      "泷舞澈跃",
+      "明镜才可止水"
+    ],
+    "displayed_levels": [
+      1,
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    "group_mapping": "Exact main-disc dual groups plus visible requirements; names transcribed from UI"
+  },
+  "limitations": [
+    "Only nine note types displayed. IDs 90019,90021,90022,90023 remain null throughout.",
+    "Intervals containing battle, level-up, ordinary selection or NPC outcomes are not separated into a battle reward kernel.",
+    "Static event IDs are mapping hypotheses; no raw server request/response IDs are observed.",
+    "No client version, verified disc phase or complete 13-note inventory was captured.",
+    "Menu text is evidence of advertised rewards/probabilities, not an empirical estimate of the server random kernel.",
+    "All shelves and rewards come from one run and one configuration; frames and repeated popup views are not independent samples.",
+    "This is a selected note/concerto annotation, not a complete ordinary-card choice dataset or joint-policy training set."
+  ]
+}
