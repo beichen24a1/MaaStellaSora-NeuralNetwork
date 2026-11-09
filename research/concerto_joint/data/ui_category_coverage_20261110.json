@@ -1,0 +1,88 @@
+{
+  "schema": "joint_ui_category_coverage_v1",
+  "runs": [
+    {
+      "run_id": "local-ui-run02-20261109",
+      "visible_note_ids": [
+        90011,
+        90012,
+        90013,
+        90014,
+        90015,
+        90016,
+        90017,
+        90018,
+        90020
+      ],
+      "unknown_note_ids": [
+        90019,
+        90021,
+        90022,
+        90023
+      ],
+      "inventory_intervals": 20
+    },
+    {
+      "run_id": "local-ui-light_earth_run01-20261110",
+      "visible_note_ids": [
+        90011,
+        90012,
+        90013,
+        90014,
+        90015,
+        90016,
+        90017,
+        90018,
+        90021,
+        90022
+      ],
+      "unknown_note_ids": [
+        90019,
+        90020,
+        90023
+      ],
+      "inventory_intervals": 3
+    },
+    {
+      "run_id": "local-ui-fire_dark_run02-20261110",
+      "visible_note_ids": [
+        90011,
+        90012,
+        90013,
+        90014,
+        90015,
+        90016,
+        90017,
+        90019,
+        90023
+      ],
+      "unknown_note_ids": [
+        90018,
+        90020,
+        90021,
+        90022
+      ],
+      "inventory_intervals": 1
+    }
+  ],
+  "observed_category_union": [
+    90011,
+    90012,
+    90013,
+    90014,
+    90015,
+    90016,
+    90017,
+    90018,
+    90019,
+    90020,
+    90021,
+    90022,
+    90023
+  ],
+  "unobserved_categories": [],
+  "runs_with_all_13_observed": 0,
+  "inventories_merged": false,
+  "training_approved": false,
+  "scope": "Category coverage only. Different runs are never one state or one transition."
+}

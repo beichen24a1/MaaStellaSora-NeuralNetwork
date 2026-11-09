@@ -1,0 +1,431 @@
+{
+  "schema": "joint_ui_evidence_v1",
+  "run_id": "local-ui-light_earth_run01-20261110",
+  "annotation_date": "2026-11-10",
+  "training_eligible": false,
+  "probability_eligible": false,
+  "review_scope": "Selected stable inventory boundaries and a controlled purchase, not an exhaustive action log.",
+  "media": {
+    "original": {
+      "file": "light_earth_run01.mp4",
+      "sha256": "d28884960875ec15b62e7697e3f427e62d21543d6e81390098079abae80e7803",
+      "bytes": 353537537,
+      "duration_seconds": 1518.599
+    },
+    "review": {
+      "file": "light_earth_run01.mp4",
+      "sha256": "d28884960875ec15b62e7697e3f427e62d21543d6e81390098079abae80e7803",
+      "bytes": 353537537,
+      "duration_seconds": 1518.599
+    },
+    "review_is_original_alias": true,
+    "review_segments": [
+      {
+        "review_start": 0,
+        "review_end": 1518.599,
+        "original_start": 0
+      }
+    ],
+    "recording_file_creation_utc": "2026-11-09T18:19:55.635799+00:00",
+    "raw_media_public": false,
+    "timing": "Local action timestamps relative to recording file creation, minus1s; inspect +/-2s. Multi-view inventory readings are only combined while paused."
+  },
+  "conditions": {
+    "tower_name": "流水与暗影",
+    "recommended_elements": [
+      "光",
+      "地"
+    ],
+    "difficulty": 8,
+    "main_sigils": [
+      "波光漫游",
+      "指引前路的启明星",
+      "星之所向"
+    ],
+    "client_version": null,
+    "disc_phases": null,
+    "policy": "game_builtin_exploration_preset_1_with_manual_inventory_inspection",
+    "research_model_deployed": false
+  },
+  "snapshots": [
+    {
+      "id": "light-s0",
+      "review_seconds": 318.568,
+      "original_seconds": 318.568,
+      "time_tolerance_seconds": 2,
+      "notes": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        20,
+        14,
+        7,
+        null,
+        null,
+        0,
+        7,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription",
+      "view": "stable_bag_details",
+      "observation_at_utc": "2026-11-09T18:25:15.204Z",
+      "supporting_views": [
+        {
+          "kind": "stable_bag_before_first_choice",
+          "original_seconds": 268.012
+        },
+        {
+          "kind": "stable_bag_details",
+          "original_seconds": 318.568
+        }
+      ]
+    },
+    {
+      "id": "light-s1",
+      "review_seconds": 641.843,
+      "original_seconds": 641.843,
+      "time_tolerance_seconds": 2,
+      "notes": [
+        8,
+        3,
+        14,
+        0,
+        0,
+        39,
+        40,
+        7,
+        null,
+        null,
+        0,
+        10,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1710,
+      "method": "manual_visual_transcription",
+      "view": "purchase_before_details",
+      "observation_at_utc": "2026-11-09T18:30:38.479Z",
+      "supporting_views": [
+        {
+          "kind": "purchase_before",
+          "original_seconds": 599.344
+        },
+        {
+          "kind": "purchase_before_details",
+          "original_seconds": 641.843
+        }
+      ]
+    },
+    {
+      "id": "light-s2",
+      "review_seconds": 841.893,
+      "original_seconds": 841.893,
+      "time_tolerance_seconds": 2,
+      "notes": [
+        8,
+        8,
+        14,
+        0,
+        0,
+        39,
+        40,
+        7,
+        null,
+        null,
+        0,
+        10,
+        null
+      ],
+      "notes_complete": false,
+      "coins": 1638,
+      "method": "manual_visual_transcription",
+      "view": "purchase_after_details",
+      "observation_at_utc": "2026-11-09T18:33:58.529Z",
+      "supporting_views": [
+        {
+          "kind": "purchase_result_popup",
+          "original_seconds": 757.148
+        },
+        {
+          "kind": "purchase_after_details",
+          "original_seconds": 841.893
+        }
+      ]
+    },
+    {
+      "id": "light-s3",
+      "review_seconds": 1495.009,
+      "original_seconds": 1495.009,
+      "time_tolerance_seconds": 2,
+      "notes": [
+        7,
+        14,
+        22,
+        6,
+        0,
+        57,
+        38,
+        7,
+        null,
+        null,
+        0,
+        28,
+        null
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription",
+      "view": "final_inventory",
+      "observation_at_utc": "2026-11-09T18:44:51.645Z"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "light-interval1",
+      "before": "light-s0",
+      "after": "light-s1",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_response_observed": false,
+      "server_option_id": null,
+      "description": "同局稳定快照之间的合并区间；不分摊到单场战斗或单次事件",
+      "observed_delta": [
+        5,
+        3,
+        14,
+        0,
+        0,
+        19,
+        26,
+        0,
+        null,
+        null,
+        0,
+        3,
+        null
+      ]
+    },
+    {
+      "id": "light-interval2",
+      "before": "light-s1",
+      "after": "light-s2",
+      "kind": "note_purchase",
+      "isolated_note_action": true,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_response_observed": false,
+      "server_option_id": null,
+      "description": "暂停托管，仅购买幸运之音×5，售价72；详情列表前后核对10类已显示库存",
+      "observed_delta": [
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null
+      ]
+    },
+    {
+      "id": "light-interval3",
+      "before": "light-s2",
+      "after": "light-s3",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_response_observed": false,
+      "server_option_id": null,
+      "description": "同局稳定快照之间的合并区间；不分摊到单场战斗或单次事件",
+      "observed_delta": [
+        -1,
+        6,
+        8,
+        6,
+        0,
+        18,
+        -2,
+        0,
+        null,
+        null,
+        0,
+        18,
+        null
+      ]
+    }
+  ],
+  "shelves": [
+    {
+      "id": "controlled-shop",
+      "review_seconds": 532.527,
+      "goods": [
+        {
+          "slot": 1,
+          "kind": "drink",
+          "quantity": 1,
+          "price": 160
+        },
+        {
+          "slot": 2,
+          "kind": "drink",
+          "quantity": 1,
+          "price": 160
+        },
+        {
+          "slot": 3,
+          "kind": "drink",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "slot": 4,
+          "kind": "drink",
+          "quantity": 1,
+          "price": 200
+        },
+        {
+          "slot": 5,
+          "kind": "note",
+          "quantity": 5,
+          "price": 72,
+          "note_id": 90012
+        },
+        {
+          "slot": 6,
+          "kind": "note",
+          "quantity": 15,
+          "price": 400,
+          "note_id": 90015
+        },
+        {
+          "slot": 7,
+          "kind": "note",
+          "quantity": 5,
+          "price": 90,
+          "note_id": 90011
+        },
+        {
+          "slot": 8,
+          "kind": "note",
+          "quantity": 5,
+          "price": 90,
+          "note_id": 90017
+        }
+      ],
+      "shop_ordinal": null,
+      "initial_or_refresh": "refresh_visible_but_exact_ordinal_unverified"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "manual-luck5-72",
+      "shelf_id": "controlled-shop",
+      "slot": 5,
+      "note_id": 90012,
+      "quantity": 5,
+      "price": 72,
+      "coins_before": 1710,
+      "coins_after": 1638,
+      "stock_before": 1,
+      "stock_after": 0,
+      "review_seconds": [
+        641.843,
+        841.893,
+        997.409
+      ]
+    }
+  ],
+  "menus": [],
+  "final_concerto": {
+    "group_ids": [
+      40381,
+      40382,
+      40661,
+      40662,
+      40511,
+      40512
+    ],
+    "displayed_levels": [
+      2,
+      0,
+      2,
+      0,
+      2,
+      0
+    ]
+  },
+  "result": {
+    "floor": 20,
+    "potential_count": 59,
+    "build_score": 7665,
+    "build_saved": true,
+    "gacha_used": false
+  },
+  "limitations": [
+    "Different runs remain separate states. Their observed note IDs may be compared for coverage, never merged as one inventory.",
+    "The in-run nine-note bar can hide auxiliary off-tower notes. Light run details and settlement explicitly show water7.",
+    "Unshown note categories remain null; no implicit zero filling or backfilling from other runs.",
+    "Most intervals contain multiple ordinary choices and rewards; these are not isolated battle samples.",
+    "No client version, confirmed phases or raw server response captured. Full joint training remains paused.",
+    "Videos and incidental desktop notifications remain local; only numeric annotations are public."
+  ],
+  "conditional_transfer_example": {
+    "criterion": "Sum of these six concerto levels only; not damage or a learned-policy evaluation",
+    "donor_note_id": 90018,
+    "target_note_id": 90012,
+    "quantity": 1,
+    "before_notes": [
+      7,
+      14,
+      22,
+      6,
+      0,
+      57,
+      38,
+      7,
+      null,
+      null,
+      0,
+      28,
+      null
+    ],
+    "after_notes": [
+      7,
+      15,
+      22,
+      6,
+      0,
+      57,
+      38,
+      6,
+      null,
+      null,
+      0,
+      28,
+      null
+    ],
+    "expected_levels": [
+      2,
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    "applied_in_game": false,
+    "entry_and_materials_verified": false,
+    "condition": "Saved build is locked. Entry, unlocking and material requirements must be checked before any actual adjustment."
+  }
+}

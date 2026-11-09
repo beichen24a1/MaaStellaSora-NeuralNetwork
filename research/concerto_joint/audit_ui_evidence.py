@@ -60,8 +60,11 @@ def audit(bundle, media_directory=None):
             raise ValueError('Missing source identity')
         if media_directory is not None:
             path = Path(media_directory) / info['file']
+            hasher = hashlib.sha256()
             with path.open('rb') as stream:
-                digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+                for block in iter(lambda: stream.read(1024*1024), b''):
+                    hasher.update(block)
+            digest = hasher.hexdigest()
             if path.stat().st_size != info['bytes'] or digest != info['sha256']:
                 raise ValueError('Video identity mismatch: '+key)
             media_checks[key] = 'sha256_and_size_match'
@@ -79,6 +82,11 @@ def audit(bundle, media_directory=None):
             raise ValueError('Wrong source/review timestamp mapping')
         if s.get('notes_complete') is not False:
             raise ValueError('This evidence bundle must not claim complete inventory')
+        for view in s.get('supporting_views', []):
+            # These timestamps locate additional stable views of the SAME state;
+            # they never import counts from a different run.
+            if not 0 <= view['original_seconds'] < bundle['media']['original']['duration_seconds']:
+                raise ValueError('Supporting view outside source video')
         states[s['id']] = s
     delta_sum, row_counts, ids, rows = [0]*13, Counter(), set(), []
     previous_end = -1
@@ -189,6 +197,26 @@ def audit(bundle, media_directory=None):
             'accepted_complete_training_transitions': 0,
             'training_eligible': False, 'probability_eligible': False,
             'limitations': bundle['limitations'], 'intervals': rows}
+
+
+def summarize_coverage(bundles):
+    """Report category coverage across runs; never merge their inventories."""
+    seen, union, runs = set(), set(), []
+    for bundle in bundles:
+        if bundle['run_id'] in seen:
+            raise ValueError('Repeated run does not add independent coverage')
+        seen.add(bundle['run_id'])
+        report = audit(bundle)
+        union.update(report['visible_note_ids'])
+        runs.append({'run_id':bundle['run_id'], 'visible_note_ids':report['visible_note_ids'],
+                     'unknown_note_ids':report['unknown_note_ids'],
+                     'inventory_intervals':report['unique_inventory_intervals']})
+    return {'schema':'joint_ui_category_coverage_v1','runs':runs,
+            'observed_category_union':sorted(union),
+            'unobserved_categories':sorted(set(NOTE_IDS)-union),
+            'runs_with_all_13_observed':sum(not r['unknown_note_ids'] for r in runs),
+            'inventories_merged':False, 'training_approved':False,
+            'scope':'Category coverage only. Different runs are never one state or one transition.'}
 
 
 if __name__ == '__main__':

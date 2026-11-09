@@ -7,7 +7,7 @@ from pathlib import Path
 import unittest
 
 from bootstrap import HERE
-from audit_ui_evidence import audit, known_levels, media_time
+from audit_ui_evidence import audit, known_levels, media_time, summarize_coverage
 from capture_records import validate
 
 
@@ -84,6 +84,33 @@ class VideoEvidenceTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             report = json.loads((Path(directory)/'audit.json').read_text(encoding='utf-8'))
             self.assertEqual(report['media_checks']['original'], 'not_checked_media_not_supplied')
+
+    def test_more_towers_cover_categories_without_merging_states(self):
+        extras = [json.loads((HERE/f'data/ui_evidence_20261110_{name}.json').read_text(encoding='utf-8'))
+                  for name in ('light','fire')]
+        result = summarize_coverage([self.bundle]+extras)
+        self.assertEqual(result['observed_category_union'], list(range(90011,90024)))
+        self.assertEqual(result['runs_with_all_13_observed'], 0)
+        self.assertFalse(result['inventories_merged'])
+        self.assertFalse(result['training_approved'])
+        self.assertEqual(extras[0]['snapshots'][-1]['notes'][7],7)  # Off-tower water is actually visible.
+        self.assertIsNone(extras[1]['snapshots'][-1]['notes'][7])  # Never backfilled into another run.
+        for bundle in extras:
+            self.assertTrue(audit(bundle)['final_concerto_ui_match'])
+        with self.assertRaisesRegex(ValueError,'Repeated run'):
+            summarize_coverage([extras[0],extras[0]])
+
+    def test_conditional_transfer_is_only_a_requirement_calculation(self):
+        b=json.loads((HERE/'data/ui_evidence_20261110_light.json').read_text(encoding='utf-8'))
+        example=b['conditional_transfer_example']
+        self.assertFalse(example['applied_in_game'])
+        self.assertFalse(example['entry_and_materials_verified'])
+        self.assertEqual(known_levels(example['after_notes'],b['final_concerto']['group_ids']),example['expected_levels'])
+        self.assertEqual(sum(example['expected_levels'])-sum(b['final_concerto']['displayed_levels']),3)
+        self.assertEqual(example['before_notes'],b['snapshots'][-1]['notes'])
+        for i,(before,after) in enumerate(zip(example['before_notes'],example['after_notes'])):
+            if i not in (1,7):
+                self.assertEqual(before,after)  # Includes every unknown component.
 
 
 if __name__ == '__main__':

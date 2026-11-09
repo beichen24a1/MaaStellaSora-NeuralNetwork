@@ -1,0 +1,92 @@
+{
+  "schema": "joint_ui_evidence_audit_v1",
+  "run_id": "local-ui-light_earth_run01-20261110",
+  "media_checks": {
+    "original": "sha256_and_size_match",
+    "review": "sha256_and_size_match"
+  },
+  "snapshots": 4,
+  "unique_inventory_intervals": 3,
+  "interval_kinds": {
+    "mixed_sequence": 2,
+    "note_purchase": 1
+  },
+  "visible_note_ids": [
+    90011,
+    90012,
+    90013,
+    90014,
+    90015,
+    90016,
+    90017,
+    90018,
+    90021,
+    90022
+  ],
+  "unknown_note_ids": [
+    90019,
+    90020,
+    90023
+  ],
+  "visible_initial_total": 51,
+  "visible_final_total": 179,
+  "visible_net_delta": 128,
+  "inventory_reconciliation": "passed_on_observed_components_only",
+  "complete_shelves": 1,
+  "shelf_note_prices": {
+    "72": 1,
+    "400": 1,
+    "90": 2
+  },
+  "wallet_and_stock_verified_note_purchases": 1,
+  "displayed_rule_conflicts": [],
+  "final_concerto_computed": [
+    2,
+    0,
+    2,
+    0,
+    2,
+    0
+  ],
+  "final_concerto_ui_match": true,
+  "accepted_complete_training_transitions": 0,
+  "training_eligible": false,
+  "probability_eligible": false,
+  "limitations": [
+    "Different runs remain separate states. Their observed note IDs may be compared for coverage, never merged as one inventory.",
+    "The in-run nine-note bar can hide auxiliary off-tower notes. Light run details and settlement explicitly show water7.",
+    "Unshown note categories remain null; no implicit zero filling or backfilling from other runs.",
+    "Most intervals contain multiple ordinary choices and rewards; these are not isolated battle samples.",
+    "No client version, confirmed phases or raw server response captured. Full joint training remains paused.",
+    "Videos and incidental desktop notifications remain local; only numeric annotations are public."
+  ],
+  "intervals": [
+    {
+      "id": "light-interval1",
+      "start": 318.568,
+      "end": 641.843,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 70,
+      "description": "同局稳定快照之间的合并区间；不分摊到单场战斗或单次事件",
+      "isolated": false
+    },
+    {
+      "id": "light-interval2",
+      "start": 641.843,
+      "end": 841.893,
+      "kind": "note_purchase",
+      "known_delta_sum": 5,
+      "description": "暂停托管，仅购买幸运之音×5，售价72；详情列表前后核对10类已显示库存",
+      "isolated": true
+    },
+    {
+      "id": "light-interval3",
+      "start": 841.893,
+      "end": 1495.009,
+      "kind": "mixed_sequence",
+      "known_delta_sum": 53,
+      "description": "同局稳定快照之间的合并区间；不分摊到单场战斗或单次事件",
+      "isolated": false
+    }
+  ]
+}

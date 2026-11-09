@@ -1,0 +1,169 @@
+{
+  "schema": "joint_ui_evidence_v1",
+  "run_id": "local-ui-fire_dark_run02-20261110",
+  "annotation_date": "2026-11-10",
+  "training_eligible": false,
+  "probability_eligible": false,
+  "review_scope": "Selected stable inventory boundaries and a controlled purchase, not an exhaustive action log.",
+  "media": {
+    "original": {
+      "file": "fire_dark_run02.mp4",
+      "sha256": "bc9dd3efac4703c75c087a026cbb1185611117671a9e44129e2fd6d5245c9084",
+      "bytes": 238512453,
+      "duration_seconds": 825.199
+    },
+    "review": {
+      "file": "fire_dark_run02.mp4",
+      "sha256": "bc9dd3efac4703c75c087a026cbb1185611117671a9e44129e2fd6d5245c9084",
+      "bytes": 238512453,
+      "duration_seconds": 825.199
+    },
+    "review_is_original_alias": true,
+    "review_segments": [
+      {
+        "review_start": 0,
+        "review_end": 825.199,
+        "original_start": 0
+      }
+    ],
+    "recording_file_creation_utc": "2026-11-09T18:45:42.025243+00:00",
+    "raw_media_public": false,
+    "timing": "Local action timestamps relative to recording file creation, minus1s; inspect +/-2s. Multi-view inventory readings are only combined while paused."
+  },
+  "conditions": {
+    "tower_name": "风暴与闪电",
+    "recommended_elements": [
+      "火",
+      "暗"
+    ],
+    "difficulty": 8,
+    "main_sigils": [
+      "花火",
+      "龙飞凤舞",
+      "雪夜惊喜"
+    ],
+    "client_version": null,
+    "disc_phases": null,
+    "policy": "game_builtin_exploration_preset_1_with_manual_inventory_inspection",
+    "research_model_deployed": false
+  },
+  "snapshots": [
+    {
+      "id": "fire-s0",
+      "review_seconds": 263.391,
+      "original_seconds": 263.391,
+      "time_tolerance_seconds": 2,
+      "notes": [
+        9,
+        3,
+        7,
+        0,
+        6,
+        16,
+        0,
+        null,
+        17,
+        null,
+        null,
+        null,
+        0
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription",
+      "view": "stable_bag_before_first_choice",
+      "observation_at_utc": "2026-11-09T18:50:06.416Z"
+    },
+    {
+      "id": "fire-s1",
+      "review_seconds": 798.869,
+      "original_seconds": 798.869,
+      "time_tolerance_seconds": 2,
+      "notes": [
+        27,
+        40,
+        11,
+        9,
+        10,
+        33,
+        7,
+        null,
+        28,
+        null,
+        null,
+        null,
+        0
+      ],
+      "notes_complete": false,
+      "coins": null,
+      "method": "manual_visual_transcription",
+      "view": "final_inventory",
+      "observation_at_utc": "2026-11-09T18:59:01.894Z"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "fire-interval1",
+      "before": "fire-s0",
+      "after": "fire-s1",
+      "kind": "mixed_sequence",
+      "isolated_note_action": false,
+      "training_eligible": false,
+      "probability_eligible": false,
+      "server_response_observed": false,
+      "server_option_id": null,
+      "description": "同局稳定快照之间的合并区间；不分摊到单场战斗或单次事件",
+      "observed_delta": [
+        18,
+        37,
+        4,
+        9,
+        4,
+        17,
+        7,
+        null,
+        11,
+        null,
+        null,
+        null,
+        0
+      ]
+    }
+  ],
+  "shelves": [],
+  "purchases": [],
+  "menus": [],
+  "final_concerto": {
+    "group_ids": [
+      40171,
+      40172,
+      40271,
+      40272,
+      40481,
+      40482
+    ],
+    "displayed_levels": [
+      2,
+      1,
+      2,
+      0,
+      2,
+      1
+    ]
+  },
+  "result": {
+    "floor": 20,
+    "potential_count": 61,
+    "build_score": 7815,
+    "build_saved": true,
+    "gacha_used": false
+  },
+  "limitations": [
+    "Different runs remain separate states. Their observed note IDs may be compared for coverage, never merged as one inventory.",
+    "The in-run nine-note bar can hide auxiliary off-tower notes. Light run details and settlement explicitly show water7.",
+    "Unshown note categories remain null; no implicit zero filling or backfilling from other runs.",
+    "Most intervals contain multiple ordinary choices and rewards; these are not isolated battle samples.",
+    "No client version, confirmed phases or raw server response captured. Full joint training remains paused.",
+    "Videos and incidental desktop notifications remain local; only numeric annotations are public."
+  ]
+}

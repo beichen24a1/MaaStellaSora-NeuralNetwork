@@ -6,6 +6,7 @@
 
 - [本轮对齐、数据复核与限制](ALIGNMENT_20261108.md)
 - [实机录像标注、库存对账及新差异（2026-11-10）](VIDEO_AUDIT_20261110.md)
+- [另外两座塔补录：类别覆盖、隐藏音符及单独购买](TOWER_CAPTURE_20261110.md)
 - [采集者的简单步骤](CAPTURE_GUIDE.md)
 - [下一阶段完整联合价值合同（设计）](TRAINING_CONTRACT.md)
 - [训练准备状态](data/TRAINING_READINESS.json)

@@ -5,6 +5,13 @@
   "status": "real_ui_evidence_annotated_but_incomplete",
   "local_ui_evidence": "data/ui_evidence_20261109_run02.json",
   "local_ui_audit": "data/ui_evidence_audit_20261110.json",
+  "additional_tower_evidence": [
+    "data/ui_evidence_20261110_light.json",
+    "data/ui_evidence_20261110_fire.json"
+  ],
+  "category_coverage": "data/ui_category_coverage_20261110.json",
+  "note_categories_observed_across_runs": 13,
+  "runs_with_all_13_observed": 0,
   "local_complete_training_transitions": 0,
   "upstream_commit": "46372929b35212875a493b3a4d7dfa19820aaeed",
   "blocking_requirements": [
